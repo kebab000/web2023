@@ -1,6 +1,6 @@
 # web2023
-수업시간 예제 백업
 
+나의 블로그 : https://kebab00.tistory.com/
 # HTML
 블록구조와 인라인구조
 시멘틱 태그
