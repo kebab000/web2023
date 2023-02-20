@@ -273,6 +273,7 @@
     console.log(arr[0]);
     console.log(arr[1]);
     console.log(arr[2]);
+}
 </code></pre>
                         </div>
                         <div class="result">
@@ -405,7 +406,7 @@
     console.log(obj.a);
     console.log(obj.b);
     console.log(obj.c);
-};
+}
 </code></pre>
                         </div>
                         <div class="result">
@@ -423,15 +424,15 @@
                         <p> 배열은 데이터를 여러개 저장하는 방법 중 하나입니다.</p>                     
                         <div class="script">
 <pre><code class="language-js">{
-let x = 100; 
-let y = 200; 
-let z = "javascript";
+    let x = 100; 
+    let y = 200; 
+    let z = "javascript";
 
-x -=1000;
-x +=1000;
+    x -=1000;
+    x +=1000;
 
-console.log(x, y, z);
-};
+    console.log(x, y, z);
+}
 </code></pre>
                         </div>
                         <div class="result">
@@ -450,23 +451,22 @@ console.log(x, y, z);
                             한 줄로 만들고 반복되는 것을 줄인 버전 입니다.</p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const brr = new Array();
-const crr = new Array(200,"react", false);
-const drr = []
-const err = [300, "arrat", true];
+    const brr = new Array();
+    const crr = new Array(200,"react", false);
+    const drr = []
+    const err = [300, "arrat", true];
 
-brr[0] = 100;
-brr[1] = "javascript";
-brr[2] = true;
-drr[0] = 100;
-drr[1] = "javascript";
-drr[2] = true;
+    brr[0] = 100;
+    brr[1] = "javascript";
+    brr[2] = true;
+    drr[0] = 100;
+    drr[1] = "javascript";
+    drr[2] = true;
 
-console.log(brr[0],brr[1],brr[2]);
-console.log(crr[0],crr[1],crr[2]);
-console.log(drr[0],drr[1],drr[2]);
-console.log(err[0],err[1],err[2]);
-
+    console.log(brr[0],brr[1],brr[2]);
+    console.log(crr[0],crr[1],crr[2]);
+    console.log(drr[0],drr[1],drr[2]);
+    console.log(err[0],err[1],err[2]);
 }
 </code></pre>
                         </div>
@@ -518,15 +518,15 @@ console.log(err[0],err[1],err[2]);
                             0,1,2라는 기본 키 대신 a,b,c,라는 직접 지정한 키를 주었습니다.</p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const obj = new Object();
+    const obj = new Object();
 
-obj.a = 100;
-obj.b = 200;
-obj.c = "javascript";
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
 
-console.log(obj.a);
-console.log(obj.b);
-console.log(obj.c);
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
 }
 </code></pre>
                         </div>
@@ -547,15 +547,16 @@ console.log(obj.c);
                             new Object가 빠져서 짧아진 버전입니다.</p>                                    
                     <div class="script">
 <pre><code class="language-js">{
-const obj = {};
+    const obj = {};
 
-obj.a = 100;
-obj.b = 200;
-obj.c = "javascript";
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
 
-console.log(obj.a);
-console.log(obj.b);
-console.log(obj.c);
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
 </code></pre>
                         </div>
                         <div class="result">
@@ -575,11 +576,12 @@ console.log(obj.c);
                             new Object가 빠진 것을 한 줄로 만들어 가장 짧아진 버전입니다.</p>                                   
                         <div class="script">
 <pre><code class="language-js">{
-const obj = {a:100, b:200, c:"javascript"};
+    const obj = {a:100, b:200, c:"javascript"};
 
-console.log(obj.a);
-console.log(obj.b);
-console.log(obj.c);
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
 </code></pre>
                             </div>
                             <div class="result">
@@ -599,15 +601,15 @@ console.log(obj.c);
                             배열 안에 객체를 넣어봤습니다<p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const obj = [
-{a:100, b:200},
-{c:"javascript"}
-]
+    const obj = [
+    {a:100, b:200},
+    {c:"javascript"}
+    ]
 
-console.log(obj[0].a);
-console.log(obj[0].b);
-console.log(obj[1].c);
-};
+    console.log(obj[0].a);
+    console.log(obj[0].b);
+    console.log(obj[1].c);
+}
 </code></pre>
                         </div>
                         <div class="result">
@@ -627,19 +629,19 @@ console.log(obj[1].c);
                             객체 안에 배열을 넣어봤습니다<p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const obj = {
-a:100,
-b: [200, 300],
-c: {x:400, y:500},
-d: "javascript"
-}
+    const obj = {
+    a:100,
+    b: [200, 300],
+    c: {x:400, y:500},
+    d: "javascript"
+    }
 
-console.log(obj.a);
-console.log(obj.b[0]);
-console.log(obj.b[1]);
-console.log(obj.c.x);
-console.log(obj.c.y);
-console.log(obj.d);
+    console.log(obj.a);
+    console.log(obj.b[0]);
+    console.log(obj.b[1]);
+    console.log(obj.c.x);
+    console.log(obj.c.y);
+    console.log(obj.d);
 }
 </code></pre>
                         </div>
@@ -663,15 +665,15 @@ console.log(obj.d);
                             변수를 객체 안에 넣어 키값을 생략했습니다.<p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const a = 100;
-const b = 200;
-const c = "javascript";
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
 
-const obj = {a, b, c};
+    const obj = {a, b, c};
 
-console.log(a);
-console.log(b);
-console.log(c);
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 </code></pre>
                         </div>
@@ -692,21 +694,21 @@ console.log(c);
                             함수를 사용해 보았습니다.<p>                        
                         <div class="script">
 <pre><code class="language-js">{
-const obj = {
-a: 100,
-b: [200, 300],
-c: "javascript",
-d: function(){
-document.write("javascript가 실행되었습니다.");
-}
-};
+    const obj = {
+    a: 100,
+    b: [200, 300],
+    c: "javascript",
+    d: function(){
+    document.write("javascript가 실행되었습니다.");
+    }
+    };
 
-console.log(obj.a);
-console.log(obj.b[0]);
-console.log(obj.b[1]);
-console.log(obj.c);
-console.log(obj.d); //이렇게 하면 문자가 써지는 것이 아니라 console로 인식되어 console창에 써짐
-obj.d();
+    console.log(obj.a);
+    console.log(obj.b[0]);
+    console.log(obj.b[1]);
+    console.log(obj.c);
+    console.log(obj.d); //이렇게 하면 문자가 써지는 것이 아니라 console로 인식되어 console창에 써짐
+    obj.d();
 }
 </code></pre>
                         </div>
