@@ -363,9 +363,9 @@
     obj.b = 200;
     obj.c = "javascript";
 
-    console.log(obj.a)
-    console.log(obj.b)
-    console.log(obj.c)
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
 }
 </code></pre>
                         </div>
@@ -392,9 +392,9 @@
     obj.c ="javascript";
 
     
-    console.log(obj.a)
-    console.log(obj.b)
-    console.log(obj.c)
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
 }
 </code></pre>
                         </div>
@@ -615,14 +615,14 @@
                             배열 안에 객체를 넣어봤습니다<p>                        
                         <div class="script">
 <pre><code class="language-js">{
-    const obj = [
+    const arr = [
         {a:100, b:200},
         {c:"javascript"}
     ]
 
-    console.log(obj[0].a);
-    console.log(obj[0].b);
-    console.log(obj[1].c);
+    console.log(arr[0].a);
+    console.log(arr[0].b);
+    console.log(arr[1].c);
 }
 </code></pre>
                         </div>
@@ -676,7 +676,7 @@
                         <h3>15. 객체 : 데이터 저장(키&값) : 표현방법7</h3>
                     <p> 객체는 데이터를 여러개 저장하는 방법 중 하나입니다. <br>
                             각 데이터의 키와 값을 직접 지정할 수 있습니다. <br>
-                            변수를 객체 안에 넣어 키값을 생략했습니다.<p>                        
+                            변수를 객체 안에 키값으로 설정하여 키값을 생략했습니다.<p>                        
                         <div class="script">
 <pre><code class="language-js">{
     const a = 100;
@@ -715,6 +715,9 @@
         d: function(){
         document.write("javascript가 실행되었습니다.");
         }
+        e: function(){
+            console.log(obj.c + "가 실행되었습니다."")
+        }
     };
 
     console.log(obj.a);
@@ -723,6 +726,7 @@
     console.log(obj.c);
     console.log(obj.d); //이렇게 하면 문자가 써지는 것이 아니라 console로 인식되어 console창에 써짐
     obj.d();
+    obj.e();
 }
 </code></pre>
                         </div>
@@ -731,7 +735,9 @@
                                 <summary>결과 확인하기</summary>
                                 100 <br>
                                 200 <br>
-                                javascript <br>
+                                300 <br>
+                                javascript가 실행되었습니다<br>
+                                javascript가 실행되었습니다<br>
                             </details>
                         </div>
                     </div>
@@ -744,7 +750,7 @@
     <!-- //main -->
 
     <footer id="footer">
-        <a href="mailto:dldytpq7010@naver.com">dldytpq7010@naver.com</a>
+        <a href="mailto:im.kebab00@gmail.com">im.kebab00@gmail.com</a>
     </footer>
     <!-- //footer -->
 
@@ -869,15 +875,21 @@
         //     console.log(c);
         // }
         //2-1 객체 : 데이터 저장(키와값) : 표현 방법8
-        // {
-        //     const obj = {
-        //         a: 100,
-        //         b: [200, 300],
-        //         c: "javascript",
-        //         d: function(){
-        //             document.write("javascript가 실행되었습니다.");
-        //         }
-        //     };
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: "javascript",
+                d: function(){
+                    document.write("javascript가 실행되었습니다.");
+                },
+                e: function(){
+                    console.log(obj.c + "가 실행되었습니다.");
+                },
+                f: function(){
+                    console.log(this.c + "가 실행되었습니다.")
+                }
+            };
 
         //     console.log(obj.a);
         //     console.log(obj.b[0]);
@@ -885,7 +897,10 @@
         //     console.log(obj.c);
         //     console.log(obj.d); //이렇게 하면 문자가 써지는 것이 아니라 console로 인식되어 console창에 써짐
         //     obj.d();
-        // }
+            obj.e();
+            obj.f();
+
+        }
 
         //변수 데이터 하나저장
         //상수 데이터 하나저장 못바꿈
