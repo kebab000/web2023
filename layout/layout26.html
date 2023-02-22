@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+
+            ;
+        }
+        main .container {
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: 100px 200px 480px;
+            grid-template-areas: 
+                "aside aside aside"
+                "article1 article1 article1"
+                "article2 article3 article4"
+        }
+        #aside {
+            background-color: #74574A;
+            grid-area: aside;
+        }
+        #article1 {
+            background-color: #684D43;
+            grid-area: article1;
+        }
+        #article2 {
+            background-color: #594139;
+            grid-area: article2;
+
+        }
+        #article3 {
+            background-color: #9a4526;
+            grid-area: article3;
+
+        }
+        #article4 {
+            background-color: #d05b34;
+            grid-area: article4;
+
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 1200px;
+            height: inherit;
+        }
+    </Style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+
+        </nav>
+        <main id="main">
+            <div class="container">
+                <aside id="aside"></aside>
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+                <article id="article4"></article>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
