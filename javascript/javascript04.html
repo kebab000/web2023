@@ -7,6 +7,7 @@
     <title>Javascript : 데이터 제어하기</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -47,11 +48,12 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. if문</a></li> <!-- 데이터 하나만 가능 -->
+                    <li><a href="#">01. if문</a></li>
                     <li><a href="#">02. if문 생략</a></li>
-                    <li><a href="#">03. 다중 if문</a></li>
-                    <li><a href="#">04. 중첩 if문</a></li>
-                    <li><a href="#">05. 삼항 연산자</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 다중 if문</a></li>
+                    <li><a href="#">05. 중첩 if문</a></li>
+                    <!-- //----여기까지했음 -->
                     <li><a href="#">06. switch문</a></li>
                     <li><a href="#">07. while문</a></li>
                     <li><a href="#">08. do while문</a></li>
@@ -60,6 +62,189 @@
                     <li><a href="#">11. continue문</a></li>
                 </ul>
             </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. if문</h3>
+                    <p>if문은 주어진 조건이 참(True)인 경우에만 실행되는 제어문입니다. 조건이 거짓(False)인 경우에는 실행되지 않습니다. <br>
+                    0, null, undefined, false, ""(빈 문자열)의 값은 false가 나오고 그외의 값은 true가 나옵니다.</p>
+                    <div class="script">
+<pre><code class="language-js">if("a") {
+    document.write("실행되었습니다.(true)")
+    } else {
+    document.write("실행되었습니다.(false)")
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>{
+                                    if("a") {
+                                        document.write("실행되었습니다.(true)")
+                                    } else {
+                                        document.write("실행되었습니다.(false)")
+                                            }
+                                    }
+                            </script>
+                        </details>
+                    </div>
+
+                </div>
+                <!-- //sanple01 -->
+                <div id="sample02" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p>if문을 한 줄로 줄여쓰는 방법은 조건부 표현식(conditional expression)을 사용하는 것입니다.<br>
+                        조건부 표현식은 if-else 구문을 한 줄로 간단하게 표현할 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const num = 100;
+if(num){
+    document.write("실행됐나?")
+    } else { document.write("실행되겠냐?");
+    }
+    //일반적인 if문
+----------------------------------------------------------------
+if(num) document.write("실행됐나?");
+else document.write("되겠냐?")
+    // if 문 생략 예제
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                const num = 100;
+                                if(num){
+                                    document.write("실행됐나?<br>");
+                                    } else { document.write("실행되겠냐?<br>");
+                                    }
+
+                                if(num) document.write("실행됐나?<br>"); // 
+                                else document.write("실행되겠냐?<br>");
+                                document.write("결과값이 같은 것을 볼 수 있습니다.");
+                                }
+                            </script>
+                        </details>
+                    </div>
+                    <!-- <div class="notice">
+                        <h4>if문</h4>
+                        <p>결과값이 같은 것을 볼 수 있습니다 </p>
+                    </div>  -->
+                </div>
+                <!-- //sanple03 -->
+                <div id="sample03" class="sample">
+                    <h3>03. 삼항 연산자</h3>
+                    <p>삼항 연산자는 조건에 따라 실행할 코드를 선택하는 연산자입니다. <br>
+                        조건식이 참이면 참일 때 실행할 코드를 실행시키, 조건식이 거짓이면 거짓일 때 실행할 코드를 실행시킬수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const num = 100;
+(num == 100) ?  document.write("실행됐나?") : document.write("실행되겠냐?");
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                const num = 100;
+                                (num == 100) ?  document.write("실행됐나?<br>") : document.write("실행되겠냐?");
+                                }
+                                document.write("num 이 100이라면 '실행됐나?'라는 문구, 아니라면'실행되겠냐?'라는 문구를 출력하는 예제입니다.<br> num이 100이기 때문에 '실행됐나?'라는 문구가 실행된 것을 볼 수 있습니다.")   
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                        <!-- // sample03 -->
+                <div id="sample04" class="sample">
+                    <h3>04. 다중 if문</h3>
+                    <p>여러 개의 조건을 판별할 때, 여러개의 if문을 사용하는 방법입니다.<br>
+                        조건식이 많아질수록 코드가 복잡해지고 가독성이 떨어지는 단점이 있습니다. <br>
+                        따라서, 조건문이 많은 경우에는 switch문을 사용하는 것이 좋습니다. </p>
+                    <div class="script">
+<pre><code class="language-js">const num = 100;
+if(num == 90){
+    document.write("실행되었습니다(num == 90)");
+    } else if (num == 100){
+    document.write("실행되었습니다(num == 100)");
+    } else if (num == 110){
+    document.write("실행되었습니다(num == 110)");
+    } else if (num == 120){
+    document.write("실행되었습니다(num == 120)");
+    } else if (num == 130){
+    document.write("실행되었습니다(num == 130)");
+    } else {
+    document.write("몰?루")
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                const num = 100;
+                                if(num == 90){
+                                    document.write("실행되었습니다(num == 90)");
+                                    } else if (num == 100){
+                                    document.write("실행되었습니다(num == 100)");
+                                    } else if (num == 110){
+                                    document.write("실행되었습니다(num == 110)");
+                                    } else if (num == 120){
+                                    document.write("실행되었습니다(num == 120)");
+                                    } else if (num == 130){
+                                    document.write("실행되었습니다(num == 130)");
+                                    } else {
+                                    document.write("몰?루<br>")
+                                }
+                                document.write("<br>num 값에 따라 지정된 문구를 출력하는 예제입니다")
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                        <!-- // sample04 -->
+                <div id="sample05" class="sample">
+                    <h3>05. 다중 if문</h3>
+                    <p>if문 안에 if 문을 넣는 방식입니다.<br>
+                    <div class="script">
+<pre><code class="language-js">const num = 100;
+if(num == 100){
+    document.write("실행");
+    if(num == 100){
+        document.write("실행 2");
+        if(num == 100){
+            document.write("실행3");
+        }                    
+    }
+} else {
+    document.write("실행4")
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                const num = 100;
+                                if(num == 100){
+                                    document.write("실행<br>");
+                                    if(num == 100){
+                                        document.write("실행2<br>");
+                                        if(num == 100){
+                                            document.write("실행3<br>");
+                                        }                    
+                                    }
+                                } else {
+                                    document.write("실행4")
+                                }
+                                document.write("<br>num 값에 따라 지정된 문구를 출력하는 예제입니다")
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                        <!-- // sample05 -->
         </div>
     </main>
     <!-- //main -->
@@ -68,6 +253,13 @@
         <a href="mailto:im.kebab00@gmail.com">im.kebab00@gmail.com</a>
     </footer>
     <!-- //footer -->
-    
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- //스크립트 예시의 색을 입혀주는 코드 -->
+    <script>
+
+
+    </script>
+    <!-- //script -->
 </body>
 </html>
