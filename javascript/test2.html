@@ -63,7 +63,7 @@
     //     document.write(i)
     // }
         // 배열에서 데이터를 불러오는 방법 
-    const arr = [1,2,3,4,5,6,7,8,9]
+    // const arr = [1,2,3,4,5,6,7,8,9]
 
 //짝수 불러오는 방법
 //     for(let i=1; i<arr.length; i+=2){
@@ -90,46 +90,47 @@
 // }
 
         //5칸 짜리 테이블
-        document.write("1번 테이블")
-        // let num = 0;
-        let table = "<table border ='1'>";
-        for(let i=1; i<6; i++){
-            table += "<tr>";
+//         document.write("1번 테이블")
+//         // let num = 0;
+//         let table = "<table border ='1'>";
+//         for(let i=1; i<6; i++){
+//             table += "<tr>";
             
-                for(let j=1; j<6; j++){
-                    table += "<td>"+j+"</td>";
-                }
-            table += "</tr>";
-        }
-        table += "</table>";
-            document.write(table);
-// ---------------------------------------------------------------------
-            document.write("<br>2번 테이블")
+//                 for(let j=1; j<6; j++){
+//                     table += "<td>"+j+"</td>";
+//                 }
+//             table += "</tr>";
+//         }
+//         table += "</table>";
+//             document.write(table);
+// // ---------------------------------------------------------------------
+//             document.write("<br>2번 테이블")
 
-            let num = 0;
-        let table1 = "<table border ='1'>";
-        for(let i=1; i<6; i++){
-            table1 += "<tr>";
-                for(let j=1; j<6; j++){
-                    num++
-                    table1 += "<td>"+num+"</td>";
-                }
-            table1 += "</tr>";
-        }
-        table1 += "</table>";
-        document.write(table1);
+//             let num = 0;
+//         let table1 = "<table border ='1'>";
+//         for(let i=1; i<6; i++){
+//             table1 += "<tr>";
+//                 for(let j=1; j<6; j++){
+//                     num++
+//                     table1 += "<td>"+num+"</td>";
+//                 }
+//             table1 += "</tr>";
+//         }
+//         table1 += "</table>";
+//         document.write(table1);
 // ---------------------------------------------------------------------
             document.write("<br>3번 테이블")
-            let num1 = 0;
-           
-        let table2 = "<table border ='1'>";
-        for(let i=1; i<6; i++){
-            table2 += "<tr>";
-            
-            for(let j=1; j<6; j++){
-                num1++
-
-                table2 += "<td>"+num1+"</td>";
+        
+            let nums = 0;
+            let table2 = "<table border='1'>"
+                
+                for(let i=1; i<6; i++){
+                    table2 += "<tr>";
+                        
+                        for(let j=1; j<6; j++){
+                            nums++
+                            nums +=(nums % 2 == 0) ? (document.write(`<td><span style='color:red'>${nums}</span></td>`)) : (document.write(`<td><span style='color:blue'>${nums}</span></td>`));  
+                // table2 += "<td>"+nums+"</td>";
             }
             table2 += "</tr>";
         }
@@ -145,8 +146,8 @@
     // } else { document.write(`<span style='color:blue'>${num1}</span>`)
     // }
             //삼항 연산자  함수를 변수에 저장을 해서 그 변수를 저 안에 넣어보자
-                    // (num1 % 2 == 0) ? (document.write(`<span style='color:red'>${num1}</span>`)) :  
-                    // (document.write(`<span style='color:blue'>${num1}</span>`));
+                    
+                    
 
 //for문을 한번 더 사용한다?
         //1-25까지 춣력하는 for문
