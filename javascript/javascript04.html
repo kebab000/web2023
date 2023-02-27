@@ -78,13 +78,14 @@
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
-                            <script>{
-                                    if("a") {
-                                        document.write("실행되었습니다.(true)")
-                                    } else {
-                                        document.write("실행되었습니다.(false)")
-                                            }
+                            <script>
+                                {
+                                if("a"==""){
+                                    document.write("실행되었습니다.(true)");
+                                } else{
+                                    document.write("실행되었습니다.(false)");
                                     }
+                                }
                             </script>
                         </details>
                     </div>
@@ -135,7 +136,7 @@ else document.write("되겠냐?")
                 <div id="sample03" class="sample">
                     <h3>03. 삼항 연산자</h3>
                     <p>삼항 연산자는 조건에 따라 실행할 코드를 선택하는 연산자입니다. <br>
-                        조건식이 참이면 참일 때 실행할 코드를 실행시키, 조건식이 거짓이면 거짓일 때 실행할 코드를 실행시킬수 있습니다.</p>
+                        조건식이 참이면 참일 때 실행할 코드를 실행시키고, 조건식이 거짓이면 거짓일 때 실행할 코드를 실행시킬수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">const num = 100;
 (num == 100) ?  document.write("실행됐나?") : document.write("실행되겠냐?");
@@ -245,6 +246,7 @@ if(num == 100){
                     </div>
                 </div>
                         <!-- // sample05 -->
+            </div>
         </div>
     </main>
     <!-- //main -->
