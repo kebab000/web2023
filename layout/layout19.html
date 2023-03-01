@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃05 - flaot 유형</title>
+    <title>레이아웃19 - flex 유형 - 반응형</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
-        }
-        #wrap {
-            width: 100%;
-            margin: 0 auto;
+            padding: 0;
         }
         #header {
             width: 100%;
             height: 100px;
-            background: #E0F2F1;
+            background-color: #E0F2F1;
         }
         #nav {
             width: 100%;
             height: 300px;
             background-color: #80CBC4;
         }
-        #section {
+        #main {
             width: 100%;
             height: 580px;
             background-color: #26A69A;
@@ -40,24 +36,32 @@
             background-color: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
         }
+        @media(max-width:1220px){
+            .container {
+                width: 96%;
+            }
+        }
+        @media(max-width:786px){
+            .container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div id="wrap">
-        <div id="header">
+        <header id="header">
             <div class="container"></div>
-        </div>
-        <div id="nav">
+        </header>
+        <nav id="nav">
             <div class="container"></div>
-        </div>
-        <div id="section">
-            <div class="container">
-            </div>
-        </div>
-        <div id="footer">
+        </nav>
+        <main id="main">
             <div class="container"></div>
-        </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,117 +1,27 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: o;
-            padding: 0;
-        }
-        #wrap {
-            width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        #aside {
-            width: 400px;
-            height: 1080px;
-            float: left;
-        }
-        #log {
-            height: 200px;
-            width: inherit;
-            background-color: #653c3c;
-        }
-        #log1 {
-            height: 200px;
-            width: inherit;
-            background-color: #816464;
-        }
-        #log2 {
-            height: 680px;
-            width: inherit;
-            background-color: #b61818;}
-        #main {
-            width: 800px;
-            height: 1080px;
-            float: left;
-        }
-        #section1 {
-            width: inherit;
-            height: 540px;
-            background-color: #282e71;
-
-        }
-        #section2 {
-            width: inherit;
-            height: 340px;
-            background-color: #32a17c;
-        }
-        #article1 {
-            width: 200px;
-            height: inherit;
-            background-color: #223522;
-            float: left;
-        }
-        #article2 {
-            width: 300px;
-            height: inherit;
-            background-color: #6d906d;
-            float: left;
-        }
-        #article3 {
-
-            width: 300px;
-            height: inherit;
-            background-color: #98ae98;
-            float: left;
-        }
-        #section3 {
-            width: inherit;
-            height: 200px;
-            background-color: #ae3759;
-        }
-        #benner {
-            width: 300px;
-            height: 200px;
-            background-color: #70bb2e;
-            float: left;
-        }
-        #benner1 {
-            width: 800px;
-            height: 100px;
-            background-color: #8f9a84;
-        }
-        #benner2 {
-            width: 800px;
-            height: 100px;
-            background-color: #73e600;
-        }
-    </style>
 </head>
 <body>
-    <div id="wrap">
-        <div id="aside">
-            <div id="log"></div>
-            <div id="log1"></div>
-            <div id="log2"></div>
-        </div>
-        <div id="main">
-            <div id="section1"></div>
-            <div id="section2">
-                <div id="article1"></div>
-                <div id="article2"></div>
-                <div id="article3"></div>
-            </div>
-            <div id="section3">
-                <div id="benner"></div>
-                <div id="benner1"></div>
-                <div id="benner2"></div>
-            </div>
-        </div>
-    </div>
+    <script>
+        let user1 = prompt("첫 번째 숫자를 입력해 주세요");
+        let user2 = prompt("두 번째 숫자를 입력해 주세요");
+        // 최대공약수 : Greatest Common Divisor (GCD)
+        function getGCD(user1, user2) {
+        let max = user1 > user2 ? user1 : user2;  //둘 중 큰 수를 알아보는 식입니다. 큰 수를 max 라는 변수로 저장합니다.
+        let GCD = 0;       //변수를 0으로 시작합니다.
+        for (let i = 1; i <= max; i++) {        //i를 1부터 시작하게 하고 i가 max가 될 때 까지 반복합니다.
+            if (user1 % i === 0 && user2 % i === 0) {  // user1을 나눈 후 나머지 값과 user2을 나눈 후 나머지 값이 모두 0이 된다면
+            GCD = i;   // 최대공약수            //GCD는 i가 됩니다12
+            }
+        }
+        return GCD;     //몰?루
+        }
+        document.write(getGCD(user1,user2))
+    </script>
 </body>
 </html>
