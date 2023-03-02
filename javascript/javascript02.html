@@ -55,22 +55,23 @@
                     <li><a href="#">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
                     <li><a href="#">06. 배열 : 데이터 불러오기 : for()문</a></li>
                     <li><a href="#">07. 배열 : 데이터 불러오기 : 중첩 for()문</a></li>
-                    <li><a href="#">08. 배열 : 데이터 불러오기 : for of</a></li>
-                    <li><a href="#">09. 배열 : 데이터 불러오기 : for in</a></li>
-                    <li><a href="#">10. 배열 : 데이터 불러오기 : map</a></li>
-                    <li><a href="#">11. 배열 : 데이터 불러오기 : 펼침 연산자</a></li>
-                    <li><a href="#">12. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
-                    <li><a href="#">13. 객체 : 데이터 불러오기 : 기본</a></li>
-                    <li><a href="#">14. 객체 : 데이터 불러오기 : Object</a></li>
-                    <li><a href="#">15. 객체 : 데이터 불러오기 : 변수</a></li>
-                    <li><a href="#">16. 객체 : 데이터 불러오기 : for in</a></li>
-                    <li><a href="#">17. 객체 : 데이터 불러오기 : map</a></li>
-                    <li><a href="#">18. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
-                    <li><a href="#">19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</a></li>
-                    <li><a href="#">20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</a></li>
-                    <li><a href="#">21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</a></li>
-                    <li><a href="#">22. 객체 : 데이터 불러오기 : 비구조화 할당</a></li>
-                    <li><a href="#">23. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
+                    <li><a href="#">08. 배열 : 데이터 불러오기 : forEach</a></li>
+                    <li><a href="#">09. 배열 : 데이터 불러오기 : for of</a></li>
+                    <li><a href="#">10. 배열 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">11. 배열 : 데이터 불러오기 : map</a></li>
+                    <li><a href="#">12. 배열 : 데이터 불러오기 : 펼침 연산자</a></li>
+                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
+                    <li><a href="#">14. 객체 : 데이터 불러오기 : 기본</a></li>
+                    <li><a href="#">15. 객체 : 데이터 불러오기 : Object</a></li>
+                    <li><a href="#">16. 객체 : 데이터 불러오기 : 변수</a></li>
+                    <li><a href="#">17. 객체 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">18. 객체 : 데이터 불러오기 : map</a></li>
+                    <li><a href="#">19. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+                    <li><a href="#">20. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</a></li>
+                    <li><a href="#">21. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</a></li>
+                    <li><a href="#">22. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</a></li>
+                    <li><a href="#">23. 객체 : 데이터 불러오기 : 비구조화 할당</a></li>
+                    <li><a href="#">24. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -224,7 +225,7 @@
                     </div>
                 </div>
                 <!-- //sanple06 -->
-                <div id="sample06" class="sample">
+                <div id="sample07" class="sample">
                     <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
                     <p>for()문을 두 번 이상 사용하여 데이터를 불러오는 방법 입니다.</p>
                     <p>중첩 for()문을 사용하여 5*5의 표와 2,3,4 단을 만들어 보았습니다</p>
@@ -277,7 +278,132 @@ for(let i=2; i &lt 5; i++){
                         </details>
                     </div>
                 </div>
-                <!-- //sanple06 -->
+                <!-- //sanple07 -->
+                <div id="sample08" class="sample">
+                    <h3>08. 배열 : 데이터 불러오기 : forEach</h3>
+                    <p>배열을 불러오는 for문을 줄인 메서드입니다</p>
+                    <div class="script">
+<pre><code class="language-js">let arr = [10,20,30,40,50,60,70,80,90]
+arr.forEach(function(element){
+    document.write(element);
+})
+-------------------------------// 화살표 함수로 줄인 내용
+arr.forEach(el=>{
+    document.write(el);
+})
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    let arr = [10,20,30,40,50,60,70,80,90]
+                                    arr.forEach(function(element){
+                                        document.write(element,"<br>");
+                                    })
+                                    document.write("<br>");
+                                    arr.forEach(el=>{
+                                        document.write(el,"<br>");
+                                    })
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple08-->
+                <div id="sample09" class="sample">
+                    <h3>09. 배열 : 데이터 불러오기 : for of</h3>
+                    <p>배열의 데이터를 불러오는 함수입니다</p>
+                    <div class="script">
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600];
+for(let i of arr){
+    document.write(i);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const arr = [100, 200, 300, 400, 500, 600];
+                                    for(let i of arr){
+                                        document.write(i);
+                                    }
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple09-->
+                <div id="sample10" class="sample">
+                    <h3>10. 배열 : 데이터 불러오기 : for in</h3>
+                    <p>객체를 키값을 불러오기 위한 문법입니다<br>
+                       요즘엔 배열에도 많이 사용합니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600];
+for(let i in arr){ 
+    document.write(i);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const arr = [100, 200, 300, 400, 500, 600];
+                                    for(let i in arr){ 
+                                        document.write(i);
+                                    }
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple10-->
+                <div id="sample11" class="sample">
+                    <h3>11. 배열 : 데이터 불러오기 : map</h3>
+                    <p>객체를 키값을 불러오기 위한 문법입니다<br>
+                       요즘엔 배열에도 많이 사용합니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+num.forEach(function(el, i, a){
+    console.log(el);
+    console.log(i);
+    console.log(a);
+});
+//------------------------------------위의 forEach문을 map문으로 나타내었습니다.
+num.map(function(el, i, a){
+    console.log(el);
+    console.log(i);
+    console.log(a);
+});
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const num = [100, 200, 300, 400, 500];
+                                    num.forEach(function(el, i, a){
+                                        console.log(el);
+                                        console.log(i);
+                                        console.log(a);
+                                    });
+                                    num.map(function(el, i, a){
+                                        console.log(el);
+                                        console.log(i);
+                                        console.log(a);
+                                    });
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple10-->
             </div>
         </div>
     </main>
@@ -291,135 +417,117 @@ for(let i=2; i &lt 5; i++){
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        //01. 변수 : 데이터 불러오기
-        // 변수 안에 데이터를 불러오는 방법 입니다 
-        // {
-        //     let x = 100, y = 200, z = "javascript";
-
-        //     console.log(x, y, z);
-        // }
-
-        // 02. 상수 : 
-        // 상수안에 있는 데이터를 불러오는 방법 입니다 
-        // {
-        //     const x = 100, y = 200, z = "javascript"
-
-        //     console.log(x, y, z);
-        // }
-
-        //03.배열
-
-        // {
-        //     const arr = [100, 200, "javascript"];
-
-        //     console.log(arr[0], arr[1], arr[2]);
-        // }
-
-        //04. 2차 배열
-        // 테트리스 만들 때 씀
-        // {
-        //     const arr = [100, 200, ["javascript","react"]];
-
-
-        //     console.log(arr[0], arr[1], arr[2][0]);//2차 배열 출력방법
-        // }
-
-        // //05. 배열: 갯수구하기
-        // {
-        //     const arr = [100, 200, "javascript"];
-
-        //     console.log(arr.length) //배열의 갯수를 구할 땐 .length를 쓰면 된다
-        // }
-
-        // 06. 배열  for문 
         {
-            // const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+            //데이터 저장하기 변수 형변환
+            // let x = 100, y = "200", z;
+            // const func = function(){}
 
-            // console.log(arr[0]);
-            // console.log(arr[1]);
-            // console.log(arr[2]);
-            // console.log(arr[3]);
-            // console.log(arr[4]);
-            // console.log(arr[5]);
-            // console.log(arr[6]);
-            // console.log(arr[7]);
-            // console.log(arr[8]);
-            // 이걸 한줄로 쓰는 법
+            // document.write(x);
+            // document.write(typeof(x));
+            // document.write(y);
+            // document.write(typeof(y));
+            // y = Number(y);
+            // document.write(typeof(y))
+            // document.write(z);
+            // document.write(typeof(z));
+            // document.write(func);
+            // document.write(typeof(func));
+        }
+        {
+            // 배열
+            let arr = [10,20,30,40,50,60,70,80,90]
 
-            // for(초기값; 조건식; 증감식) {
-            //     실행문;  } 형식으로 되어 있다.
-            // 증감식 ++가 앞에 있을 때랑 뒤에 있는 거랑 결과값이 달라진다
-            // 
-            // for(let i=0; i<=8; i++) {
-            //     console.log(arr[i]);
+            // for( let i=0; i<arr.length; i++ ){
+            //     document.write(a[i]);
             // }
-            // i가 0이고 i가 9보다 작을 떄, console.log에 값이 입력이 되고 그다음 i++ 1이 늘어난다
-            // 그 1일 다시 조건에 맞을 때 다시 작동하는데 그게 가운데 있는 i<9; 까지 간다.
+            //forEach <- 메소드  쓰기 어려원 것들을 미리 안들어 둔 것  콜백함수 엄청 중요함
 
-            // i=0; 0<9; true console.log(arr[i]); i++ //100
-            // i=1; 1<9; true console.log(arr[i]); i++ //200
-            // i=2; 2<9; true console.log(arr[i]); i++ //300
-            // i=3; 3<9; true console.log(arr[i]); i++ //400
-            // i=4; 4<9; true console.log(arr[i]); i++ //500
-            // i=5; 5<9; true console.log(arr[i]); i++ //600
-            // i=6; 6<9; true console.log(arr[i]); i++ //700
-            // i=7; 7<9; true console.log(arr[i]); i++ //800
-            // i=8; 8<9; true console.log(arr[i]); i++ //900
-            // i=8; 9<9; false; END. 
+            // arr.forEach(function(element){
+            //     document.write(element);
+            // })
+
+            // arr.forEach((element)=>{
+            //     document.write(element);
+            // })
+            //     document.write("<br>");
+
+            // arr.forEach(el=>{
+            //     document.write(el);
+            // })
+
+            // document.write("<br>");
+
+            // arr.forEach(el => document.write(el));
+        // }
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     // document.write(num[0],"<br>");
+        //     // document.write(num[1],"<br>");
+        //     // document.write(num[2],"<br>");
+        //     // document.write(num[3],"<br>");
+
+        //     // forEach
+        //     for( let i=0; i<num.length; i++ ){
+        //         document.write(num[i],"<br>")
+        //     }
+
+        //     num.forEach(function(el){
+        //         document.write(el,"<br>")
+        //     });
+            
+        //     num.forEach((el)=>{
+        //         document.write(el,"<br>")
+        //     });
+            
+        //     num.forEach(el => {
+        //         document.write(el,"<br>");
+        //     })
+
+
+        //     num.forEach(el => document.write(el,"<br>"))
+        //     //forEach는 값, 인덱스, 배열을 불러올 수 있다.
+        //     num.forEach(function(element, index, array){
+        //         document.write(element,"<br>");
+        //         document.write(index,"<br>");
+        //         document.write(array,"<br>");
+        //     })
         }
 
-        {
-            //0223
-            const A = [1,2,3,4,5,6,7,8,9,10]
-
-            // for( let i=0; i<A.length; i++){
-            //     console.log(A[i]);
-            // }
-
-            // i=0; 0<10; A[0]=1; i=1;
-            // i=1; 1<10; A[1]=2; i=2;
-            // i=2; 2<10; A[2]=3; i=3;
-            // i=3; 3<10; A[3]=4; i=4;
-            // i=4; 4<10; A[4]=5; i=5;
-            // i=5; 5<10; A[5]=6; i=6;
-            // i=6; 6<10; A[6]=7; i=7;
-            // i=7; 7<10; A[7]=8; i=8;
-            // i=8; 8<10; A[8]=9; i=9;
-            // i=9; 9<10; A[9]=10; i=10;
-            // i=10; 10<10; 이러고 끝난다 
-        }
-        //중첩 for 문 
+        //09 forof문
         // {
-        //     for( let i=1; i<=10; i++){
-        //         console.log(i);
-        //         for( let j=1; j<=10; j++){
-        //             console.log("j : " + j)
-        //         }
+        //     const arr = [100, 200, 300, 400, 500, 600];
+
+        //     for(let i of arr){
+        //         document.write(i);
         //     }
         // }
-        // 중처 for 문을 이용한 구구단 내 방식으로 만든 야매
-        // 5*5표를 만들어 보자
-        
-        // let table = "<table border='1'>"
-        //         for(i=1; i<6; i++){
-        //             table += "<tr>"
-        //                 for(j=1; j<6; j++){
-        //                     table +="<td>"+j+"</td>"
-        //                 }
-        //             table +="</tr>" 
-        //         }
-        //     table += "</table>" 
-        //     document.write(table)
+                //10 forin문 객체를 위한 문법 하지만 요즘에는 ㄱ냥쓴다
 
-        // // 구구단을 만들어 보자
+        // {
+        //     const arr = [100, 200, 300, 400, 500, 600];
 
-        // for(let i=1; i<10; i++){
-        //     document.write(i+"단<br>")
-        //     for(let j=1; j<10; j++){
-        //         document.write(i + "*" + j +"="+ i*j +"<br>" )
+        //     for(let i in arr){ 
+        //         document.write(i);
         //     }
         // }
 
+        {
+            //11. 배열 : 데이터 불러오기 : map  // 차이점도 정리해죠
+            const num = [100, 200, 300, 400, 500];
+
+            num.forEach(function(el, i, a){
+                console.log(el);
+                console.log(i);
+                console.log(a);
+            });
+
+            num.map(function(el, i, a){
+                console.log(el);
+                console.log(i);
+                console.log(a);
+            });
+        }
     </script>
 </body>
 </html>

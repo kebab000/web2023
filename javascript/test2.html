@@ -8,159 +8,36 @@
 </head>
 <body>
     <script>
-
-//         let arr = [1,2,3,4,5,6,7,8,9,10];
-
-//         document.write(arr[4],"<br>");
-
-//         document.write(arr[6],arr[7],"<br>");
-
-//         document.write(arr[1] + arr[9],"<br>");
-
-//         document.write(arr[8] * arr[9],"<br>");
-
-//         for( i=1; i<9; i++){
-//             document.write(i,"<br>");
-//         }
-// //2     배수
-//         for( i=2; i<=100; i+=2){
-//             document.write(i)
-//                 document.write("<br>")
-
-//         }
-// //4배수
-// for( i=2; i<=100; i+=4){
-//             document.write(i)
-//                 document.write("<br>")
-
-//         }
-//
-{
-        // for(let i=8; i<=8; i++){
-        //     document.write(i+"단","<br>")
-        //     for(let j=2; j<=9; j++){
-        //         document.write(i + " * " + j +" = "+ i*j)
-        //         document.write("<br>")
-
-        //     }
-        // }
-        // 테이블 
-
-        // let table = "<table border='1'>"
-        //     for(i=1; i<=15; i++){
-        //         table +="<tr>"
-        //             for(j=1; j<=15; j++){
-        //                 table += "<td>"+j+"</td>"
-        //             }
-        //         table +="</tr>"
-        //     }
-        //     table += "</table>"
-        // document.write(table)
-}
-
-{
-    // for(i=1; i<101; i++){
-    //     document.write(i)
-    // }
-        // 배열에서 데이터를 불러오는 방법 
-    // const arr = [1,2,3,4,5,6,7,8,9]
-
-//짝수 불러오는 방법
-//     for(let i=1; i<arr.length; i+=2){
-//         document.write(arr[i]+" ")
-//     };
-//     document.write("<br>")
-//     //홀수 불러오는 방법
-//     for(let i=0; i<arr.length; i+=2){
-//         document.write(arr[i]+" ")
-//     }
-// }
-            // if 문을 이용한 짝수 홀수 구분방법
-// for(let i=1; i<=arr.length; i++){
-    // if (i % 2 == 0){
-    //     document.write("<span style='color:red'>"+i+"</span>");
-    // } else {
-    //     document.write(`<span style='color:blue'>${i}</span>`);
-    // }
-    // if (num1 % 2 == 0){
-    //     document.write(`<span style='color:red'>${mun1}</span>`)
-    // } else { document.write(`<span style='color:blue'>${num1}</span>`)
-    // }
-    
-// }
-
-        //5칸 짜리 테이블
-//         document.write("1번 테이블")
-//         // let num = 0;
-//         let table = "<table border ='1'>";
-//         for(let i=1; i<6; i++){
-//             table += "<tr>";
-            
-//                 for(let j=1; j<6; j++){
-//                     table += "<td>"+j+"</td>";
-//                 }
-//             table += "</tr>";
-//         }
-//         table += "</table>";
-//             document.write(table);
-// // ---------------------------------------------------------------------
-            document.write("<br>2번 테이블")
-
-            let num = 0;
-        let table1 = "<table border ='1'>";
-        for(let i=1; i<6; i++){
-            table1 += "<tr>";
-                for(let j=1; j<6; j++){
-                    num++
-                    table1 += "<td>"+num+"</td>";
-                }
-            table1 += "</tr>";
+        for(let i=1; i<101; i++){
+            document.write(i);
         }
-        table1 += "</table>";
-        document.write(table1);
-// ---------------------------------------------------------------------
-            document.write("<br>3번 테이블")
-    {
-            let num = 0;
-        let table1 = "<table border ='1'>";
-        for(let i=1; i<6; i++){
-            table1 += "<tr>";
-                for(let j=1; j<6; j++){
-                    num++
-                    table1 += "<td>"+num+"</td>";
-                }
-            table1 += "</tr>";
-        }
-        table1 += "</table>";
-        document.write(table1);
-    }
+        document.write("<br>");
+        
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+        for(i=0; i<arr.length; i++){
+            document.write(arr[i]);
+        };
+        document.write("<br>");
 
+        arr.forEach(function(el){
+            document.write(el);
+        });
+        document.write("<br>");
 
+        arr.forEach(function(el){
+            if(el % 2 == 0){
+                document.write(el+"<br>");
+            }
+        });
+// 04 짝수를 화살표로
+        document.write("<br>");
 
-            // 홀짝 감별 이걸 바로 넣는 건 실패// num1++ 밑에 넣는 것도 실패
-            // for 문을 하나더 만들어 보는 건 어떨까 어차피 반복문 이니까
-    //         if (num1 % 2 == 0){
-    //     document.write(`<span style='color:red'>${mun1}</span>`)
-    // } else { document.write(`<span style='color:blue'>${num1}</span>`)
-    // }
-            //삼항 연산자  함수를 변수에 저장을 해서 그 변수를 저 안에 넣어보자
-                    
-                    
-
-//for문을 한번 더 사용한다?
-        //1-25까지 춣력하는 for문
-        // let num = 0;
-        // for( i = 1; i<26; i++){
-        //     document.write(i);
-        //     num++;
-            
-        // }
-        // document.write("<br>");
-        // document.write(num)
-        // if(num1 % 2 == 0) document.write{(<span style='color:blue'>${(num1)}</span>);
-        // }else document.write(<span style='color:red'>${(num1)}</span>) `
-}
-
+        arr.forEach((el)=>{
+            if(el % 2 == 0){
+                document.write(el);
+            }
+        });
     </script>
 </body>
 </html>

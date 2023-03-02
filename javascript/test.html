@@ -91,21 +91,91 @@
 
             // 함수 4가지
 
-                // 선언적함수
+                // 01.선언적함수
                 {
-
+                    function func(){
+                        document.write("01. 함수가 실행되었습니다<br>");
+                    };
+                    func();
                 }
-                //익명함수
+
+                //02.익명함수
                 {
+                    const func = function(){
+                        document.write("02. 함수가 실행되었습니다<br>");
+                    }
+                    func();
+                }
+                // 03.
+                {
+                    function func(){
+                        for (i=1; i<=10; i++){
+                            document.write("03. 함수가 실행되었습니다<br>");
+                        }
+                    };
+                    func();
+                }
                 
-                }
-                // 매개 함수 
+                // 04. 리턴함수
                 {
-                    
+                    function func(){
+                        const str = "04. 함수가 실행되었습니다<br>"
+                        return str
+                    }
+                    document.write(func());
                 }
-                // 리턴함수
-                {
 
+                // 05. 매개변수
+                {
+                    function func(str){
+                        document.write(str);
+
+                    }
+                    func("05. 함수가 실행되었습니다<br>");
+                }
+
+                //06. 선언적 함수 화살표
+                {
+                    func = () => {
+                        document.write("06. 함수가 실행되었습니다<br>");
+                    }
+                    func()
+                }
+                // 테이블
+                {
+                function func1(){
+                    let table = "<table border='1'>";
+                    for(let i=1; i<=10; i++){
+                        table += "<tr>";
+                            for(let j=1; j<=10; j++){
+                                table+="<td>"+j+"</td>";
+                                }
+                            table += "</tr>";
+                    }
+                    table += "</table>";
+                    document.write(table);
+                };
+                func1();
+                }
+                {
+                    function func(){
+                        let table = "<table border='1'>";
+                            for(let i=1; i<11; i++){
+                                table+="<tr>";
+                                    for(let j=1; j<3; j++){
+                                        table+="<td>1</td>";
+                                    }
+                                table+="</tr>";
+                            }
+                        table+= "</table>";
+                        document.write(table);
+                    };
+                    func();
+                }
+                {
+                    const arr = [1, 2, 3, 4, 5, 6, 7];
+
+                    arr.forEach( el => document.write(el));
                 }
 
 

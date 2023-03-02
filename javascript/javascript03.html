@@ -366,8 +366,8 @@ document.write(func());
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
                     <p>익명 함수에 매개변수 함수와 리턴값 함수를 모두 쓴 것 입니다.</p>
                     <div class="script">
-<pre><code class="language-js">const func =(str) =&gt; {
-return str; 
+<pre><code class="language-js">const func = (str) =&gt; {
+    return str; 
 }
 document.write(func("실행되었습니다."));
 </code></pre>
@@ -468,58 +468,8 @@ document.write(func("실행되었습니다"));
     <script>hljs.highlightAll();</script>
 
     <script>
-    //    //선언적 함수
-    //    {
-    //         a = () => {
-    //             document.write("실행1");
-    //         }
-    //         a();
-    //     }
-    //     {
-    //         const b = () => {
-    //             document.write("실행2");
-    //         }
-    //         b();
-    //     }
-    //     // 매개변수는 2개 이상 쓸수 도 있다// 보통 익명 함수를 화살표 함수로 바꾼다.<- 그렇지 않으면 가독성이 떨어지기 때문에
-    //     { 
-    //         const c = (str1,str2,str3) => {
-    //             document.write(str1,str2, str3);
-    //         }
-    //         c("실행3", "실행4","실행5");
-    //     }
-    //     {
-    //         const d = (x,y,z) => {
-    //             return x+y+z;
-    //         }
-    //         document.write(d(1,2,3));
-    //     }
-        // 09. 익명+매개변수+리턴 값
-    // {
-        // const func =(str) => {
-        //     return str; 
-        // }
-        // document.write(func("실행되었습니다."));
-    // }
-        // 10. +괄호 생략
-        {
-            const func = str => {
-                return str;
-            }
-            document.write(func("실행되었습니다"));
-        }
-        //11. + 리턴 생략// 이 형태를 리젝트에서 가장 많이 사용한다.
-        {
-            const func = str => str;
-
-            document.write(func("실행되었습니다"));
-        }
-        // 12. 이것을 선언적 함수로 바꿈 가능
-        {
-            func = str => str;
-
-            document.write(func("실행되었습니다"));
-        }
+    // .1선언적 함수
+   
     </script>
 </body>
 </html>
