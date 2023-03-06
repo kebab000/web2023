@@ -70,8 +70,7 @@
                     <li><a href="#">20. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</a></li>
                     <li><a href="#">21. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</a></li>
                     <li><a href="#">22. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</a></li>
-                    <li><a href="#">23. 객체 : 데이터 불러오기 : 비구조화 할당</a></li>
-                    <li><a href="#">24. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
+                    <li><a href="#">23. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -207,7 +206,7 @@
                         <p>for(초기값; 조건식; 증감식) { <br>
                                 실행문;  } <br>
                                 형식으로 되어 있다. <br>
-                            증감식 ++가 앞에 있을 때랑 뒤에 있는 때랑 결과값이 달라진다</p>
+                            증감식 ++가 앞에 있을 때랑 뒤에 있는 때랑 결괏값이 달라진다</p>
                            <p> 위의 예시는 아래의 것을 한 줄로 쓴 것이다.</p>
                         <p style="color: rebeccapurple;">const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90];<br>
 
@@ -235,7 +234,7 @@ let table = "&lttable border='1'&gt"
         for(i=1; i&lt 6; i++){
             table += "&lttr&gt"
                 for(j=1; j&lt 6; j++){
-                    table +="&lttd>"+j+"&lt/td&gt"
+                    table +="&lttd&gt;"+j+"&lt/td&gt"
                 };
             table +="&lt/tr&gt" 
         };
@@ -339,7 +338,7 @@ for(let i of arr){
                 <!-- //sanple09-->
                 <div id="sample10" class="sample">
                     <h3>10. 배열 : 데이터 불러오기 : for in</h3>
-                    <p>객체를 키값을 불러오기 위한 문법입니다<br>
+                    <p>객체를 키를 불러오기 위한 문법입니다<br>
                        요즘엔 배열에도 많이 사용합니다.</p>
                     <div class="script">
 <pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600];
@@ -366,7 +365,7 @@ for(let i in arr){
                 <!-- //sanple10-->
                 <div id="sample11" class="sample">
                     <h3>11. 배열 : 데이터 불러오기 : map</h3>
-                    <p>객체를 키값을 불러오기 위한 문법입니다<br>
+                    <p>객체를 키을 불러오기 위한 문법입니다<br>
                        요즘엔 배열에도 많이 사용합니다.</p>
                     <div class="script">
 <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
@@ -509,8 +508,8 @@ console.log(obj.c);
                 </div>
                 <!-- //sanple15-->
                 <div id="sample15" class="sample">
-                    <h3>15. 객체 : 데이터 불러오기 : Objec</h3>
-                    <p>Object.keys/value/entries(객체명)을써서 키값,데이터값 혹은 둘다 를 불러오는 방법입니다.</p>
+                    <h3>15. 객체 : 데이터 불러오기 : Object</h3>
+                    <p>Object.keys/value/entries(객체명)을써서 키,값 혹은 둘다 를 불러오는 방법입니다.</p>
                     <div class="script">
 <pre><code class="language-js">const obj = {
     a: 100,
@@ -588,9 +587,9 @@ console.log(name3);
                 <!-- //sanple16-->
                 <div id="sample17" class="sample">
                     <h3>17. 객체 : 데이터 불러오기 : for in</h3>
-                    <p>for in 문을 통해 객체 안의 키값과 데이터값을 불러오는 방법입니다.</p>
+                    <p>for in 문을 통해 객체 안의 키와 값을 불러오는 방법입니다.</p>
                     <div class="script">
-<pre><code class="language-js"> const obj = {
+<pre><code class="language-js">const obj = {
     a: 100,
     b: 200,
     c: "javascript"
@@ -625,17 +624,74 @@ for(let key in obj){
                 <!-- //sanple17-->
                 <div id="sample18" class="sample">
                     <h3>18. 객체 : 데이터 불러오기 : map</h3>
-                    <p>객체의 데이터를 변수에 넣고 변수를 통해 객체의 데이터를 불러오는 방법입니다.</p>
+                    <p>map을 통해서 배열 안 객체의 데이터를 하나씩 불러오는 방법입니다.<br>
+                    배열에만 사용이 가능하므로 배열 안의 객체가 아닌 객체만 단독으로 있다면 사용하지 못합니다.</p>
                     <div class="script">
-<pre><code class="language-js"> const obj = {
+<pre><code class="language-js">const obj = [
+    {a: 100, b: 200, c: "javascript"}
+]
+obj.map(function(el){
+    console.log(el.a);
+    console.log(el.b);
+    console.log(el.c);
+})
+//-------------------------화살표 함수 ver.
+obj.map((el) =&gt; {
+    console.log(el.a);
+    console.log(el.b);
+    console.log(el.c);
+})
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = [
+                                        {a: 100, b: 200, c: "javascript"}
+                                    ]
+                                    
+                                    obj.map((el) => {
+                                        document.write(el.a);
+                                    document.write("<br>");
+                                        document.write(el.b);
+                                    document.write("<br>");
+                                        document.write(el.c);
+                                    })
+                                    document.write("<br>")
+                                    obj.map(function(el){
+                                    document.write("<br>");
+                                        document.write(el.a);
+                                    document.write("<br>");
+                                        document.write(el.b);
+                                    document.write("<br>");
+                                        document.write(el.c);
+                                    })
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple18-->
+                <div id="sample19" class="sample">
+                    <h3>19. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
+                    <p>객체 안에 해당 데이터가 있는지 없는지 true/false로알려줍니다</p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
     a: 100,
     b: 200,
     c: "javascript"
 }
-for(let key in obj){
-    console.log(key);
-    console.log(obj[key]);
-}
+console.log(obj.hasOwnProperty("a"));
+console.log(obj.hasOwnProperty("b"));
+console.log(obj.hasOwnProperty("c"));
+console.log(obj.hasOwnProperty("d"));
+//------------------------약식으로
+console.log("a" in obj);
+console.log("b" in obj);
+console.log("c" in obj);
+console.log("d" in obj);
 </code></pre>
                     </div>
                     <div class="result">
@@ -648,18 +704,189 @@ for(let key in obj){
                                         b: 200,
                                         c: "javascript"
                                     }
-                                    for(let key in obj){
-                                        document.write(key);
-                                        document.write("<br>");
-                                        document.write(obj[key]);
-                                        document.write("<br>");
-                                    }
+                                    document.write(obj.hasOwnProperty("a"));
+                                    document.write("<br>");
+                                    document.write(obj.hasOwnProperty("b"));
+                                    document.write("<br>");
+                                    document.write(obj.hasOwnProperty("c"));
+                                    document.write("<br>");
+                                    document.write(obj.hasOwnProperty("d"));
+                                    document.write("<br>");
+                                    //------------------------약식으로
+                                    document.write("a" in obj);
+                                    document.write("<br>");
+                                    document.write("b" in obj);
+                                    document.write("<br>");
+                                    document.write("c" in obj);
+                                    document.write("<br>");
+                                    document.write("d" in obj);
                                 }
                             </script>
                         </details>
                     </div>
                 </div>
-                <!-- //sanple18-->
+                <!-- //sanple19-->
+                <div id="sample20" class="sample">
+                    <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                    <p>전개구문이라고도 하며 배열처럼 값이 다양한 자료를 한꺼번에 인수로 넘겨주거나 배열과 배열을 합할 때처럼 배열을 하나의 덩어리로 처리해야 할 때 아주 유용합니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj1 = {
+    a: 100,
+    b: 200,
+} 
+const spread = {...obj1};
+
+console.log(spread.a);
+console.log(spread.b);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj1 = {
+                                        a: 100,
+                                        b: 200,
+                                    } 
+                                    const spread = {...obj1};
+
+                                    document.write(spread.a);
+                                    document.write("<br>");
+                                    document.write(spread.b);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple20-->
+                <div id="sample21" class="sample">
+                    <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+                    <p>전개구문이라고도 하며 배열처럼 값이 다양한 자료를 한꺼번에 인수로 넘겨주거나 배열과 배열을 합할 때처럼 배열을 하나의 덩어리로 처리해야 할 때 아주 유용합니다.<br>
+                    중간에 데이터를 추가할 수 도 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj1 = {
+    a: 100,
+    b: 200,
+} 
+const spread = {...obj1, c:"javascript"};
+
+console.log(spread.a);
+console.log(spread.b);
+console.log(spread.c);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj1 = {
+                                        a: 100,
+                                        b: 200,
+                                    } 
+                                    const spread = {...obj1, c:"javascript"};
+
+                                    document.write(spread.a);
+                                    document.write("<br>");
+                                    document.write(spread.b);
+                                    document.write("<br>");
+                                    document.write(spread.c);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple21-->
+                <div id="sample22" class="sample">
+                    <h3>22. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+                    <p>전개구문이라고도 하며 배열처럼 값이 다양한 자료를 한꺼번에 인수로 넘겨주거나 배열과 배열을 합할 때처럼 배열을 하나의 덩어리로 처리해야 할 때 아주 유용합니다.<br>
+                    객체와 객체를 결합할 수도 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj1 = {
+    a: 100,
+    b: 200,
+} 
+const obj2 = {
+    c: "javascript",
+    d: "react",
+}
+const spread = {...obj1, ...obj2}
+
+console.log(spread.a);
+console.log(spread.b);
+console.log(spread.c);
+console.log(spread.d);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj1 = {
+                                    a: 100,
+                                    b: 200,
+                                } 
+                                const obj2 = {
+                                    c: "javascript",
+                                    d: "react",
+                                }
+                                const spread = {...obj1, ...obj2}
+
+                                document.write(spread.a);
+                                    document.write("<br>");
+                                document.write(spread.b);
+                                    document.write("<br>");
+                                document.write(spread.c);
+                                    document.write("<br>");
+                                document.write(spread.d);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple22-->
+                <div id="sample23" class="sample">
+                    <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+                    <p>객체를 분해해서 변수화 시킨 것 입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript",
+}
+const {a:name1, b:name2, c:name3} = obj;
+
+console.log(name1);
+console.log(name2);
+console.log(name3);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript",
+
+                                    }
+                                    const {a:name1, b:name2, c:name3} = obj;
+
+                                    document.write(name1);
+                                    document.write("<br>");
+                                    document.write(name2);
+                                    document.write("<br>");
+                                    document.write(name3);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple23-->
             </div>
         </div>
     </main>
@@ -785,7 +1012,7 @@ for(let key in obj){
         //     });
         // }
         {
-            const arr = [100,200,300,400, [500,600]]
+            // const arr = [100,200,300,400, [500,600]]
 
             // console.log (arr[4][0]);
 
@@ -879,15 +1106,15 @@ for(let key in obj){
         }
         // 17. for in
         // {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            }
-            for(let key in obj){
-                console.log(key);
-                console.log(obj[key]);
-            }
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javascript"
+            // }
+            // for(let key in obj){
+            //     console.log(key);
+            //     console.log(obj[key]);
+            // }
         // }
         // 18. map
         {
@@ -912,21 +1139,43 @@ for(let key in obj){
         //19. hasOwnProperty()
         // 데이터가 있는지 없는지 알려줌
         // {
-        //     const obj = {
-        //         a: 100,
-        //         b: 200,
-        //         c: "javascript"
-        //     }
-        //     console.log(obj.hasOwnProperty("a"));
-        //     console.log(obj.hasOwnProperty("b"));
-        //     console.log(obj.hasOwnProperty("c"));
-        //     console.log(obj.hasOwnProperty("d"));
-        //     //약식으로
-        //     console.log("a" in obj)
-        //     console.log("b" in obj)
-        //     console.log("d" in obj)
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javascript"
+            // }
+            // console.log(obj.hasOwnProperty("a"));
+            // console.log(obj.hasOwnProperty("b"));
+            // console.log(obj.hasOwnProperty("c"));
+            // console.log(obj.hasOwnProperty("d"));
+            // //약식으로
+            // console.log("a" in obj)
+            // console.log("b" in obj)
+            // console.log("d" in obj)
         // }
         // //20 추가 결합
+        // {
+        //     const obj1 = {
+        //         a: 100,
+        //         b: 200,
+        //     } 
+        //     const spread = {...obj1}
+
+        //     console.log(spread.a);
+        //     console.log(spread.b);
+        // }
+        // {
+        //     const obj1 = {
+        //         a: 100,
+        //         b: 200,
+        //     } 
+        //     const spread = {...obj1, c:"javascript"}
+
+        //     console.log(spread.a);
+        //     console.log(spread.b);
+        //     console.log(spread.c);
+        // }
+        //결합
         // {
         //     const obj1 = {
         //         a: 100,
@@ -945,17 +1194,17 @@ for(let key in obj){
         // }
         // //21. 객체 구조분해할당
         // {
-        //     const obj = {
-        //         a: 100,
-        //         b: 200,
-        //         c: "javascript",
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript",
 
-        //     }
-        //     const {a:name1, b:name2, c:name3} = obj;
+            }
+            const {a:name1, b:name2, c:name3} = obj;
 
-        //     console.log(name1);
-        //     console.log(name2);
-        //     console.log(name3);
+            console.log(name1);
+            console.log(name2);
+            console.log(name3);
         // }
     </script>
 </body>
