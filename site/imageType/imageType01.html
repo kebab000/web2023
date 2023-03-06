@@ -15,9 +15,12 @@
         }
         a {
             text-decoration: none;
+            color: #000;
         }
         img {
             vertical-align: top;
+            width: 100%;
+
         }
         h1,h2,h3,h4,h5,h6 {
             font-weight: normal;
@@ -28,12 +31,17 @@
             padding: 0 20px;
             /* background-color: rgba(0, 0, 0, 0.1); */
         }
+        img {
+            text-decoration: none;
+        }
         .nexon {
             font-family: NexonLv1Gothic;
             font-weight: 400;
         }
         .section {
             padding: 120px 0;
+        }
+        .section .center {
             text-align: center;
         }
         .section__h2 {
@@ -47,9 +55,11 @@
             color: #666;
             margin-bottom: 70px;
             font-weight: 300;
+            line-height: 1.5;
+
         }
 
-        /* image__wrap */
+        /* image__type */
         .image__inner {
             display: flex;
             justify-content: space-between;
@@ -91,8 +101,8 @@
 <body>
     <section class="image__wrap section nexon">
         <div class="centainer">
-            <h2 class="section__h2">식물을 키우는 방법</h2>
-            <p class="section__desc">식물을 키우는 것은 생각만큼 쉽지않지만 배운다면 할 수 있습니다.</p>
+            <h2 class="section__h2 center">식물을 키우는 방법</h2>
+            <p class="section__desc center">식물을 키우는 것은 생각만큼 쉽지않지만 배운다면 할 수 있습니다.</p>
             <div class="image__inner">
                 <article class="image">
                     <figure class="image__header">

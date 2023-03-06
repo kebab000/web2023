@@ -59,8 +59,8 @@
                     <li><a href="#">09. 배열 : 데이터 불러오기 : for of</a></li>
                     <li><a href="#">10. 배열 : 데이터 불러오기 : for in</a></li>
                     <li><a href="#">11. 배열 : 데이터 불러오기 : map</a></li>
-                    <li><a href="#">12. 배열 : 데이터 불러오기 : 펼침 연산자</a></li>
-                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
+                    <li><a href="#">12. 배열 : 데이터 불러오기 : 배열 펼침 연산자</a></li>
+                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열 구조분해 할당</a></li>
                     <li><a href="#">14. 객체 : 데이터 불러오기 : 기본</a></li>
                     <li><a href="#">15. 객체 : 데이터 불러오기 : Object</a></li>
                     <li><a href="#">16. 객체 : 데이터 불러오기 : 변수</a></li>
@@ -227,8 +227,8 @@
                 <!-- //sanple06 -->
                 <div id="sample07" class="sample">
                     <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
-                    <p>for()문을 두 번 이상 사용하여 데이터를 불러오는 방법 입니다.</p>
-                    <p>중첩 for()문을 사용하여 5*5의 표와 2,3,4 단을 만들어 보았습니다</p>
+                    <p>for()문을 두 번 이상 사용하여 데이터를 불러오는 방법 입니다.<br>
+                    중첩 for()문을 사용하여 5*5의 표와 2,3,4 단을 만들어 보았습니다</p>
                     <div class="script">
 <pre><code class="language-js">// 5*5표를 만들어 보자
 let table = "&lttable border='1'&gt"
@@ -344,7 +344,8 @@ for(let i of arr){
                     <div class="script">
 <pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600];
 for(let i in arr){ 
-    document.write(i);
+            console.log("a" in obj)
+            document.write(i);
 }
 </code></pre>
                     </div>
@@ -389,21 +390,276 @@ num.map(function(el, i, a){
                                 {
                                     const num = [100, 200, 300, 400, 500];
                                     num.forEach(function(el, i, a){
-                                        console.log(el);
-                                        console.log(i);
-                                        console.log(a);
+                                        document.write(el);
+                                        document.write("<br>");
+                                        document.write(i);
+                                        document.write("<br>");
+                                        document.write(a);
+                                        document.write("<br>");
                                     });
+                                    document.write("위의 forEach문을 map문으로 나타낸 것의 결괏값입니다.<br>")
                                     num.map(function(el, i, a){
-                                        console.log(el);
-                                        console.log(i);
-                                        console.log(a);
+                                        document.write(el);
+                                        document.write("<br>");
+                                        document.write(i);
+                                        document.write("<br>");
+                                        document.write(a);
                                     });
                                 }
                             </script>
                         </details>
                     </div>
                 </div>
-                <!-- //sanple10-->
+                <!-- //sanple11-->
+                <div id="sample12" class="sample">
+                    <h3>12. 배열 : 데이터 불러오기 : 배열 펼침 연산자</h3>
+                    <p>배열 펼침(Spread) 연산자는 ... 기호로 표시되며, 배열이나 이터러블(iterable) 객체를 개별 요소로 분리하여 전개할 때 사용됩니다.<br> 
+                       배열 펼침 연산자는 배열을 다른 배열에 병합하거나, 함수의 인수로 배열을 전달할 때 유용하게 사용됩니다.</p>
+                    <div class="script">
+<pre><code class="language-js">let arr1 = [100, 200, 300, 400, 500];
+let arr2 = [600, 700];
+
+console.log(arr1);
+console.log(...arr1);
+console.log(...arr1, ...arr2);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    let arr1 = [100, 200, 300, 400, 500];
+                                    let arr2 = [600, 700];
+
+                                    document.write("["+arr1+"]<br>");
+                                    document.write(...arr1);
+                                    document.write("<br>")
+                                    document.write(...arr1, ...arr2);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple12-->
+                <div id="sample13" class="sample">
+                    <h3>13. 배열 : 데이터 불러오기 : 배열 구조분해 할당</h3>
+                    <p>배열 구조분해 할당은 배열의 요소를 개별 변수에 할당하는 방법중 하나입니다.<br>
+                         이를 통해 배열의 각 요소를 개별 변수로 분리하여 사용할 수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">let a, b, c;
+[a, b, c] = [100, 200, "javascript"];
+
+console.log(a);
+console.log(b);
+console.log(c);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    let a, b, c;
+
+                                    [a, b, c] = [100, 200, "javascript"];
+
+                                    document.write(a+"<br>");
+                                    document.write(b+"<br>");
+                                    document.write(c);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple13-->
+                <div id="sample14" class="sample">
+                    <h3>14. 객체 : 데이터 블러오기 : 기본</h3>
+                    <p>객체에 데이터를 저장하고 불러오는 기본적인 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+console.log(obj.a);
+console.log(obj.b);
+console.log(obj.c);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                    }
+                                    document.write(obj.a);
+                                    document.write("<br>");
+                                    document.write(obj.b);
+                                    document.write("<br>");
+                                    document.write(obj.c);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple15-->
+                <div id="sample15" class="sample">
+                    <h3>15. 객체 : 데이터 불러오기 : Objec</h3>
+                    <p>Object.keys/value/entries(객체명)을써서 키값,데이터값 혹은 둘다 를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                    }
+                                    document.write(Object.keys(obj));
+                                    document.write("<br>");
+                                    document.write(Object.values(obj));
+                                    document.write("<br>");
+                                    document.write(Object.entries(obj));
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple15-->
+                <div id="sample16" class="sample">
+                    <h3>16. 객체 : 데이터 불러오기 : 변수</h3>
+                    <p>객체의 데이터를 변수에 넣고 변수를 통해 객체의 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+const name1 = obj.a;
+const name2 = obj.b;
+const name3 = obj.c;
+
+console.log(name1);
+console.log(name2);
+console.log(name3);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                    }
+                                    const name1 = obj.a;
+                                    const name2 = obj.b;
+                                    const name3 = obj.c;
+
+                                    document.write(name1);
+                                    document.write("<br>");
+                                    document.write(name2);
+                                    document.write("<br>");
+                                    document.write(name3);
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple16-->
+                <div id="sample17" class="sample">
+                    <h3>17. 객체 : 데이터 불러오기 : for in</h3>
+                    <p>for in 문을 통해 객체 안의 키값과 데이터값을 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+for(let key in obj){
+    console.log(key);
+    console.log(obj[key]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                    }
+                                    for(let key in obj){
+                                        document.write(key);
+                                        document.write("<br>");
+                                        document.write(obj[key]);
+                                        document.write("<br>");
+                                    }
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple17-->
+                <div id="sample18" class="sample">
+                    <h3>18. 객체 : 데이터 불러오기 : map</h3>
+                    <p>객체의 데이터를 변수에 넣고 변수를 통해 객체의 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js"> const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+for(let key in obj){
+    console.log(key);
+    console.log(obj[key]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <script>
+                                {
+                                    const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                    }
+                                    for(let key in obj){
+                                        document.write(key);
+                                        document.write("<br>");
+                                        document.write(obj[key]);
+                                        document.write("<br>");
+                                    }
+                                }
+                            </script>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sanple18-->
             </div>
         </div>
     </main>
@@ -435,7 +691,7 @@ num.map(function(el, i, a){
         }
         {
             // 배열
-            let arr = [10,20,30,40,50,60,70,80,90]
+            // let arr = [10,20,30,40,50,60,70,80,90]
 
             // for( let i=0; i<arr.length; i++ ){
             //     document.write(a[i]);
@@ -512,22 +768,195 @@ num.map(function(el, i, a){
         //     }
         // }
 
+        // {
+        //     //11. 배열 : 데이터 불러오기 : map  // 차이점도 정리해죠
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     num.forEach(function(el, i, a){
+        //         console.log(el);
+        //         console.log(i);
+        //         console.log(a);
+        //     });
+
+        //     num.map(function(el, i, a){
+        //         console.log(el);
+        //         console.log(i);
+        //         console.log(a);
+        //     });
+        // }
         {
-            //11. 배열 : 데이터 불러오기 : map  // 차이점도 정리해죠
-            const num = [100, 200, 300, 400, 500];
+            const arr = [100,200,300,400, [500,600]]
 
-            num.forEach(function(el, i, a){
-                console.log(el);
-                console.log(i);
-                console.log(a);
-            });
+            // console.log (arr[4][0]);
 
-            num.map(function(el, i, a){
-                console.log(el);
-                console.log(i);
-                console.log(a);
-            });
+            // console.log(arr.length);
+
+            // for(let i=0; i<arr.length; i++){
+            // console.log(arr[i]);
+            // }
+
+            // arr.forEach(function(el){
+            // console.log(el);
+            // });
+
+            // arr.forEach(el => console.log(el));
+
+            // for(let i of arr){
+            //     document.write(i);
+            // }
+
+            // for(let i in arr){
+            //     document.write(arr[i]);
+            // }
+
+            // arr.map(function(el){
+            //     console.log(el);
+            // })
+            // console.log("aa")
+            // arr.map (el => console.log(el))
         }
+        
+            //12. 배열 : 데이터 불러오기 : 배열 펼침 연산자(spread operator)
+            // 배열에 포함된 항목을 목록으로 바꿔주는 연산자
+            // 
+        // {
+        //     let arr1 = [100, 200, 300, 400, 500];
+        //     let arr2 = [600, 700];
+
+        //     console.log(arr1);
+        //     console.log(...arr1);
+        //     console.log(...arr1, ...arr2);
+        // }
+
+        // 13. 배열 : 데이터 불러오기 : 배열 구조분해 할당
+        // 배열 구조분해 할당은 배열의 요소를 개별 변수에 할당하는 방법중 하나입니다.
+        // 이를 통해 배열의 각 요소를 개별 변수로 분리하여 사용할 수 있습니다.
+        // {
+            // let a, b, c;
+
+            // [a, b, c] = [100, 200, "javascript"];
+            // console.log(a);
+            // console.log(b);
+            // console.log(c);
+        // }
+
+        // 14. 객체 : 데이터 블러오기 : 기본
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript"
+        //     }
+        //     console.log(obj.a);
+        //     console.log(obj.b);
+        //     console.log(obj.c);
+        // }
+        // 15.
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript"
+        //     }
+        //     console.log(Object.keys(obj));
+        //     console.log(Object.values(obj));
+        //     console.log(Object.entries(obj));
+        // }
+        // 16. 객체 불러오기 변수
+        {
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javascript"
+            // }
+            // const name1 = obj.a;
+            // const name2 = obj.b;
+            // const name3 = obj.c;
+
+            // console.log(name1);
+            // console.log(name2);
+            // console.log(name3);
+        }
+        // 17. for in
+        // {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            for(let key in obj){
+                console.log(key);
+                console.log(obj[key]);
+            }
+        // }
+        // 18. map
+        {
+            // const obj = [
+            //     {a: 100, b: 200, c: "javascript"}
+            // ]
+            
+            
+            // obj.map((el) => {
+            //     console.log(el.a);
+            //     console.log(el.b);
+            //     console.log(el.c);
+            // })
+             
+            // obj.map(function(el){
+            //     console.log(el.a);
+            //     console.log(el.b);
+            //     console.log(el.c);
+            // })
+        }
+
+        //19. hasOwnProperty()
+        // 데이터가 있는지 없는지 알려줌
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript"
+        //     }
+        //     console.log(obj.hasOwnProperty("a"));
+        //     console.log(obj.hasOwnProperty("b"));
+        //     console.log(obj.hasOwnProperty("c"));
+        //     console.log(obj.hasOwnProperty("d"));
+        //     //약식으로
+        //     console.log("a" in obj)
+        //     console.log("b" in obj)
+        //     console.log("d" in obj)
+        // }
+        // //20 추가 결합
+        // {
+        //     const obj1 = {
+        //         a: 100,
+        //         b: 200,
+        //     } 
+        //     const obj2 = {
+        //         c: "javascript",
+        //         d: "react",
+        //     }
+        //     const spread = {...obj1, ...obj2}
+
+        //     console.log(spread.a);
+        //     console.log(spread.b);
+        //     console.log(spread.c);
+        //     console.log(spread.d);
+        // }
+        // //21. 객체 구조분해할당
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript",
+
+        //     }
+        //     const {a:name1, b:name2, c:name3} = obj;
+
+        //     console.log(name1);
+        //     console.log(name2);
+        //     console.log(name3);
+        // }
     </script>
 </body>
 </html>

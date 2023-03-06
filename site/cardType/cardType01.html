@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            text-decoration: none;
+        }
+        /* common */
+        .centainer {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: NexonLv1Gothic;
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* card__type */
+        .card__wrap {
+            height: 900px;
+        }
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card__inner .card {
+            width: 32.3333%;
+            background-color: #f8f8f8;
+        }
+        .card__header {}
+        .card__body {
+            padding: 24px;
+        }
+        .card__body .title{
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .card__body .desc{
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .card__body .btn{
+            padding-right: 40px;
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='8' viewBox='0 0 32 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM1 4.5H31V3.5H1V4.5Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="card__wrap section nexon">
+        <div class="centainer">
+            <h2 class="section__h2">식물을 키울 때 주의해야 할 것들</h2>
+            <p class="section__desc">식물을 키우는 방법에 대해서는 다양한 팁과 지침이 있지만 기본적인 것들에 대해서 이야기를 나누어 보려고 합니다.
+                다음에 설명할 내용과 같은 기본적인 방법들을 지키면, 식물을 적절히 관리하면 건강하고 아름다운 식물을 키울 수 있습니다.</p>
+            <div class="card__inner">
+                <article class="card">
+                    <figure class="card__header">
+                    <img src="../asset/img/cardType01_01.jpg" alt="적절한 환경조건 유지하기">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                        <p class="desc">각 식물마다 적합한 조도, 온도, 습도, 토양 등의 환경 조건이 다릅니다. 해당 환경 조건에 맞게 식물을 배치하고, 유지하는 것이 중요합니다. 적합한 관경 조성은 가장 중요한 조건입니다.</p>
+                        <a href="#" class="btn">자세히 보기
+                            
+                        </a>
+                    </div>  
+                </article>
+
+                <article class="card">
+                    <figure class="card__header">
+                    <img src="../asset/img/cardType01_02.jpg" alt="적절한 환경조건 유지하기">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                        <p class="desc">식물의 토양이 너무 건조해지지 않도록 꾸준한 관수를 해줘야 합니다. 하지만 과도한 관수는 뿌리 부분이 부패하거나 곰팡이가 생길 수 있으므로 적절한 배수와 관수가 필요합니다.</p>
+                        <a href="#" class="btn">자세히 보기
+                           
+                        </a>
+                    </div> 
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_03.jpg" alt="적절한 환경조건 유지하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                            <p class="desc">식물은 영양분을 필요로 합니다. 때문에, 적절한 비료 사용이 필요합니다. 비료의 종류와 양은 식물의 종류와 성장 단계에 따라 다를 수 있으므로, 자세히 알아보는 것이 좋습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div> 
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

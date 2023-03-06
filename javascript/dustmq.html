@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #2b2121;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "nav nav"
+            "aside section1"
+            "aside section2"
+            "footer footer"
+            ;
+            grid-template-rows: 100px 100px 400px 400px 100px;
+            grid-template-columns: 400px 800px;
+        }
+        #header {
+            background-color: #b87171;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #b816c1;
+            grid-area: nav;
+        }
+        .aside {
+            background-color: #5f7cc5;
+            grid-area: aside;
+        }
+        .section1 {
+            background-color: #588f76;
+            grid-area: section1;
+        }
+        .section2 {
+            background-color: #4ab383;
+            grid-area: section2;
+        }
+        #footer {
+            background-color: #cbe947;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <div class="aside"></div>
+        <section class="section1"></section>
+        <section class="section2"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

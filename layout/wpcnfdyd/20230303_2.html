@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #332a2a;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1200px;
+            display: grid;
+            grid-template-columns: 200px 800px 200px;
+            grid-template-rows: 100px 100px 400px 400px 100px;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside section1 banner"
+            "aside section2 banner"
+            "footer footer footer"
+            ;
+        }
+        #header {
+            background-color: #c28282;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #1e8448;
+            grid-area:nav;
+        }
+        .aside {
+            background-color: #a0ca2c;
+            grid-area:aside;
+        }
+        .section1 {
+            background-color: #2ce06b;
+            grid-area:section1;
+        }
+        .section2 {
+            background-color: #053014;
+            grid-area:section2;
+        }
+        .banner {
+            background-color: #b1d9bf;
+            grid-area:banner
+        }
+        #footer {
+            background-color: #034b1c;
+            grid-area:footer
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside class="aside"></aside>
+        <section class="section1"></section>
+        <section class="section2"></section>
+        <banner class="banner"></banner>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

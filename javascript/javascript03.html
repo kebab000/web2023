@@ -57,8 +57,8 @@
                     <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
                     <li><a href="#">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
                     <li><a href="#">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-                    <li><a href="#">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생락</a></li>
-                    <li><a href="#">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생락</a></li>
+                    <li><a href="#">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
+                    <li><a href="#">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
 
 
                     <li><a href="#">04. 함수 유형 : 햄수와 매개변수를 이용한 형태</a></li>
@@ -322,7 +322,7 @@ func("화살표 함수 : 매개변수 함수");
                 <!-- // sample07 -->
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
-                    <p>리턴값 함수에 "function"을 뻬고 "=","=>"을 넣어 줄여쓰는 방법입니다.</p>
+                    <p>리턴값 함수에 "function"을 뻬고 "=","=&gt;"을 넣어 줄여쓰는 방법입니다.</p>
                     <div class="script">
 <pre><code class="language-js">// 기본 형식의 리턴값 함수입니다. 
 function func(){
@@ -332,7 +332,7 @@ function func(){
 document.write(func());
 //------------------------------------------------------------
 //위의 것을 화살표 함수를 써서 줄인 방법입니다.
-func = () => {
+func = () =&gt; {
     const str = "화살표 함수 : 리턴값 함수";
     return str;
 }
@@ -413,10 +413,10 @@ document.write(func("실행되었습니다"));
                 </div>
                         <!-- // sample10 -->
                 <div id="sample11" class="sample">
-                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생락</h3>
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
                     <p>10번에서 리턴까지 생략한 형식입니다.</p>
                     <div class="script">
-<pre><code class="language-js">const func = str => str;
+<pre><code class="language-js">const func = str =&gt; str;
 document.write(func("실행되었습니다"));
 </code></pre>
                     </div>
@@ -434,10 +434,10 @@ document.write(func("실행되었습니다"));
                 </div>
                         <!-- // sample11 -->
                 <div id="sample12" class="sample">
-                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생락</h3>
+                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</h3>
                     <p>11번에서 익명 함수를 선언적 함수로 바꾼 것 입니다.</p>
                     <div class="script">
-<pre><code class="language-js">func = str => str;
+<pre><code class="language-js">func = str =&gt; str;
 document.write(func("실행되었습니다"));
 </code></pre>
                     </div>

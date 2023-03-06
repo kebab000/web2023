@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        } 
+        body {
+            background-color: #b84747;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 450px 450px;
+            grid-template-rows: 100px 100px 300px 300px 300px 100px;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside article1 article2"
+            "aside section1 section1"
+            "aside section2 section2"
+            "footer footer footer"
+            ;
+        }
+        #header {
+            background-color: #aab535;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #39b439;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #7192b2;
+            grid-area: aside;
+        }
+        #article1 {
+            background-color: #ca1bad;
+            grid-area: article1;
+        }
+        #article2 {
+            background-color: #06513b;
+            grid-area: article2;
+        }
+        #section1 {
+            background-color: #26c295;
+            grid-area: section1;
+        }
+        #section2 {
+            background-color: #022f22;
+            grid-area: section2;
+        }
+        #footer {
+            background-color: #0b116a;
+            grid-area: footer;
+        }
+            </style>
+            </head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <section id="section1"></section>
+        <section id="section2"></section>
+        <footer id="footer"></footer>
+    </div>
+    
+</body>
+</html>
