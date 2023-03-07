@@ -181,24 +181,23 @@
     console.log("함수밖"+y);
 }
 {
-let x = 100;    // 전역 변수
-let y = 200;    // 전역 변수
+    let x = 100;    // 전역 변수
+    let y = 200;    // 전역 변수
 
-function func(){
-    x = 300;    // 전역 변수  let이 사라지면서 지역번수가 전역변수로 바뀌었다.
-    let y = 400;    // 지역 변수
-    z = "javascript" // 변수선언을 안해주었음에도 전역변수가 된다.
-    console.log("함수안"+x);
-    console.log("함수안"+y);
-    console.log("함수안"+z);
+    function func(){
+        x = 300;    // 전역 변수  let이 사라지면서 지역번수가 전역변수로 바뀌었다.
+        let y = 400;    // 지역 변수
+        z = "javascript" // 변수선언을 안해주었음에도 전역변수가 된다.
+        console.log("함수안"+x);
+        console.log("함수안"+y);
+        console.log("함수안"+z);
+    }
+    func();
+
+    console.log("함수밖"+x);
+    console.log("함수밖"+y);
+    console.log("함수밖"+z);
 }
-func();
-
-console.log("함수밖"+x);
-console.log("함수밖"+y);
-console.log("함수밖"+z);
-}
-
 </code></pre>
                         </div>
                         <div class="result">
