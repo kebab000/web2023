@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        img {
+            text-decoration: none;
+        }
+        .nexon {
+            font-family: NexonLv1Gothic;
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #218d73;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 70px !important;}
+        .mt70 {margin-top: 60px !important;}
+        
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 70px !important;}
+        .mb70 {margin-bottom: 60px !important;}
+
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+
+        }
+        /* text__wrap */
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner .text {
+            width: 32.33333%;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__inner .text.t1::before {
+            background-color: rgba(11, 98, 19, 0.3);
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text__inner .text.t2::before {
+            background-color: rgba(11, 98, 19, 0.4);
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text__inner .text.t3::before{
+            background-color: rgba(11, 98, 19, 0.5);
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner .text.t4::before{
+            background-color: rgba(11, 98, 19, 0.6);
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text__inner .text.t5::before{
+            background-color: rgba(11, 98, 19, 0.7);
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text__inner .text.t6::before{
+            background-color: rgba(11, 98, 19, 0.8);
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-style: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            background-image: url(../asset/img/icon_plus.svg);
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all 0.5s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+</style>
+</head>
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">NOTICE</span>
+            <h2 class="section__h2 mb70">식물을 키울 때 유의할 점</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">적절한 환경 조성</h3>
+                    <p class="text__desc">각 식물은 자신만의 적절한 환경을 필요로 합니다. 적절한 온도, 습도, 빛 등을 제공해주어야 합니다. 예를 들어, 대부분의 화분 식물들은 밝은 곳에서 자라는 것을 좋아합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">적절한 수분 공급</h3>
+                    <p class="text__desc">대부분의 식물들은 적절한 양의 물을 필요로 합니다. 물 주기는 각 식물마다 다르며, 너무 많이 물을 주거나 적게 물을 주는 것은 식물의 건강에 영향을 미칠 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">적절한 토양 선택</h3>
+                    <p class="text__desc">적절한 토양을 선택하여 식물이 뿌리를 잘 박을 수 있도록 도와줍니다. 일반적으로, 잘 배수되는 토양과 건조하게 유지되지 않는 토양을 선택하는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">깨끗한 환경 유지</h3>
+                    <p class="text__desc">깨끗한 환경을 유지하여 식물이 병에 걸리거나 해충에 감염되지 않도록 합니다. 잎을 닦아주고 잎이 부패되거나 떨어지는 것을 제거해줍니다.중요하지 않아보이지만 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">영양분 제공</h3>
+                    <p class="text__desc">영양분이 필요한 경우, 식물에게 적절한 비료를 제공해주어야 합니다. 이 때, 비료의 종류와 양은 식물 종류와 상황에 따라 다릅니다. 올바른 영양제 선택이 매우 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">가지치기</h3>
+                    <p class="text__desc">너무 많은 가지는 식물이 흡수하는 영양분을 분산 시키기 때문에 식물이 자라는 과정에서 적당히 가지치기를 하면, 식물의 성장을 촉진시키고 생산성을 높일 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
