@@ -678,11 +678,31 @@ func(info[2].num, info[2].name,info[2].word);
                 </div>
                         <!-- // sample17 -->
                 <div id="sample18" class="sample">
-                    <h3>18. 함수 유형 : 객체안에 함수를 넣어 이용한 형태</h3>
-                    <p>11번에서 익명 함수를 선언적 함수로 바꾼 것 입니다.</p>
+                    <h3>18. 함수 유형 : 객체 안에 함수를 넣어 이용한 형태</h3>
+                    <p>객체 안에 함수를 넣어 문장을 출력하는 방법입니다.</p>
                     <div class="script">
-<pre><code class="language-js">func = str =&gt; str;
-document.write(func("실행되었습니다"));
+<pre><code class="language-js">const info = {
+    num1 : 1,
+    name1 : "함수",
+    num2 : 2,
+    name2 : "자바스크립트",
+    num3 : 3,
+    name3 : "리액트",
+    word : "실행",
+    result1 : function(){
+        document.write(info.num1+ "." + info.name1 + "가" + info.word + "되었습니다."); 
+    },
+    result2 : function(){
+        document.write(info.num2+ "." + info.name2 + "가" + info.word + "되었습니다."); 
+    },
+    result3 : function(){
+        document.write(info.num3+ "." + info.name3 + "가" + info.word + "되었습니다."); 
+    }
+}
+
+info.result1();
+info.result2();
+info.result23();
 </code></pre>
                     </div>
                     <div class="result">
@@ -690,8 +710,28 @@ document.write(func("실행되었습니다"));
                             <summary>결과 확인하기</summary>
                             <script>
                                 {            
-                                    func = str => str;
-                                    document.write(func("실행되었습니다"));
+                                    const info = {
+                                        num1 : 1,
+                                        name1 : "함수",
+                                        num2 : 2,
+                                        name2 : "자바스크립트",
+                                        num3 : 3,
+                                        name3 : "리액트",
+                                        word : "실행",
+                                        result1 : function(){
+                                            document.write(info.num1+ "." + info.name1 + "가" + info.word + "되었습니다."); 
+                                        },
+                                        result2 : function(){
+                                            document.write(info.num2+ "." + info.name2 + "가" + info.word + "되었습니다."); 
+                                        },
+                                        result3 : function(){
+                                            document.write(info.num3+ "." + info.name3 + "가" + info.word + "되었습니다."); 
+                                        }
+                                    }
+
+                                    info.result1();
+                                    info.result2();
+                                    info.result23();
                                 }
                             </script>
                         </details>
@@ -700,10 +740,25 @@ document.write(func("실행되었습니다"));
                         <!-- // sample18 -->
                 <div id="sample19" class="sample">
                     <h3>19. 함수 유형 : 객체생성자 함수</h3>
-                    <p>11번에서 익명 함수를 선언적 함수로 바꾼 것 입니다.</p>
+                    <p>함수에 데이터를 넣어 원하는 문장을 출력하는 방법입니다.</p>
                     <div class="script">
-<pre><code class="language-js">func = str =&gt; str;
-document.write(func("실행되었습니다"));
+<pre><code class="language-js">function Func(num, name, word){
+    this.num = num;
+    this.name = name;
+    this.word = word;
+
+    this.result = function(){
+        document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+    }
+}
+// 인스턴스 생성 
+const info1 = new Func(1, "함수", "실행");
+const info2 = new Func(2, "자바스크립트", "실행");
+const info3 = new Func(3, "리액트", "실행");
+
+info1.result();
+info2.result();
+info3.result();
 </code></pre>
                     </div>
                     <div class="result">
@@ -711,8 +766,23 @@ document.write(func("실행되었습니다"));
                             <summary>결과 확인하기</summary>
                             <script>
                                 {            
-                                    func = str => str;
-                                    document.write(func("실행되었습니다"));
+                                    function Func(num, name, word){
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+
+                                        this.result = function(){
+                                            document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+                                        }
+                                    }
+                                    // 인스턴스 생성 
+                                    const info1 = new Func(1, "함수", "실행");
+                                    const info2 = new Func(2, "자바스크립트", "실행");
+                                    const info3 = new Func(3, "리액트", "실행");
+
+                                    info1.result();
+                                    info2.result();
+                                    info3.result();
                                 }
                             </script>
                         </details>
@@ -721,10 +791,25 @@ document.write(func("실행되었습니다"));
                         <!-- // sample19 -->
                 <div id="sample20" class="sample">
                     <h3>20. 함수 유형 : 프로토타입 함수</h3>
-                    <p>11번에서 익명 함수를 선언적 함수로 바꾼 것 입니다.</p>
+                    <p>프로토타입 함수(Prototype Function)는 자바스크립트에서 객체 생성자(Constructor)를 사용하여 생성된 모든 객체에서 공유되는 메서드입니다.</p>
                     <div class="script">
-<pre><code class="language-js">func = str =&gt; str;
-document.write(func("실행되었습니다"));
+<pre><code class="language-js">function Func(num, name, word){
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+Func.prototype.result = function(){
+    document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+}
+
+const info1 = new Func(1, "함수", "실행");
+const info2 = new Func(2, "자바스크립트", "실행");
+const info3 = new Func(3, "리액트", "실행");
+
+info1.result();
+info2.result();
+info3.result();
 </code></pre>
                     </div>
                     <div class="result">
@@ -732,8 +817,23 @@ document.write(func("실행되었습니다"));
                             <summary>결과 확인하기</summary>
                             <script>
                                 {            
-                                    func = str => str;
-                                    document.write(func("실행되었습니다"));
+                                    function Func(num, name, word){
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+                                    }
+
+                                    Func.prototype.result = function(){
+                                        document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+                                    }
+
+                                    const info1 = new Func(1, "함수", "실행");
+                                    const info2 = new Func(2, "자바스크립트", "실행");
+                                    const info3 = new Func(3, "리액트", "실행");
+
+                                    info1.result();
+                                    info2.result();
+                                    info3.result();
                                 }
                             </script>
                         </details>
@@ -894,16 +994,16 @@ document.write(func("실행되었습니다"));
     // 19. 함수 유형 : 객체생성자 함수
         // 단점은 모든 함수가 실행되기 때문에 낭비되는 리소스가 있다.
     // {
-    //     function Func(num, name, word){
-    //         this.num = num;
-    //         this.name = name;
-    //         this.word = word;
+        // function Func(num, name, word){
+        //     this.num = num;
+        //     this.name = name;
+        //     this.word = word;
 
-    //         this.result = function(){
-    //             document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
-    //         }
-    //     }
-    //     // 인스턴스 생성 
+        //     this.result = function(){
+        //         document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+        //     }
+        // }
+        // // 인스턴스 생성 
         // const info1 = new Func(1, "함수", "실행");
         // const info2 = new Func(2, "자바스크립트", "실행");
         // const info3 = new Func(3, "리액트", "실행");
@@ -914,23 +1014,23 @@ document.write(func("실행되었습니다"));
     // }
     //20. 함수 유형 : 프로토타입 함수
     // {
-    //     function Func(num, name, word){
-    //         this.num = num;
-    //         this.name = name;
-    //         this.word = word;
-    //     }
+        function Func(num, name, word){
+            this.num = num;
+            this.name = name;
+            this.word = word;
+        }
 
-    //     Func.prototype.result = function(){
-    //         document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
-    //     }
+        Func.prototype.result = function(){
+            document.write(this.num+ "." + this.name + "가" + this.word + "되었습니다.");
+        }
 
-    //     const info1 = new Func(1, "함수", "실행");
-    //     const info2 = new Func(2, "자바스크립트", "실행");
-    //     const info3 = new Func(3, "리액트", "실행");
+        const info1 = new Func(1, "함수", "실행");
+        const info2 = new Func(2, "자바스크립트", "실행");
+        const info3 = new Func(3, "리액트", "실행");
 
-    //     info1.result()
-    //     info2.result()
-    //     info3.result()
+        info1.result()
+        info2.result()
+        info3.result()
     // }
     </script>
 </body>
