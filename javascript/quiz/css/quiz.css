@@ -1,6 +1,4 @@
-body {
 
-}
 /* header */
 #header {
     position: fixed;
@@ -178,6 +176,7 @@ header h1 em {
 
 .quiz__desc {
     padding-top: 5px;
+    line-height: 1.5;
 }
 /* dog__wrap */
 .dog .tail,

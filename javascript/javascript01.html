@@ -878,7 +878,12 @@
                 기본적인 비트연산자는 AND(&), OR(|), XOR(^), NOT(~)등이 있습니다.</p>                        
                         <div class="script">
 <pre><code class="language-js">{
-    let x =     
+    let x = 5;
+    let y = 21;
+
+    document.write(x&y);
+    document.write(x|y);
+    document.write(x^y);
 }
 </code></pre>
                         </div>
@@ -887,14 +892,14 @@
                                 <summary>결과 확인하기</summary>
                                 <script>
                                     {
-                                        let x = 7 , y = 7, result;
-                                        result = x > y ? ++x : y--;
+                                        let x = 5;
+                                        let y = 21;
 
-                                        document.write(result);
+                                        document.write(x&y);
                                         document.write("<br>");
-                                        document.write(x);
+                                        document.write(x|y);
                                         document.write("<br>");
-                                        document.write(y);
+                                        document.write(x^y);
                                     }
                                 </script>
                             </details>
@@ -1179,20 +1184,20 @@ console.log(typeof function() {}); // "function"
         }
         //04. 변수 : 지역변수 + 전역변수
         {
-            let x = 100;    // 전역 변수
-            let y = 200;    // 전역 변수
+            // let x = 100;    // 전역 변수
+            // let y = 200;    // 전역 변수
             
-            function func(){
-                let x = 300;    // 지역 변수
-                let y = 400;    // 지역 변수
+            // function func(){
+            //     let x = 300;    // 지역 변수
+            //     let y = 400;    // 지역 변수
 
-                console.log("함수안"+x);
-                console.log("함수안"+y);
-            }
-            func();
+            //     console.log("함수안"+x);
+            //     console.log("함수안"+y);
+            // }
+            // func();
 
-            console.log("함수밖"+x);
-            console.log("함수밖"+y);
+            // console.log("함수밖"+x);
+            // console.log("함수밖"+y);
         }
         // {
             // let x = 100;    // 전역 변수
@@ -1213,10 +1218,16 @@ console.log(typeof function() {}); // "function"
             // console.log("함수밖"+z);
         // }
         {
-            let x = 9;
-            let y = 11;
+            let x = 5;
+            let y = 21;
 
+            document.write(x&y);
+            document.write("<br>");
+            document.write(x|y);
+            document.write("<br>");
             document.write(x^y);
+            document.write("<br>");
+
         }
     </script>
 </body>
