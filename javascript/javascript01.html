@@ -66,9 +66,9 @@
                     <li><a href="#">15. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
                     <li><a href="#">16. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
                     <li><a href="#">17. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
-                    <li><a href="#">18. ++ 식별자, 예약자</a></li>
-                    <li><a href="#">18. ++ 연산자</a></li>
-                    <li><a href="#">19. ++ 형변환, typeof</a></li>
+                    <li><a href="#">++ 연산자, 비트 연산자</a></li>
+                    <li><a href="#">++ 식별자, 예약자</a></li>
+                    <li><a href="#">++ 형변환, typeof</a></li>
                 </ul>
                 <div class="main__sample">
                     <div id="sample01" class="sample">
@@ -843,7 +843,7 @@
                     </div>
                     <!-- //sample23 -->
                     <div id="sample24" class="sample">
-                        <h3>18."++" 전치 증감연산자와 후치 증감연산자</h3>
+                        <h3>++전치 증감연산자와 후치 증감연산자/비트연산자</h3>
                     <p>증감연산자에서 기호를 앞에 쓰는 것과 뒤에 쓰는 것은 연산 우선순위에서 차이가 있습니다.<br>
                     전치증감연산자는 우선순위가 "="보다 높고 후치증감연산자는 낮습니다.</p>                        
                         <div class="script">
@@ -855,6 +855,31 @@
     console.log(x);
     console.log(y);
     //만약 삼항연산자가 아니고 if 문이면 x 는 8 이된다.
+}
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <script>
+                                    {
+                                        let x = 7 , y = 7, result;
+                                        result = x > y ? ++x : y--;
+
+                                        document.write(result);
+                                        document.write("<br>");
+                                        document.write(x);
+                                        document.write("<br>");
+                                        document.write(y);
+                                    }
+                                </script>
+                            </details>
+                        </div>
+                <p>비트 수준에서 논리 연산을 수행하는 연산자입니다. 이러한 연산자는 정수형 데이터를 다루는 데 유용합니다.<br>
+                기본적인 비트연산자는 AND(&), OR(|), XOR(^), NOT(~)등이 있습니다.</p>                        
+                        <div class="script">
+<pre><code class="language-js">{
+    let x =     
 }
 </code></pre>
                         </div>
@@ -878,7 +903,41 @@
                     </div>
                     <!-- //sample24 -->
                     <div id="sample25" class="sample">
-                        <h3>19.형변환, typeof</h3>
+                        <h3>++식별자,예약자</h3>
+                    <p>식별자(identifier)는 변수나 함수의 이름을 작성할 때 사용하는 이름을 의미합니다.<br>
+                        예약자는 언어에서 특별한 의미를 가지는 단어로, 변수 또는 함수 이름으로 사용할 수 없습니다.</p>                        
+                        <div class="script">
+<pre><code class="language-js">식별자 규칙
+1. 키워드를 사용하면 안 된다.
+2. 숫자로 시작하면 안 된다.
+3. 특수 문자는 _와 $만 허용된다.
+4. 공백 문자를 포함할 수 없다.
+
+// 예시
+// 유효한 식별자
+var myVariable;
+var my_function_name;
+var $myObject;
+var _myObject;
+var π = 3.14;
+
+// 유효하지 않은 식별자
+var 123myVariable; // 숫자로 시작해서는 안됨
+var my-variable; // 하이픈(-)을 사용해서는 안됨
+var if = 10; // 예약어를 사용해서는 안됨
+</code></pre>
+<pre><code class="language-js">예약어 목록입니다.
+abstract, arguments, boolean, break, byte, case, catch, char, class*, const, continue, debugger, default, delete  
+do, double, else, enum*, eval, export*, extends*, false, final, finally, float, for, function,  goto, if, implements, 
+import*, in, instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, 
+short, static, super*, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, volatile, while, 
+with, yield
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- //sample25 -->
+                    <div id="sample26" class="sample">
+                        <h3>++형변환, typeof</h3>
                     <p>증감연산자에서 기호를 앞에 쓰는 것과 뒤에 쓰는 것은 연산 우선순위에서 차이가 있습니다.<br>
                     전치증감연산자는 우선순위가 "="보다 높고 후치증감연산자는 낮습니다.</p>                        
                         <div class="script">
@@ -911,7 +970,7 @@
                             </details>
                         </div>
                     </div>
-                    <!-- //sample25 -->
+                    <!-- //sample26 -->
                 </div>
             </div>
         </div>
@@ -1160,6 +1219,12 @@
             // console.log("함수밖"+y);
             // console.log("함수밖"+z);
         // }
+        {
+            let x = 9;
+            let y = 11;
+
+            document.write(x^y);
+        }
     </script>
 </body>
 </html>
