@@ -1,12 +1,12 @@
-# web2023
+# web2023   
 
-나의 블로그 : https://kebab00.tistory.com/
-# HTML
-블록구조와 인라인구조
-시멘틱 태그
+나의 블로그 : https://kebab00.tistory.com/   
+# HTML   
+블록구조와 인라인구조   
+시멘틱 태그   
 
 #JAVASCRIPT
-변수, 상수, 배열, 객체
+변수, 상수, 배열, 객체   
 데이터 저장하기 : https://kebab000.github.io/web2023/javascript/javascript01.html   
 데이터 출력하기 : https://kebab000.github.io/web2023/javascript/javascript02.html   
 데이터 실행하기 : https://kebab000.github.io/web2023/javascript/javascript03.html   
