@@ -303,7 +303,7 @@
     console.log(a%b);   
 
     let c = 10;     
-    c = "100"       //숫자 10 이였던 c 가 문자"100"이 되고 
+    c = "100";       //숫자 10 이였던 c 가 문자"100"이 되고 
     c = 1000;       //그 후에 다시 1000으로 바뀌고 1000에
     c += 1000;      //1000이 더해져 2000이 되었습니다.                    
     console.log(c);  
@@ -567,7 +567,7 @@
 <pre><code class="language-js">{
     const brr = new Array();
     const crr = new Array(200,"react", false);
-    const drr = []
+    const drr = [];
     const err = [300, "arrat", true];
 
     brr[0] = 100;
@@ -611,7 +611,6 @@
     console.log(obj[0]);
     console.log(obj[1]);
     console.log(obj[2]);
-
 }
 </code></pre>
                         </div>
@@ -814,10 +813,10 @@
         c: "javascript",
         d: function(){
         document.write("javascript가 실행되었습니다.");
-        }
+        };
         e: function(){
-            console.log(obj.c + "가 실행되었습니다.")
-        }
+            console.log(obj.c + "가 실행되었습니다.");
+        };
     };
 
     console.log(obj.a);
@@ -938,36 +937,30 @@ with, yield
                     <!-- //sample25 -->
                     <div id="sample26" class="sample">
                         <h3>++형변환, typeof</h3>
-                    <p>증감연산자에서 기호를 앞에 쓰는 것과 뒤에 쓰는 것은 연산 우선순위에서 차이가 있습니다.<br>
-                    전치증감연산자는 우선순위가 "="보다 높고 후치증감연산자는 낮습니다.</p>                        
+                    <p>형변환은 값의 타입을 다른 타입으로 변환하는 것을 말합니다.<br>
+                        typeof 연산자는 주어진 값의 타입을 문자열로 반환합니다.<br>
+                        자바스크립트에서는 형변환이 자주 일어나며, 그것을 확인하기 위해 typeof를 자주사용합니다.</p>                        
                         <div class="script">
-<pre><code class="language-js">{
-    let x = 7 , y = 7, result;
-    result = x &gt; y ? ++x : y--;
+<pre><code class="language-js">//암시적 형변환
+let num = 10;
+let str = "20";
+let result = num + str; // "1020"
 
-    console.log(result);
-    console.log(x);
-    console.log(y);
-    //만약 삼항연산자가 아니고 if 문이면 x 는 8 이된다.
-}
+//명시적 형변환
+let str = "123";
+let num = Number(str); // 123
+let bool = Boolean(str); // true
+
+//typeof
+console.log(typeof 123); // "number"
+console.log(typeof "hello"); // "string"
+console.log(typeof true); // "boolean"
+console.log(typeof undefined); // "undefined"
+console.log(typeof null); // "object"
+console.log(typeof []); // "object"
+console.log(typeof {}); // "object"
+console.log(typeof function() {}); // "function"
 </code></pre>
-                        </div>
-                        <div class="result">
-                            <details>
-                                <summary>결과 확인하기</summary>
-                                <script>
-                                    {
-                                        let x = 7 , y = 7, result;
-                                        result = x > y ? ++x : y--;
-
-                                        document.write(result);
-                                        document.write("<br>");
-                                        document.write(x);
-                                        document.write("<br>");
-                                        document.write(y);
-                                    }
-                                </script>
-                            </details>
                         </div>
                     </div>
                     <!-- //sample26 -->

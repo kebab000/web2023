@@ -100,7 +100,7 @@
                     <p>상수 안에 있는 데이터를 불러오는 방법 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const x = 100, y = 200, z = "javascript"
+    const x = 100, y = 200, z = "javascript";
 
     console.log(x, y, z);
 }
@@ -182,9 +182,9 @@
                     <p>for()문을 사용하여 데이터를 불러오는 방법 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90];
-    for(let i=0; i&lt=8; i++) {
+for(let i=0; i&lt=8; i++) {
     console.log(arr[i]);
-    };
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -231,13 +231,13 @@
                     <div class="script">
 <pre><code class="language-js">// 5*5표를 만들어 보자
 let table = "&lttable border='1'&gt"
-        for(i=1; i&lt 6; i++){
-            table += "&lttr&gt"
-                for(j=1; j&lt 6; j++){
-                    table +="&lttd&gt;"+j+"&lt/td&gt"
-                };
-            table +="&lt/tr&gt" 
-        };
+for(i=1; i&lt 6; i++){
+    table += "&lttr&gt"
+    for(j=1; j&lt 6; j++){
+        table +="&lttd&gt;"+j+"&lt/td&gt"
+    };
+    table +="&lt/tr&gt" 
+};
 table += "&lt/table&gt" 
 document.write(table);
 ----------------------------------------------------------------------------------------
@@ -256,13 +256,13 @@ for(let i=2; i &lt 5; i++){
                             <script>
                                 document.write("5*5표를 만들어 보자")
                                 let table = "<table border='1'>"
-                                        for(i=1; i<6; i++){
-                                            table += "<tr>"
-                                                for(j=1; j<6; j++){
-                                                    table +="<td>"+j+"</td>"
-                                                }
-                                            table +="</tr>" 
+                                    for(i=1; i<6; i++){
+                                        table += "<tr>"
+                                            for(j=1; j<6; j++){
+                                                table +="<td>"+j+"</td>"
                                             }
+                                        table +="</tr>" 
+                                        }
                                     table += "</table>" 
                                     document.write(table)
 
@@ -342,9 +342,8 @@ for(let i of arr){
                        요즘엔 배열에도 많이 사용합니다.</p>
                     <div class="script">
 <pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600];
-for(let i in arr){ 
-            console.log("a" in obj)
-            document.write(i);
+for(let i in arr){
+    document.write(i);
 }
 </code></pre>
                     </div>
@@ -480,7 +479,7 @@ console.log(c);
     a: 100,
     b: 200,
     c: "javascript"
-}
+};
 console.log(obj.a);
 console.log(obj.b);
 console.log(obj.c);
@@ -550,7 +549,7 @@ console.log(Object.entries(obj));
     a: 100,
     b: 200,
     c: "javascript"
-}
+};
 const name1 = obj.a;
 const name2 = obj.b;
 const name3 = obj.c;
@@ -593,11 +592,11 @@ console.log(name3);
     a: 100,
     b: 200,
     c: "javascript"
-}
+};
 for(let key in obj){
     console.log(key);
     console.log(obj[key]);
-}
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -628,19 +627,19 @@ for(let key in obj){
                     배열에만 사용이 가능하므로 배열 안의 객체가 아닌 객체만 단독으로 있다면 사용하지 못합니다.</p>
                     <div class="script">
 <pre><code class="language-js">const obj = [
-    {a: 100, b: 200, c: "javascript"}
-]
+    {a: 100, b: 200, c: "javascript"};
+];
 obj.map(function(el){
     console.log(el.a);
     console.log(el.b);
     console.log(el.c);
-})
+});
 //-------------------------화살표 함수 ver.
 obj.map((el) =&gt; {
     console.log(el.a);
     console.log(el.b);
     console.log(el.c);
-})
+});
 </code></pre>
                     </div>
                     <div class="result">
@@ -682,7 +681,7 @@ obj.map((el) =&gt; {
     a: 100,
     b: 200,
     c: "javascript"
-}
+};
 console.log(obj.hasOwnProperty("a"));
 console.log(obj.hasOwnProperty("b"));
 console.log(obj.hasOwnProperty("c"));
@@ -733,7 +732,7 @@ console.log("d" in obj);
 <pre><code class="language-js">const obj1 = {
     a: 100,
     b: 200,
-} 
+};
 const spread = {...obj1};
 
 console.log(spread.a);
@@ -768,7 +767,7 @@ console.log(spread.b);
 <pre><code class="language-js">const obj1 = {
     a: 100,
     b: 200,
-} 
+};
 const spread = {...obj1, c:"javascript"};
 
 console.log(spread.a);
@@ -806,12 +805,12 @@ console.log(spread.c);
 <pre><code class="language-js">const obj1 = {
     a: 100,
     b: 200,
-} 
+}; 
 const obj2 = {
     c: "javascript",
     d: "react",
-}
-const spread = {...obj1, ...obj2}
+};
+const spread = {...obj1, ...obj2};
 
 console.log(spread.a);
 console.log(spread.b);

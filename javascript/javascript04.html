@@ -70,10 +70,10 @@
                     0, null, undefined, false, ""(빈 문자열)의 값은 false가 나오고 그외의 값은 true가 나옵니다.</p>
                     <div class="script">
 <pre><code class="language-js">if("a") {
-    document.write("실행되었습니다.(true)")
+    document.write("실행되었습니다.(true)");
     } else {
-    document.write("실행되었습니다.(false)")
-}
+    document.write("실행되었습니다.(false)");
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -102,11 +102,11 @@
 if(num){
     document.write("실행됐나?")
     } else { document.write("실행되겠냐?");
-    }
+    };
     //일반적인 if문
 ----------------------------------------------------------------
 if(num) document.write("실행됐나?");
-else document.write("되겠냐?")
+else document.write("되겠냐?");
     // if 문 생략 예제
 </code></pre>
                     </div>
@@ -175,8 +175,8 @@ if(num == 90){
     } else if (num == 130){
     document.write("실행되었습니다(num == 130)");
     } else {
-    document.write("몰?루")
-}
+    document.write("몰?루");
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -216,11 +216,11 @@ if(num == 100){
         document.write("실행 2");
         if(num == 100){
             document.write("실행3");
-        }                    
-    }
+        };               
+    };
 } else {
-    document.write("실행4")
-}
+    document.write("실행4");
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -273,8 +273,8 @@ switch(num){
         document.write("실행40");
         break;
     default:
-        document.write("0")
-}
+        document.write("0");
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -320,6 +320,7 @@ switch(num){
 while(num&lt5){
     document.write(num);
     num++;
+}
 let num2 = 0;
 </code></pre>
                     </div>
@@ -349,7 +350,7 @@ let num2 = 0;
 do{
     document.write(num2);
     num2++;
-}while(num2&lt5)
+}while(num2&lt5);
 </code></pre>
                     </div>
                     <div class="result">
@@ -361,7 +362,7 @@ do{
                                     do{
                                         document.write(num2);
                                         num2++;
-                                    }while(num2<5)
+                                    }while(num2<5);
                                 }
                             </script>
                         </details>
@@ -375,15 +376,15 @@ do{
                     <div class="script">
 <pre><code class="language-js">for(let i=1; i&lt;10; i++){
     document.write(i);
-}
-배열안의 데이터를 불러오는 방법
+};
+//배열안의 데이터를 불러오는 방법
 let num = [1,2,3,4,5,6,7,8,9];
-let sum = 0
+let sum = 0;
 
 for(let i=0; i&ltnum.length; i++){
     document.write(num[i]);
     sum += num[i];
-}
+};
 document.write(sum);
 </code></pre>
                     </div>
@@ -416,11 +417,11 @@ document.write(sum);
                     <h3>10. 중첩 for문</h3>
                     <p>for()문을 두 번 이상 사용하여 데이터를 불러오는 방법 입니다.</p>
                     <div class="script">
-<pre><code class="language-js">for ( let i=1; i&lt=10; i++){
+<pre><code class="language-js">for(let i=1; i&lt=10; i++){
     document.write(i);
-    for(let j=1; j&lt=10; j++)
+    for(let j=1; j&lt=10; j++);
     document.write(j);
-}
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -428,7 +429,7 @@ document.write(sum);
                             <summary>결과 확인하기</summary>
                             <script>
                                 {
-                                    for ( let i=1; i<=10; i++){
+                                    for(let i=1; i<=10; i++){
                                         document.write(i);
                                         for(let j=1; j<=10; j++)
                                         document.write(j);
@@ -448,9 +449,9 @@ document.write(sum);
 <pre><code class="language-js">for(let i=1; i&lt;20; i++){
     if(i == 10){
         break;
-    }
+    };
     document.write(i);
-}
+};
 </code></pre>
                     </div>
                     <div class="result">
@@ -461,9 +462,9 @@ document.write(sum);
                                     for(let i=1; i<20; i++){
                                         if(i == 10){
                                             break;
-                                        }
+                                        };
                                         document.write(i);
-                                    }
+                                    };
                                 }
                             </script>
                         </details>
@@ -477,9 +478,9 @@ document.write(sum);
 <pre><code class="language-js">for(let i=1; i&lt;20; i++){
     if(i == 10){
         continue;
-    }
+    };
     document.write(i);
-}
+};
 </code></pre>
                     </div>
                     <div class="result">
