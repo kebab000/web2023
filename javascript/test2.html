@@ -8,36 +8,128 @@
 </head>
 <body>
     <script>
-        for(let i=1; i<101; i++){
+        // 0-100출력
+        {
+            for(let i=0; i<101; i++){
             document.write(i);
+            
         }
         document.write("<br>");
-        
-        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        
-        for(i=0; i<arr.length; i++){
-            document.write(arr[i]);
-        };
-        document.write("<br>");
-
-        arr.forEach(function(el){
-            document.write(el);
-        });
-        document.write("<br>");
-
-        arr.forEach(function(el){
-            if(el % 2 == 0){
-                document.write(el+"<br>");
+        }
+        //테이블 100칸
+        {
+            let table = "<table border='1'>"
+            for(let i=1; i<11; i++){
+                table += "<tr>";
+                for(let j=1; j<11; j++){
+                    table += "<td>"+j+"</td>";
+                }
+                table += "</tr>";
             }
-        });
-// 04 짝수를 화살표로
+            
+            table += "</table>"
+            document.write(table);
+        }
+        document.write("<br>");
+        {
+            for( let i=20; i<21; i++){
+                document.write(i+"단");
+                for(let j=1; j<10; j++){
+                    document.write(i+"*"+j+"="+i*j);
+                }
+            }
+        }
         document.write("<br>");
 
-        arr.forEach((el)=>{
-            if(el % 2 == 0){
-                document.write(el);
+        {
+            let sum = 0;
+            for(i=1; i<=100; i++){
+                if(i%2==0){
+                    sum += i 
+                }
             }
-        });
+            document.write(sum);
+        }
+        document.write("<br>");
+
+        {
+            for(i=1; i<=100; i++){
+                if(i%2==0){
+                    document.write("<span style='color: red;'>"+i+"</span>");
+                }else{
+                    document.write('<span style="color: blue;">'+i+"</span>")
+                }
+            }
+        }
+        document.write("<br>");
+        {
+            const arr = [1,2,3,4,5,6,7,8,9,10];
+
+            arr.forEach(element => {
+                document.write(element);
+            });
+        }
+        document.write("<br>");
+        {
+            // 선언적 함수 
+            {
+                function func(){
+                    document.write("선언적함수");
+                }
+                func();
+                document.write("<br>");
+            }
+            // 익명 함수
+            {
+                const func = function(){
+                    document.write("익명함수");
+                }
+                func();
+            }
+            // 매개변수 함수
+            {
+                function func (str){
+                    document.write(str);
+                }
+                func("매개변수함수");
+            }
+            document.write("<br>");
+            //리턴 값함수
+        }
+        {
+             {
+                function func(){
+                    const str = "리턴 값";
+                    return str;
+                }
+                document.write(func());
+            }
+        }
+        {
+            func=()=>{
+                document.write("선언적함수");
+            }
+            func();
+        }
+        {
+            const func = ()=>{
+                document.write("익명함수");
+            }
+            func();
+        }
+        {
+             func=(str)=>{
+                    document.write(str);
+                }
+            func("매개변수함수");
+        }
+        {
+            func=()=>{
+                    const str = "리턴 값";
+                    return str;
+                }
+            document.write(func());
+        }
     </script>
 </body>
 </html>
