@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트02</title>
+    <title>퀴즈 이펙트2</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
  <!-- //외부링크 -->
@@ -15,6 +15,8 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+
         </ul>
     </header>
     <!-- //header -->
@@ -22,8 +24,7 @@
         <div class="quiz__wrap">
             <div class="quiz">
                 <div class="qiuz__header">
-                    <h2 class="quiz__title"><span></span><em></em></h2>
-                    
+                    <h2 class="quiz__title"><span></span><em></em></h2>  
                 </div>
                 <div class="qiuz__main">
                     <div class="qiuz__question">
@@ -58,10 +59,8 @@
                         <button class="confirm">정답 확인하기</button>
                         <div class="result"></div>
                     </div>
-                </div>
-                <div class="quiz__footer">
                     <div class="quiz__desc">설명</div>
-                </div>
+                </div> 
             </div>
         </div>
     </main>
@@ -72,17 +71,16 @@
     <!-- //footer -->
     <script>
     // 선택자
-        const quizWrap = document.querySelector(".quiz__wrap")
+        const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__title span");
         const quizTime = quizWrap.querySelector(".quiz__title em");
         const quizQuestionNum = quizWrap.querySelector(".qiuz__question em");
         const quizQuestion = quizWrap.querySelector(".qiuz__question span");
-        const quizDesc = quizWrap.querySelector(".quiz__desc")
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
         const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
-        const dogWrap = quizWrap.querySelector(".dog__wrap")
-        const quizFooter = quizWrap.querySelector(".quiz__footer")
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
 
         
     // 문제 정보
@@ -103,7 +101,7 @@
     
     // 정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";
-        quizFooter.style.display = "none";
+        quizDesc.style.display = "none";
 
     // 사용자 정답
     quizAnswerConfirm.addEventListener("click", function(){
@@ -111,7 +109,7 @@
         quizAnswerInput.style.display = "none"; // 인풋 박스 숨김
         quizAnswerConfirm.style.display = "none"; // 정답 확인 버튼 숨김
         quizAnswerResult.style.display = "block"; // 정답 나타내기
-        quizFooter.style.display = "block"; // 해설 보이기
+        quizDesc.style.display = "block"; // 해설 보이기
         const userAnswer = quizAnswerInput.value.trim();
         if(infoAnswer == userAnswer){
             dogWrap.classList.add("like");
