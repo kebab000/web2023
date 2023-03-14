@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <title>이미지텍스트타입01</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        vertical-align: top;
+        width: 100%;
+
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+    }
+    .container {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* background-color: rgba(0, 0, 0, 0.1); */
+    }
+    img {
+        text-decoration: none;
+    }
+    .nexon {
+        font-family: NexonLv1Gothic;
+        font-weight: 400;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section.center {
+        text-align: center;
+    }
+    .section__small {
+        font-size: 14px;
+        border-radius: 50px;
+        background-color: #218d73;
+        color: #fff;
+        padding: 1px 23px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: inline-block;
+
+    }
+    .blind {
+        position:absolute;
+        clip:rect(0 0 0 0);
+        width:1px;
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+    }
+    .mt10 {margin-top: 10px !important;}
+    .mt20 {margin-top: 20px !important;}
+    .mt30 {margin-top: 30px !important;}
+    .mt40 {margin-top: 40px !important;}
+    .mt50 {margin-top: 50px !important;}
+    .mt60 {margin-top: 70px !important;}
+    .mt70 {margin-top: 60px !important;}
+    
+    .mb10 {margin-bottom: 10px !important;}
+    .mb20 {margin-bottom: 20px !important;}
+    .mb30 {margin-bottom: 30px !important;}
+    .mb40 {margin-bottom: 40px !important;}
+    .mb50 {margin-bottom: 50px !important;}
+    .mb60 {margin-bottom: 70px !important;}
+    .mb70 {margin-bottom: 60px !important;}
+
+    .section__h2 {
+        font-size: 50px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .section__desc {
+        font-size: 22px;
+        color: #666;
+        margin-bottom: 70px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    /* img_text__wrap */
+    .img_text__wrap {
+        height: 900px;
+        margin-top: 120px;
+    }
+    .img_text__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .img_text__text {
+        width: 373px;
+    }
+    .img_text__text h2 {
+        font-size: 50px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+    .img_text__text p {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        color: #666;
+    }
+    .img_text__text ul {
+        font-size: 16px;
+        margin-left: 15px;
+        line-height: 1.4;
+        color: #666;
+    }
+    </style>
+</head>
+<body>
+    <section class="img_text__wrap nexon container">
+        <div class="img_text__inner">
+            <h2 class="blind">이미지&텍스트 영역</h2>
+            <div class="img_text__text">
+                <span class="section__small">NOTICE</span>
+                <h2>수많은 종류의 식물들</h2>
+                <p>많이 기르는 식물의 종류는 지역에 따라 다르지만, 일반적으로 다음과 같은 식물들이 많이 기르고 있습니다.</p>
+                <ul>
+                    <li>장미</li>
+                    <li>튤립</li>
+                    <li>백합</li>
+                    <li>카네이션</li>
+                    <li>아몬드</li>
+                    <li>로즈마리</li>
+                    <li>페퍼민트</li>
+                    <li>바질</li>
+                    <li>라벤더</li>
+                    <li>선인장</li>
+                    <li>알로에</li>
+                </ul>
+            </div>
+            <figure class="img_text__img">
+                <img src="../asset/img/img_textType01_02.jpg" alt="텍스트이미지타입01">
+            </figure>
+            <figure class="img_text__img">
+                <img src="../asset/img/img_textType01_01.jpg" alt="텍스트이미지타입02">
+            </figure>
+        </div>
+    </section>
+</body>
+</html>
