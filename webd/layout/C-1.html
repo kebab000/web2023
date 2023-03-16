@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-1</title>
+    <style>
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            height: 650px;
+        }
+        .section {
+            width: 80%;
+        }
+        .nav {
+            width: 20%;
+            background-color: #0e6a20;
+            height: 100%;
+        }
+        .slider {
+            background-color: #1bc18a;
+            width: 80%;
+            height: 350px;
+        }
+        .contents {
+            height: 200px;
+            width: 80%;
+            display: flex;
+        }
+        .contents .cont1 {
+            width: 33.3333%;
+            background-color: #17c00f;
+        }
+        .contents .cont2 {
+            width: 33.3333%;
+            background-color: #3a9f35;
+        }
+        .contents .cont3 {
+            width: 33.3333%;
+            background-color: #166312;
+        }
+        .footer {
+            width: 80%;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .footer .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #bedfbc;
+        }
+        .footer .foot2 {
+            width: 80%;
+            height: 50px;
+            background-color: #196e14;
+        }
+        .footer .foot3 {
+            width: 80%;
+            height: 50px;
+            background-color: #19946d;
+        }
+    </style> 
+</head>
+<body>
+    <div id="wrap">
+        <div class="nav">로고</div>
+        <section class="section">
+            <article class="slider">이미지슬라이더</article>
+            <section class="contents">
+                <div class="cont1">공지사항</div>
+                <div class="cont2">배너</div>
+                <div class="cont3">바로가기</div>
+            </section>
+            <footer class="footer">
+                <div class="foot1">로고</div>
+                <div class="foot2">하단메뉴</div>
+                <div class="foot3">카피라이터</div>
+            </footer>
+
+        </section>
+    </div>
+</body>
+</html>
