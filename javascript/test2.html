@@ -8,19 +8,31 @@
 </head>
 <body>
     <script>
-        {            
-            function func (str1, str2){
-                document.write(arguments[0]);
-                document.write(arguments[1]);
-            }
-            func("함수실행1","함수실행2");
-        }
+        // {            
+        //     function func (str1, str2){
+        //         document.write(arguments[0]);
+        //         document.write(arguments[1]);
+        //     }
+        //     func("함수실행1","함수실행2");
+        // }
+        // {
+        //     function func(str1, str2){
+        //         document.write(arguments[0]);    //배열을 설정하지 않았지만 자동으로 출력되는 것
+        //         document.write(arguments[1]);
+        //     }
+        //     func("함수실행1", "함수실행2");
+        // }
+        // {
+        //     const arr = {
+        //         a:[100,200]
+        //     }
+        //     document.write(arr.a[0]);
+        // }
         {
-            function func(str1, str2){
-                document.write(arguments[0]);    //배열을 설정하지 않았지만 자동으로 출력되는 것
-                document.write(arguments[1]);
-            }
-            func("함수실행1", "함수실행2");
+            let arr = [10,20,]
+            arr.forEach(function(element,i,a){
+                document.write(a);
+            })
         }
     </script>
 </body>
