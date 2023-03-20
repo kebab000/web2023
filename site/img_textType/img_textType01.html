@@ -20,6 +20,9 @@
         width: 100%;
 
     }
+    li {
+        list-style: none;
+    }
     h1,h2,h3,h4,h5,h6 {
         font-weight: normal;
     }
@@ -92,63 +95,105 @@
     }
     /* img_text__wrap */
     .img_text__wrap {
-        height: 900px;
         margin-top: 120px;
     }
     .img_text__inner {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
-    .img_text__text {
-        width: 373px;
+    .img_text__inner article {
+        width: 31.333%;
     }
-    .img_text__text h2 {
+    .img_text__text h3 {
         font-size: 50px;
-        line-height: 1.2;
-        margin-bottom: 25px;
+        margin-bottom: 17px;
     }
     .img_text__text p {
         font-size: 16px;
-        margin-bottom: 15px;
         line-height: 1.5;
         color: #666;
+        margin-bottom: 12px;
     }
-    .img_text__text ul {
-        font-size: 16px;
-        margin-left: 15px;
-        line-height: 1.4;
+    .img_text__text li {
+        position: relative;
+        padding-left: 14px;
+    }
+    .img_text__inner .img_text__text li::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #666;
+        position: absolute;
+        left: 0;
+        top: 8px;
+    }
+    .img_text__inner .img_text__text li a {
         color: #666;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+    .img_text__img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        border-radius: 10px;
+        position: relative;
+    }
+    .img_text__img a {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 40px;
+    }
+    .img_text__img.i1 {
+        background-image: url(../asset/img/img_textType01_02.jpg);
+    }
+    .img_text__img.i2 {
+        background-image: url(../asset/img/img_textType01_01.jpg);
+    }
+    .img_text__img.i1 a {
+        background-color: #621515;
+    }
+    .img_text__img.i2 a {
+        background-color: #156246;
     }
     </style>
 </head>
 <body>
-    <section class="img_text__wrap nexon container">
-        <div class="img_text__inner">
-            <h2 class="blind">이미지&텍스트 영역</h2>
-            <div class="img_text__text">
-                <span class="section__small">NOTICE</span>
-                <h2>수많은 종류의 식물들</h2>
-                <p>많이 기르는 식물의 종류는 지역에 따라 다르지만, 일반적으로 다음과 같은 식물들이 많이 기르고 있습니다.</p>
-                <ul>
-                    <li>장미</li>
-                    <li>튤립</li>
-                    <li>백합</li>
-                    <li>카네이션</li>
-                    <li>아몬드</li>
-                    <li>로즈마리</li>
-                    <li>페퍼민트</li>
-                    <li>바질</li>
-                    <li>라벤더</li>
-                    <li>선인장</li>
-                    <li>알로에</li>
-                </ul>
+    <section class="img_text__wrap nexon section">
+        <h2 class="blind">수많은 종류의 식물들</h2>
+        <div class="container">
+            <div class="img_text__inner">
+                <article class="img_text__text">
+                    <span class="section__small">NOTICE</span>
+                    <h3>수많은 종류의 식물들</h3>
+                    <p>많이 기르는 식물의 종류는 지역에 따라 다르지만, 일반적으로 다음과 같은 식물들이 많이 기르고 있습니다.</p>
+                    <ul>
+                        <li><a href="#"> 장미</a></li>
+                        <li><a href="#"> 튤립</a></li>
+                        <li><a href="#"> 백합</a></li>
+                        <li><a href="#"> 카네이션</a></li>
+                        <li><a href="#"> 아몬드</a></li>
+                        <li><a href="#"> 로즈마리</a></li>
+                        <li><a href="#"> 페퍼민트</a></li>
+                        <li><a href="#"> 바질</a></li>
+                        <li><a href="#"> 라벤더</a></li>
+                        <li><a href="#"> 선인장</a></li>
+                        <li><a href="#"> 알로에</a></li>
+                    </ul>
+                </article>
+                <article class="img_text__img i1">
+                    <a href="#">꽃이 피는 식물</a>
+                </article>
+                <article class="img_text__img i2">
+                    <a href="#">꽃이 피지 않는 식물</a>
+                </article>
             </div>
-            <figure class="img_text__img">
-                <img src="../asset/img/img_textType01_02.jpg" alt="텍스트이미지타입01">
-            </figure>
-            <figure class="img_text__img">
-                <img src="../asset/img/img_textType01_01.jpg" alt="텍스트이미지타입02">
-            </figure>
         </div>
     </section>
 </body>

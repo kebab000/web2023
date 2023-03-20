@@ -1,0 +1,78 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+@import url('https://webfontworld.github.io/haenam/haenam.css');
+@import url('https://webfontworld.github.io/nixgon/NixgonFonts.css');
+@import url('https://webfontworld.github.io/gyeonggi/GyeonggiTitle.css');
+@import url('https://webfontworld.github.io/yanolja/YanoljaYache.css');
+@import url('https://webfontworld.github.io/NexonFootballGothic/NexonFootballGothic.css');
+@import url('https://webfontworld.github.io/tvn/EnjoyStories.css');
+@import url('https://webfontworld.github.io/chungbuk/CBNU.css');
+@import url('https://webfontworld.github.io/cookierun/CookieRun.css');
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+
+.font01 {
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+.font02 {
+    font-family: NanumSquareNeo;
+    font-weight: 300;    
+}
+.font03 {
+    font-family: haenam;
+    font-weight: 300;    
+}
+.font04 {
+    font-family: nixgon;
+    font-weight: 300;    
+}
+.font05 {
+    font-family: NexonFootballGothic;
+    font-weight: 300;    
+}
+.font06 {
+    font-family: yanolja;
+    font-weight: 300;    
+}
+.font07 {
+    font-family: gyeonggi;
+    font-weight: 300;    
+}
+.font08 {
+    font-family: EnjoyStories;
+    font-weight: 300;    
+}
+.font09 {
+    font-family: chungbuk;
+    font-weight: 300;    
+}
+.font10 {
+    font-family: cookierun;
+    font-weight: 300;    
+}
