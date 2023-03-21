@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03. 마우스 이펙트</title>
+    <style>
+        .mouse__wrap {
+            cursor: none;
+        }
+        .mouse__text {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+
+        }
+        .mouse__text p {
+            font-size: 3vw;
+            line-height: 1.6;
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-image: url(img/mouseEffect03-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+        }
+    </style>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
@@ -23,12 +57,39 @@
     </header>
     <!-- //heaver -->
     <main id="main">
-
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__text">
+                <p>"The only way to do great work is to love what you do."</p>
+                <p>큰 일을 해내는 유일한 방법은 자신이 하는 일을 사랑하는 것이다.</p>
+            </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">
         
     </footer>
     <!-- //footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // 선택자
+        const cursor = document.querySelector(".mouse__cursor");
+
+        // console.log(cursor.clientWidth);
+        // console.log(cursor.clientHeight);
+
+        // console.log(cursor.offsetWidth);
+        // console.log(cursor.offsetHeight);
+
+        const circle = cursor.getBoundingClientRect();
+
+        window.addEventListener("mousemove", e=> {
+            gsap.to(cursor,{
+                duration: 0.5,
+                left: e.pageX - circle.width/2,
+                top: e.pageY  -circle.height/2
+            });
+        })
+    </script>
 </body>
 </html>

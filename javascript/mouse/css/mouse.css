@@ -54,7 +54,7 @@ body.bg02::after {
     background: rgba(121, 78, 35, 0.7);
 }
 body.bg03::after {
-    background: rgba(35, 117, 121, 0.7);
+    background: rgba(35, 117, 121, 0.8);
 }
 body.bg04::after {
     background: rgba(35, 81, 121, 0.7);
