@@ -150,7 +150,7 @@ console.log("javascript refercence".indexOf("r")); //6
                 <h3>10. match() 🌳</h3>
                 <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
                 <ul>
-                    <li>메서드는 문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                    <li>메서드는 문자열(정규식)을 검색하고, 위치값(문자)을 반환합니다.</li>
                     <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null를 반환합니다 </li>
                     <li>대소문자를 구분합니다</li>
                     <li>match()는 문자값(배열)을 반환하고, search() 메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
@@ -178,7 +178,7 @@ console.log("javascript refercence".indexOf("r")); //6
                     <li>또한 대소문자를 구분합니다</li>
                 </ul>
                 <div class="script">
-<pre><code class="language-js"> "javascript reference".search("javascript");    //0
+<pre><code class="language-js">"javascript reference".search("javascript");    //0
 "javascript reference".search("reference");    //11
 "javascript reference".search("r");             //6
 "javascript reference".search("a");             //1
@@ -215,6 +215,5 @@ console.log("javascript refercence".indexOf("r")); //6
         console.log("javascript reference".lastIndexOf("script"));
 
     </script>
-
 </body>
 </html>
