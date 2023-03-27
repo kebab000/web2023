@@ -32,6 +32,8 @@
                     <div class="qiuz__question">
                     </div>
                     <div class="qiuz__view">
+                        <div class="quiz__cnt"></div>
+                        <div class="quiz__result"></div>
                         <div class='dog__wrap'>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
@@ -58,7 +60,7 @@
                         </div>
                     </div>
                     <div class="quiz__choice">
-                        <label for="choice1">
+                        <!-- <label for="choice1">
                             <input type="radio" id="choice1" name="choice" value="1">
                             <span></span>
                         </label>
@@ -73,7 +75,7 @@
                         <label for="choice4">
                             <input type="radio" id="choice4" name="choice" value="4">
                             <span></span>
-                        </label>
+                        </label> -->
                     </div>
                     <div class="quiz__answer">
 
@@ -101,7 +103,7 @@
                 infoNumber : "20110401",
                 infoQuestion : "일반적으로 명령어의 패치 사이클 중에는 현재 수행하고 있는 명령어의 위치를 가리키고, 실행 사이클 중에는 바로 다음에 실행할 명령어의 위치를 가리키는 Register는?",
                 infoChoice : ["누산기(accumulator)", "프로그램 카운터(program counter)", "명령어 레지스터(instruction register)", "범용 레지스터(general purpose register)"],
-                infoAnswer: "2",
+                infoAnswer: "프로그램 카운터(program counter)",
                 infoDesc : "누산기(accumulator) : 연산결과 일시 저장<br>프로그램 카운터(program counter) : 다음 수행 명령번지 기억<br>명령어 레지스터(instruction register) : 현재수행중인 명령어를 일시저장"
             },{
                 infoType : "정보처리 기능사" ,
@@ -109,7 +111,7 @@
                 infoNumber : "20110402",
                 infoQuestion : "스택 연산에서 데이터를 삽입하거나 삭제하는 동작을 나타내는 것은?",
                 infoChoice : ["ADD, SUB", "LOAD, STORE", "PUSH, POP", "MOV, MUL"],
-                infoAnswer: "3",
+                infoAnswer: "PUSH, POP",
                 infoDesc : "PUSH : 데이터 삽입<br>POP : 데이터 꺼내기(삭제)",
             },{
                 infoType : "정보처리 기능사" ,
@@ -117,7 +119,7 @@
                 infoNumber : "20110403",
                 infoQuestion : "다음 중 제어장치에서 명령어의 실행 사이클에 해당하지 않는 것은?",
                 infoChoice : ["인출 주기(fetch cycle)", "직접 주기(direct cycle)", "간접 주기(indirect cycle)", "실행 주기(execute cycle)"],
-                infoAnswer: "2",
+                infoAnswer: "직접 주기(direct cycle)",
                 infoDesc : "제어장치의 명령어 실행 사이클은 기계주기(Machine Cycle)라 하며, 다음과 같다..<br> ① 인출사이클(Fetch Cycle) - 중앙처리장치가 기억장치에서 다음에 실행할 명령을 가져오는 주기)<br>② 명령사이클(Instruction Cycle) - 기억장치의 번지를 확인하여 명령을 읽어 낼 때까지의 단계<br>③ 실행사이클(Execution Cycle) - 명령에 따라 필요한 신호를 만들어 결과를 얻을 때까지의단계",
             },{
                 infoType : "정보처리 기능사" ,
@@ -125,7 +127,7 @@
                 infoNumber : "20110404",
                 infoQuestion : "전가산기(Full Adder)는 어떤 회로로 구성되는가?",
                 infoChoice : ["반가산기 1개와 OR 게이트로 구성된다.", "반가산기 1개와 AND 게이트로 구성된다.", "반가산기 2개와 OR 게이트로 구성된다.", "반가산기 2개와 AND 게이트로 구성된다."],
-                infoAnswer: "3",
+                infoAnswer: "반가산기 2개와 OR 게이트로 구성된다.",
                 infoDesc : "전가산기 구성 : 반가산기 2개와 OR 게이트로 구성된다.",
             },{
                 infoType : "정보처리 기능사" ,
@@ -133,7 +135,7 @@
                 infoNumber : "20110405",
                 infoQuestion : "CISC(Complex Instruction Set Computer)의 특징으로 틀린 것은?",
                 infoChoice : ["많은 수의 명령어", "다양한 주소지정 방식", "가변 길이 명령어 형식", "단일 사이클의 명령어 실행"],
-                infoAnswer: "4",
+                infoAnswer: "단일 사이클의 명령어 실행",
                 infoDesc : "단일 사이클의 명령어 실행은 RISC방식입니다. <br>CISC 방식은 다양한 길이의 가변 사이클을 지원 합니다.",
             },{
                 infoType : "정보처리 기능사" ,
@@ -143,8 +145,130 @@
                 infoChoice : ["1",  "2", "3", "4"],
                 infoAnswer: "4",
                 infoDesc : "총 코드비트<br>BCD 코드(6)<br>ASCII 코드(7)<br>EBCDIC 코드(8)<br>모든 코드의 디지트 비트는 4임<br>따라서 각 코드의 존비트는 코드총비트 - 4 입니다. 즉 8-4 = 4 입니다<br>",
+            },{
+                infoType : "수고하셨습니다" ,
+                infoTime : " " ,
+                infoNumber : "20110407",
+                infoQuestion : " ",
+                infoChoice : [" ",  " ", " ", " "],
+                infoAnswer: " ",
+                infoDesc : " ",
             }
         ]
+        // 선택자 
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const quizQuestion = quizWrap.querySelector(".qiuz__question");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizNext = quizWrap.querySelector(".quiz__answer .next"); //정답버튼
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizLength = quizWrap.querySelector(".quiz__length");
+        const quizCnt = quizWrap.querySelector(".quiz__cnt");
+        const quizResult = quizWrap.querySelector(".quiz__result");
+        let quizCount = 0;
+        let quizScore = 0;
+
+        // 문제 출력 
+        updateQuiz = (index) => {
+            let typeTag = `
+                <span>${quizInfo[index].infoType}</span>
+                <em>${quizInfo[index].infoTime}</em>
+            `;
+            const questionTag = `
+            <em>${index+1}</em>
+            <span>.${quizInfo[index].infoQuestion}</span>
+            `
+            let choiceTag = `
+                <label for="choice1">
+                    <input type="radio" id="choice1" name="choice" value="1">
+                    <span>${quizInfo[index].infoChoice[0]}</span>
+                </label>
+                <label for="choice2">
+                    <input type="radio" id="choice2" name="choice" value="2">
+                    <span>${quizInfo[index].infoChoice[1]}</span>
+                </label>
+                <label for="choice3">
+                    <input type="radio" id="choice3" name="choice" value="3">
+                    <span>${quizInfo[index].infoChoice[2]}</span>
+                </label>
+                <label for="choice4">
+                    <input type="radio" id="choice4" name="choice" value="4">
+                    <span>${quizInfo[index].infoChoice[3]}</span>
+                </label>
+            `
+            let descTag = `
+                정답은 ${quizInfo[index].infoAnswer} 입니다.</br>
+                ${quizInfo[index].infoDesc}
+            `
+            let cntTag = `
+            남은 문제는 ${quizInfo.length-quizCount-1}개 입니다
+            `
+            let ResultTag = `
+            <span>점수는 ${Math.ceil((quizScore / (quizInfo.length-1)) * 100)}점 입니다.<br>
+            맞은 문제는 ${quizScore}개고 <br> 틀린문제는 ${quizInfo.length-quizScore-1} 개 입니다.</span>
+            
+            `
+            quizResult.innerHTML = ResultTag;
+            quizCnt.innerHTML = cntTag;
+            quizTitle.innerHTML = typeTag;
+            quizQuestion.innerHTML = questionTag;
+            quizChoice.innerHTML = choiceTag;
+            quizDesc.innerHTML = descTag;
+            // 보기 선택자
+            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
+            const quizInput = quizWrap.querySelectorAll(".quiz__choice input");
+            // quizChoiceSpan.forEach((span, num)=>{
+                // span.setAttribute("onclick", "choiceSelected(this)");
+            // })
+            for(let i=0; i<quizChoiceSpan.length; i++){
+                quizChoiceSpan[i].setAttribute("onclick", "choiceSelected(this)");
+                // quizInput[i].disabled = "true" 
+            }
+            if(quizCount+1==quizInfo.length){
+                dogWrap.style.display = "none";
+                quizResult.style.display = "block";
+                quizCnt.style.display = "none";
+                quizChoice.style.display = "none";
+                quizQuestion.style.display = "none";
+            }
+        };
+        // 다음숨기기, 해설 숨기기
+        quizAnswer.style.display = "none";
+        quizDesc.style.display = "none";
+        quizResult.style.display = "none";
+        //
+        function choiceSelected (answer){
+            let userAnswer = answer.textContent;
+            let currentAnswer = quizInfo[quizCount].infoAnswer
+
+            if(userAnswer == currentAnswer){
+                console.log("정답이다");
+                dogWrap.classList.add("like")
+                quizScore++
+            } else {
+                console.log("오답이다")
+                dogWrap.classList.add("dislike")
+            }
+
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+        }
+        updateQuiz(quizCount);
+
+        // 정답확인 
+        quizNext.addEventListener("click", () => {
+            dogWrap.classList.remove("like" ,"dislike")
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
+            quizCount++;
+            updateQuiz(quizCount);
+        })
+        
+        // 남은 문제수 
+
+        // 끝났을 때 정답확인 
     </script>
 </body>
 </html>
