@@ -146,8 +146,23 @@ header h1 em {
     transition: all 0.3s;
     font-weight: bold;
 }
+
 .quiz__answer .confirm:hover {
     background-color: #a5a1a1;
+}
+.quiz__answer .next {
+    background-color: #cacaca;
+    border: 6px groove #cacaca;
+    width: 100%;
+    font-family: "NexonLv1Gothic";
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.quiz__answer .next:hover {
+    background-color: #ae7db9;
 }
 .quiz__answer .result {
     background-color: #fff;
