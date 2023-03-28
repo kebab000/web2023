@@ -1,0 +1,95 @@
+.text__inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text__inner .text {
+    width: 32.33333%;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 90px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text__inner .text:hover {
+    background-color: #f5f5f5;
+}
+.text__inner .text::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+}
+.text__inner .text.t1::before {
+    background-color: rgba(11, 98, 19, 0.3);
+    background-image: url(../img/textType01_01.svg);
+}
+.text__inner .text.t2::before {
+    background-color: rgba(11, 98, 19, 0.4);
+    background-image: url(../img/textType01_02.svg);
+}
+.text__inner .text.t3::before{
+    background-color: rgba(11, 98, 19, 0.5);
+    background-image: url(../img/textType01_03.svg);
+}
+.text__inner .text.t4::before{
+    background-color: rgba(11, 98, 19, 0.6);
+    background-image: url(../img/textType01_04.svg);
+}
+.text__inner .text.t5::before{
+    background-color: rgba(11, 98, 19, 0.7);
+    background-image: url(../img/textType01_05.svg);
+}
+.text__inner .text.t6::before{
+    background-color: rgba(11, 98, 19, 0.8);
+    background-image: url(../img/textType01_06.svg);
+}
+.text__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text__desc {
+    font-style: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text__btn::before {
+    content: '';
+    background-image: url(../img/icon_plus.svg);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+.text__btn:hover::before {
+    transform: rotate(360deg);
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 960px){
+    .text__inner .text {
+        width: 49%;
+    }
+}
+@media (max-width: 600px){
+   .text__inner .text {
+    width: 100%;
+}
+}

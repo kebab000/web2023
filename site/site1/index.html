@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+    <!-- SEO -->
+    <meta name="author" content="케밥00">
+    <meta name="description" content="식물에 대한 사이트입니다.">
+    <meta name="keyword" content="케밥00, 사이트, 식물, plant, 튜토리얼">
+    <meta name="robots" content="all">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/> 
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png"/>
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" style="display: none;">
+        <div class="header__inner">
+            <h1 class="header__logo"> Plant Planner</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">이로운 점</a></li>
+                    <li><a href="#">주의할 점</a></li>
+                    <li><a href="#">관리방법</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">연락방법</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+    <!-- headerType -->
+    <main id="main">
+        <section id="sliderType" class="nexon" style="display: none;">
+            <div class="slider__inner">
+                <h2 class="blind">메인 슬라이드 영역</h2>  
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">EVENT</span>
+                        <h3 class="title">식물과 함께하는 일상☘️</h3>
+                        <p class="desc">식물을 키우는 것은 건강하고 지속 가능한 생활 습관을 형성하는데 도움이 되며, 자연과의 소통을 이루는 작은 시작이 될 수 있습니다.책상 위에 하나의 작은 식물, 당신의 일상에 작은 변화를 더해보세요 .</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 요청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+                <!-- <div class="slider"></div>
+                <div class="slider"></div> -->
+            </div>
+        </section>
+        <!-- //sliderType -->
+        <section id="imageType" class="nexon section center" >
+            <h2 class="section__h2 center">식물을 키우는 방법</h2>
+            <p class="section__desc center">식물을 키우는 것은 생각만큼 쉽지않지만 배운다면 할 수 있습니다.</p>
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../site1/assets/img/imageType01.jpg" alt="물을 주는 주기">
+                    </figure>
+                    <div class="image__body">
+                    <h3 class="title">물을 주는 주기</h3>
+                    <p class="desc"> 올바른 주기를 알고 물을 주는 것이 중요합니다.
+                        너무 자주주면 뿌리가 썩을 수도 있기 때문입니다.</p>
+                    <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure>
+                    <img src="../site1/assets/img/imageType02.jpg" alt="광합성의 중요성">
+                    </figure>
+                    <div class="image__body">
+                    <h3 class="title">광합성의 중요성</h3>
+                    <p class="desc">올바른 주기를 알고 물을 주는 것이 중요합니다.
+                        너무 자주주면 뿌리가 썩을 수도 있기 때문입니다.</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- //imageType -->
+        <section id="imgTextType" class="nexon section gray">
+                <h2 class="blind">수많은 종류의 식물들</h2>
+                <div class="container">
+                    <div class="img_text__inner">
+                        <article class="img_text__text">
+                            <span class="section__small">NOTICE</span>
+                            <h3>수많은 종류의 식물들</h3>
+                            <p>많이 기르는 식물의 종류는 지역에 따라 다르지만, 일반적으로 다음과 같은 식물들이 많이 기르고 있습니다.</p>
+                            <ul>
+                                <li><a href="#"> 장미</a></li>
+                                <li><a href="#"> 튤립</a></li>
+                                <li><a href="#"> 백합</a></li>
+                                <li><a href="#"> 카네이션</a></li>
+                                <li><a href="#"> 아몬드</a></li>
+                                <li><a href="#"> 로즈마리</a></li>
+                                <li><a href="#"> 페퍼민트</a></li>
+                                <li><a href="#"> 바질</a></li>
+                                <li><a href="#"> 라벤더</a></li>
+                                <li><a href="#"> 선인장</a></li>
+                                <li><a href="#"> 알로에</a></li>
+                            </ul>
+                        </article>
+                        <article class="img_text__img i1">
+                            <a href="#">꽃이 피는 식물</a>
+                        </article>
+                        <article class="img_text__img i2">
+                            <a href="#">꽃이 피지 않는 식물</a>
+                        </article>
+                    </div>
+                </div>
+        </section>
+        <!-- //imgTextType -->
+        <section id="cardType" class="nexon section">
+            <div class="container">
+                <h2 class="section__h2">식물을 키울 때 주의해야 할 것들</h2>
+                <p class="section__desc">식물을 키우는 방법에 대해서는 다양한 팁과 지침이 있지만 기본적인 것들에 대해서 이야기를 나누어 보려고 합니다.
+                    다음에 설명할 내용과 같은 기본적인 방법들을 지키면, 식물을 적절히 관리하면 건강하고 아름다운 식물을 키울 수 있습니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                        <img src="../asset/img/cardType01_01.jpg" alt="적절한 환경조건 유지하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                            <p class="desc">각 식물마다 적합한 조도, 온도, 습도, 토양 등의 환경 조건이 다릅니다. 해당 환경 조건에 맞게 식물을 배치하고, 유지하는 것이 중요합니다. 적합한 관경 조성은 가장 중요한 조건입니다.</p>
+                            <a href="#" class="btn">자세히 보기
+                                
+                            </a>
+                        </div>  
+                    </article>
+
+                    <article class="card">
+                        <figure class="card__header">
+                        <img src="../asset/img/cardType01_02.jpg" alt="적절한 환경조건 유지하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                            <p class="desc">식물의 토양이 너무 건조해지지 않도록 꾸준한 관수를 해줘야 합니다. 하지만 과도한 관수는 뿌리 부분이 부패하거나 곰팡이가 생길 수 있으므로 적절한 배수와 관수가 필요합니다.</p>
+                            <a href="#" class="btn">자세히 보기
+                            
+                            </a>
+                        </div> 
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_03.jpg" alt="적절한 환경조건 유지하기">
+                            </figure>
+                            <div class="card__body">
+                                <h3 class="title">적절한 환경 조건 유지하기:</h3>
+                                <p class="desc">식물은 영양분을 필요로 합니다. 때문에, 적절한 비료 사용이 필요합니다. 비료의 종류와 양은 식물의 종류와 성장 단계에 따라 다를 수 있으므로, 자세히 알아보는 것이 좋습니다.</p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div> 
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- //cardType -->
+        <section id="bannerType" class="nexon section">
+            <div class="banner__inner">
+                <h2>식물을 관리하는 방법</h2>
+                <p>식물을 기르는데 필요한 것들과 숙지해야될 사항은 <br> 플렌테리어 어플을 사용하시면 더욱 자세하게 알아볼 수 있습니다.</p>
+            </div>
+            <address class="banner__right">
+                im.kebab00@gmail.com
+            </address>
+        </section>
+        <!-- //bannerType -->
+        <section id="textType" class="nexon section center container">
+            <span class="section__small">NOTICE</span>
+            <h2 class="section__h2 mb70">식물을 키울 때 유의할 점</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">적절한 환경 조성</h3>
+                    <p class="text__desc">각 식물은 자신만의 적절한 환경을 필요로 합니다. 적절한 온도, 습도, 빛 등을 제공해주어야 합니다. 예를 들어, 대부분의 화분 식물들은 밝은 곳에서 자라는 것을 좋아합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">적절한 수분 공급</h3>
+                    <p class="text__desc">대부분의 식물들은 적절한 양의 물을 필요로 합니다. 물 주기는 각 식물마다 다르며, 너무 많이 물을 주거나 적게 물을 주는 것은 식물의 건강에 영향을 미칠 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">적절한 토양 선택</h3>
+                    <p class="text__desc">적절한 토양을 선택하여 식물이 뿌리를 잘 박을 수 있도록 도와줍니다. 일반적으로, 잘 배수되는 토양과 건조하게 유지되지 않는 토양을 선택하는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">깨끗한 환경 유지</h3>
+                    <p class="text__desc">깨끗한 환경을 유지하여 식물이 병에 걸리거나 해충에 감염되지 않도록 합니다. 잎을 닦아주고 잎이 부패되거나 떨어지는 것을 제거해줍니다.중요하지 않아보이지만 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">영양분 제공</h3>
+                    <p class="text__desc">영양분이 필요한 경우, 식물에게 적절한 비료를 제공해주어야 합니다. 이 때, 비료의 종류와 양은 식물 종류와 상황에 따라 다릅니다. 올바른 영양제 선택이 매우 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">가지치기</h3>
+                    <p class="text__desc">너무 많은 가지는 식물이 흡수하는 영양분을 분산 시키기 때문에 식물이 자라는 과정에서 적당히 가지치기를 하면, 식물의 성장을 촉진시키고 생산성을 높일 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+        </section>
+        <!-- //textType -->
+    </main>
+    <!-- //mainType -->
+    <footer id="footer" class="section gray">
+            <div class="footer__inner container">
+                <div class="footer__menu">
+                    <div>
+                        <h3>식물 정보 사이트</h3>
+                        <ul>
+                            <li><a href="#">소개 하기</a></li>
+                            <li><a href="#">식물 이야기</a></li>
+                            <li><a href="#">환경보호하기</a></li>
+                            <li><a href="#">식물 키우기</a></li>
+                            
+                        </ul>
+                    </div>
+                    <!-- // 1 -->
+                    <div>
+                        <h3>식물원 정보</h3>
+                        <ul>
+                            <li><a href="#">소개 하기</a></li>
+                            <li><a href="#">서울/경기 지역</a></li>
+                            <li><a href="#">강원도 지역</a></li>
+                            <li><a href="#">충청도 지역</a></li>
+                            <li><a href="#">경상도 지역</a></li>
+                        </ul>
+                    </div>
+                    <!-- //2 -->
+                    <div>
+                        <h3>식물 관련 유튜버</h3>
+                        <ul>
+                            <li><a href="#">소개 하기</a></li>
+                            <li><a href="#">식물 Vlog 유튜버</a></li>
+                            <li><a href="#">관리방법 유튜버</a></li>
+                            <li> <a href="#">식물 소개 유튜버</a></li>
+                        </ul>
+                    </div>
+                    <!-- //3 -->
+                    <div>
+                        <h3>식물 영양제 추천</h3>
+                        <ul>
+                            <li><a href="#">질소(Nitrogen)</a></li>
+                            <li><a href="#">인(Phosphorus)</a></li>
+                            <li><a href="#">칼륨(Potassium)</a></li>
+                            <li><a href="#">칼슘(Calcium)</a></li>
+                            <li><a href="#">마그네슘(Magnesium)</a></li>
+                        </ul>
+                    </div>
+                    <!-- //4 -->
+                    <div>
+                        <h3>식물을 기르는 방법</h3>
+                        <ul>
+                            <li><a href="#">기르기 쉬운 식물 추천</a></li>
+                            <li> <a href="#">흙은 어디서 구해야 할까</a></li>
+                            <li><a href="#">필요한 장비</a></li>
+                            <li> <a href="#">식물 기르기</a></li>
+                        </ul>
+                    </div>
+                    <!-- //5 -->
+                    <div>
+                        <h3>고객센터</h3>
+                        <ul>
+                        <li><a href="#">소개 하기</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li><a href="#">연락 방법</a></li>
+                        </ul>
+                    </div>
+                    <!-- //6 -->
+                </div>
+                <!-- // 메뉴 부분 -->
+                <address class="footer__right">
+                    2023 플렌테리어 작업<br>im.kebab00@gmail.com
+                </address>
+            </div>
+    </footer>
+    <!-- //footerType -->
+</body>
+</html>
