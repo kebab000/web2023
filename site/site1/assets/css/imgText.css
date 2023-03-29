@@ -78,6 +78,7 @@
 @media (max-width: 960px){
     .img_text__inner .img_text__text {
         width: 100%;
+        text-align: center;
     }
     .img_text__inner .img_text__img {
         width: 49%;
