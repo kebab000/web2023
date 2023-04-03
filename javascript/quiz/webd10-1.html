@@ -70,7 +70,7 @@
                             <div class="cbt__keyword">객체지향언어</div>
                         </div> -->
                     </div>
-                </div>        
+                </div>
                 <div class="cbt__aside">
                     <div class="bbb">
                         <div class="cbt__time">59분 10초</div>
@@ -126,7 +126,7 @@
         let questionAll = [];
         
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")
+            fetch("json/gineungsaWD2010_01.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -159,6 +159,11 @@
                 newQuestion();  //문제 만들기
             })
             .catch((err) => console.log(err));
+
+            const quizImg = document.querySelectorAll(".cbt__question__img");
+                if(quizImg[number].innerText == "img/undefined.png"){
+                    quizImg[number].classList.add("hide");
+                }
         }
 
        //문제 만들기
@@ -170,7 +175,7 @@
                 exam.push(`
                 <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img src="img/${question.questionImg}.png" alt=""></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
                             <label for="select${number}_1"="select1"><span>${question.choice1}</span> </label>
@@ -206,14 +211,12 @@
                 `)
             });
             score.push(`
-
                 <span>전체 문제 수 : <em>${questionAll.length}</em>문항</span>
                 <span>남은 문제 수 : <em>${questionAll.length}</em>문항</span>
                 `)
             cbtQuiz.innerHTML = exam.join(``);
             cbtOmr.innerHTML = omr.join(``);
             cbtScore.innerHTML = score.join(``);
-
 
         }
 
@@ -242,7 +245,8 @@
                     quizDesc[number].classList.add("hide");
                 } else {
                     quizDesc[number].classList.remove("hide");
-                }
+                };
+
             });
         }
         const answerSelect = () => {
