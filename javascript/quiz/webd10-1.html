@@ -159,11 +159,6 @@
                 newQuestion();  //문제 만들기
             })
             .catch((err) => console.log(err));
-
-            const quizImg = document.querySelectorAll(".cbt__question__img");
-                if(quizImg[number].innerText == "img/undefined.png"){
-                    quizImg[number].classList.add("hide");
-                }
         }
 
        //문제 만들기
