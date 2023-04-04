@@ -32,6 +32,56 @@
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
                 <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <select name="cbtTime" id="cbtTime">
+                    <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
+                    <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
+                    <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
+                    <option value="gineungsaJC2006_01">정보처리기능사 2006년 1회</option>
+                    <option value="gineungsaJC2006_02">정보처리기능사 2006년 2회</option>
+                    <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
+                    <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
+                    <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
+                    <option value="gineungsaJC2007_02">정보처리기능사 2007년 2회</option>
+                    <option value="gineungsaJC2007_05">정보처리기능사 2007년 5회</option>
+                    <option value="gineungsaJC2008_01">정보처리기능사 2008년 1회</option>
+                    <option value="gineungsaJC2008_02">정보처리기능사 2008년 2회</option>
+                    <option value="gineungsaJC2008_04">정보처리기능사 2008년 4회</option>
+                    <option value="gineungsaJC2008_05">정보처리기능사 2008년 5회</option>
+                    <option value="gineungsaJC2009_01">정보처리기능사 2009년 1회</option>
+                    <option value="gineungsaJC2009_05">정보처리기능사 2009년 5회</option>
+                    <option value="gineungsaJC2010_02">정보처리기능사 2010년 2회</option>
+                    <option value="gineungsaJC2010_05">정보처리기능사 2010년 5회</option>
+                    <option value="gineungsaJC2011_01">정보처리기능사 2011년 1회</option>
+                    <option value="gineungsaJC2011_02">정보처리기능사 2011년 2회</option>
+                    <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
+                    <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
+                </select>
+                <select name="cbtTime" id="cbtTime">
+                    <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
+                    <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
+                    <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
+                    <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
+                    <option value="gineungsaWD2010_05">웹디자인기능사 2010년 5회</option>
+                    <option value="gineungsaWD2011_01">웹디자인기능사 2011년 1회</option>
+                    <option value="gineungsaWD2011_02">웹디자인기능사 2011년 2회</option>
+                    <option value="gineungsaWD2011_04">웹디자인기능사 2011년 4회</option>
+                    <option value="gineungsaWD2011_05">웹디자인기능사 2011년 5회</option>
+                    <option value="gineungsaWD2012_02">웹디자인기능사 2012년 2회</option>
+                    <option value="gineungsaWD2012_04">웹디자인기능사 2012년 4회</option>
+                    <option value="gineungsaWD2012_05">웹디자인기능사 2012년 5회</option>
+                    <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
+                    <option value="gineungsaWD2013_04">웹디자인기능사 2013년 4회</option>
+                    <option value="gineungsaWD2013_05">웹디자인기능사 2013년 5회</option>
+                    <option value="gineungsaWD2014_01">웹디자인기능사 2014년 1회</option>
+                    <option value="gineungsaWD2014_04">웹디자인기능사 2014년 4회</option>
+                    <option value="gineungsaWD2014_05">웹디자인기능사 2014년 5회</option>
+                    <option value="gineungsaWD2015_01">웹디자인기능사 2015년 1회</option>
+                    <option value="gineungsaWD2015_03">웹디자인기능사 2015년 3회</option>
+                    <option value="gineungsaWD2015_04">웹디자인기능사 2015년 4회</option>
+                    <option value="gineungsaWD2015_05">웹디자인기능사 2015년 5회</option>
+                    <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
+                    <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
+                </select>
             </div>
             <div class="ccc">
                 <div class="cbt__conts">
@@ -135,7 +185,7 @@
                         number: index + 1
                     }
                     const answerChoices = [...item.incorrect_answers];  //오답 불러오기
-                    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;
+                    formattedQuestion.answer = Math.round(Math.random() * answerChoices.length) + 1;
                     answerChoices.splice(formattedQuestion.answer - 1, 0, item.correct_answer);
                     //보기를 추가
                     answerChoices.forEach((choice, index) => {
@@ -169,36 +219,37 @@
             questionAll.forEach((question, number) => {
                 exam.push(`
                 <div class="cbt">
-                        <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="img/${question.questionImg}.png" alt=""></div>
-                        <div class="cbt__selects">
-                            <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
-                            <label for="select${number}_1"="select1"><span>${question.choice1}</span> </label>
-                            <input type="radio" id="select${number}_2" name="select${number}" value="${number+1}_2" onclick="answerSelect(this)">
-                            <label for="select${number}_2"="select2"><span>${question.choice2}</span></label>
-                            <input type="radio" id="select${number}_3" name="select${number}" value="${number+1}_3" onclick="answerSelect(this)">
-                            <label for="select${number}_3"="select3"><span>${question.choice3}</span></label>
-                            <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_4" onclick="answerSelect(this)">
-                            <label for="select${number}_4"="select4"><span>${question.choice4}</span></label>
-                        </div>
-                        <div class="cbt__desc hide">${question.desc}</div>
+                    <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
+                    <div class="cbt__question__img"><img src="img/${question.questionImg}.png" alt=""></div>
+                    <div class="cbt__question__desc"></div>
+                    <div class="cbt__selects">
+                        <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
+                        <label for="select${number}_1"="select1"><span>${question.choice1}</span> </label>
+                        <input type="radio" id="select${number}_2" name="select${number}" value="${number}_2" onclick="answerSelect2(this)">
+                        <label for="select${number}_2"="select2"><span>${question.choice2}</span></label>
+                        <input type="radio" id="select${number}_3" name="select${number}" value="${number}_3" onclick="answerSelect2(this)">
+                        <label for="select${number}_3"="select3"><span>${question.choice3}</span></label>
+                        <input type="radio" id="select${number}_4" name="select${number}" value="${number}_4" onclick="answerSelect2(this)">
+                        <label for="select${number}_4"="select4"><span>${question.choice4}</span></label>
                     </div>
+                    <div class="cbt__desc hide">${question.desc}</div>
+                </div>
                 `);
 
                 omr.push(`
                     <div class="omr">
                             <strong>${question.number}</strong>
-                            <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_0">
+                            <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
                             <label for="omr${number}_1"><span class="label-inner">1</span></label>
-                            <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_1">
+                            <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
                             <label for="omr${number}_2">
                                 <span class="label-inner">2</span>
                             </label>
-                            <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_2">
+                            <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
                             <label for="omr${number}_3">
                                 <span class="label-inner">3</span>
                             </label>
-                            <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_3">
+                            <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
                             <label for="omr${number}_4">
                                 <span class="label-inner">4</span>
                             </label>
@@ -243,11 +294,12 @@
                 };
 
             });
+            
         }
         const answerSelect = () => {
 
         }
-        cbtSumit.addEventListener("click",answerQuiz)
+        cbtSumit.addEventListener("click",answerQuiz);
         dataQuestion();
 
     </script>
