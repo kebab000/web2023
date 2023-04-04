@@ -297,9 +297,6 @@
     border: 8px ridge #cacaca;
     margin-bottom: 10px;
 }
-.aaa {
-    
-}
 .cbt__time {
     font-family: NexonLv1Gothic;
     padding-left: 17px;
@@ -590,11 +587,12 @@
     justify-content: center;
 }
 .cbt__start > div {
-    width: 30%;
+    width: 450px;
     height: 45vh;
     background-color: #fff;
     border: 8px ridge #cacaca;
     text-align: center;
+    border-radius: 20px;
 }
 .cbt__start > div h2 {
     display: inline-block;
