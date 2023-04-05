@@ -240,9 +240,9 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "웹페이지 제작 시 사용되는 스타일시트(CSS)에 대한 설명으로 틀린 것은?",
-        "correct_answer": "내부 스타일시트 적용 시<HTML>와 </HTML> 내에서 자유롭게 정의할 수 있다.",
+        "correct_answer": "내부 스타일시트 적용 시 &ltHTML&gt와 &lt/HTML&gt 내에서 자유롭게 정의할 수 있다.",
         "incorrect_answers" : ["Inline CS 와 Internal CS 가 부분적으로 충동할 경우, 충돌하지 않는 Internal CS 는 그대로 상속 적용한다.","외부스타일시트의 파일타입(확장자)은 .CSS 이다.","웹문서 내에 특정 영역에만 영향을 주기 위해 SPAN, DIV 태그를 사용한다."],
-        "desc" : "내부 스타일 시트 적용시, 주로 <HEAD></HEAD> 태그 내에서 CSS 스타일을 적용함"
+        "desc" : "내부 스타일 시트 적용시, 주로 &ltHEAD&gt&lt/HEAD&gt 태그 내에서 CSS 스타일을 적용함"
     },{
         "subject": "웹디자인 기능사",
         "question" : "저해상도 비트맵 이미지에서 곡선이나 사선드로잉 결과는 계단 모양이나 지그재그 모양으로 나타낸다. 이와 같은 계단현상을 부드럽게 처리하기 위해 사용되는 방식은?",
