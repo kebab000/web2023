@@ -325,7 +325,7 @@
     },{
         "subject": "웹디자인 기능사",
         "question": "다음과 같은 내비게이션 구조는?",
-        "question_img": "img/gineungsaWD_2013_04_01",
+        "question_img": "gineungsaWD_2013_04_01",
         "infoTime": "2013년 4회",
         "infoNumber": "20130441",
         "correct_answer": "계층 구조",

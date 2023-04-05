@@ -44,7 +44,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "진리표가 다음 표와 같이 되는 논리회로는?",
-        "question_img" : "gineungsaJC2005_05_08.jpg",
+        "question_img" : "gineungsaJC2005_05_08",
         "incorrect_answers": ["AND 게이트","OR 게이트","NOR 게이트"],
         "correct_answer": "NAND 게이트",
         "desc": "척보고 알수 있는 진리표가 아니므로 반대로 생각해 봅니다.. 입력이 1,1일때 1이 나온다면 AND 이므로 이와 반대로 나오기 때문에 NAND 입니다."
@@ -87,7 +87,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "아래 게이트 기호를 논리식으로 바르게 표현한 것은?",
-        "question_img" : "gineungsaJC2005_05_15.jpg",
+        "question_img" : "gineungsaJC2005_05_15",
         "incorrect_answers": ["(A+B)+<em style='text-decoration: overline;'>C</em>","A+B+C","A<em style='text-decoration: overline;'>C</em>+<em style='text-decoration: overline;'>C</em>+A"],
         "correct_answer": "(A+B)•<em style='text-decoration: overline;'>C</em>",
         "desc": "A OR B 한 데이터와 C' 한 데이터를 AND 시켜 줍니다..(A + B)C' 입니다."
@@ -118,7 +118,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "그림과 같은 논리회로의 출력 C는 얼마인가?",
-        "question_img" : "gineungsaJC2005_05_20.jpg",
+        "question_img" : "gineungsaJC2005_05_20",
         "incorrect_answers": ["0","10","11"],
         "correct_answer": "1",
         "desc": "출력 C는 오직 1또는 0입니다..(AB)' XOR (A+B) 입니다."
