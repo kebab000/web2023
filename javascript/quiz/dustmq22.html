@@ -190,7 +190,7 @@
         }
         //데이터 가져오기
         const dataQuestion = (value) => {
-            fetch("json/gineungsaJC2011_04.json")
+            fetch(`json/https://kebab000.github.io/web2023/gineungsaJSON/${value}.json.json`)
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -245,7 +245,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="img/${question.question_img}.jpg" alt=""></div>
+                        <div class="cbt__question__img"><img src="https://kebab000.github.io/web2023/gineungsaJPG/${quesiton.question}.json.jpg" alt=""></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
@@ -318,6 +318,12 @@
                 } else {
                     quizDesc[number].classList.remove("hide");
                 }
+
+                document.querySelectorAll(".cbt__question__img").forEach(desc => {
+                if( desc.innerHTML === "https://kebab000.github.io/web2023/gineungsaJPG/undefined.jpg") {
+                    desc.classList.add("hide")
+                }
+            })
             });
         }
         // 보기체크 
