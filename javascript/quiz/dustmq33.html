@@ -65,6 +65,7 @@
                         <div class="cbt__score">
                             <span>전체 문제수 : <em class="cbt__length">0</em>문항</span>
                             <span>남은 문제수 : <em class="cbt__rest">0</em>문항</span>
+                            <span>점수 : <em class="cbt__end__score">__</em>점</span>
                         </div>
                     </div>
                 </div>
@@ -169,12 +170,16 @@
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
+        const cbtEndScore = document.querySelector(".cbt__end__score");
+        const yourName = document.querySelector(".cbt__view .name");
+        
 
         let questionAll = [];                  //모든 퀴즈 정보
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
         let questionTime = "";  
-        let questionTimeRemain = "3600";
+        let questionTimeRemain = "3615";
+        let quizScore = 0;
 
         //시작하기
         const startQuiz = () => {
@@ -302,19 +307,18 @@
                 const userSelector = `input[name=select${number}]:checked`;
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
-
+                
                 if(numberAnswer == question.answer){
-                    console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
+                    quizScore++
                 } else {
-                    console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
                     
                     //오답 일 경우 정답 표시
                     const label = cbtSelects[number].querySelectorAll("label");
                     label[question.answer-1].classList.add("correct");
                 }
-
+               
                 // 설명 숨기기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
@@ -324,6 +328,9 @@
                     quizDesc[number].classList.remove("hide");
                 }
             });
+
+             // 점수 표시
+             cbtEndScore.innerHTML = `${Math.ceil((quizScore / questionLength) * 100)}`
         }
 
         // 보기 체크
@@ -389,9 +396,11 @@
             } else {
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let seconds = questionTimeRemain % 60;
-
-                return minutes + "분 " + seconds + "초";
-                //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
+                if (seconds<10){
+                    return minutes + "분 " +"0"+ seconds + "초";
+                } else {
+                    return minutes + "분 " + seconds + "초";
+                }
             }
         }
 
