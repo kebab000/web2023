@@ -276,7 +276,19 @@
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
 
-            
+            document.querySelectorAll(".cbt__question__desc").forEach(desc => {
+                if (desc.innerText === "undefined"){
+                    desc.classList.add("hide");
+                };
+            });
+
+            document.querySelectorAll(".cbt__question__img").forEach(img => {
+                let src = img.querySelector("img").src;
+
+                if (src.includes("undefined")){
+                    img.classList.add("hide")
+                }
+            });
         }
 
         
@@ -391,6 +403,8 @@
         cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
         // dataQuestion();
+
+
 
     </script>
 </body>
