@@ -61,7 +61,7 @@
                         <span class="cbt__time">60분 00초</span>
                     </div>
                     <div>
-                        <div class="cbt__title">수험자 : <em class="cbt__name">황상연</em></div>
+                        <div class="cbt__title">수험자 : <em class="cbt__name">---</em></div>
                         <div class="cbt__score">
                             <span>전체 문제수 : <em class="cbt__length">0</em>문항</span>
                             <span>남은 문제수 : <em class="cbt__rest">0</em>문항</span>
@@ -172,13 +172,14 @@
         const cbtTime = document.querySelector(".cbt__time");
         const cbtEndScore = document.querySelector(".cbt__end__score");
         const yourName = document.querySelector(".cbt__view .name");
+        const cbtName = document.querySelector(".cbt__name");
         
 
         let questionAll = [];                  //모든 퀴즈 정보
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
         let questionTime = "";  
-        let questionTimeRemain = "3615";
+        let questionTimeRemain = "3600";
         let quizScore = 0;
 
         //시작하기
@@ -187,7 +188,9 @@
 
             //시간 설정
             questionTime = setInterval(reduceTime, 1000);
-        }
+            // 입력한 이름을 가져오기
+            cbtName.innerText = `${yourName.value}`
+        };
  
         //데이터 가져오기
         const dataQuestion = (value) => {

@@ -2,7 +2,6 @@
     {
         "subject": "정보처리 기능사",
         "question": "현재 수행 중에 있는 명령 코드(Code)를 저장하고 있는 임시 저장 장치는?",
-        "question_img": "gineungsaJC2020_01_01",
         "question_desc": "명령 레지스터(Instruction Register) : 현재 실행중인 명령을 기억하는 레지스터 입니다.",
         "correct_answer": "명령 레지스터(Instrudction Register)",
         "incorrect_answers": ["인덱스 레지스터(Index Register)","누산기(Accumulator)","메모리 레지스터(Memory Register)"],
@@ -48,6 +47,7 @@
         "question": "다음 진리표에 대한 논리식으로 올바른 것은?",
         "question_img":"gineungsaJC2011_02_01",
         "correct_answer": "2",
+        "incorrect_answers": ["1","2","3","4"],
         "desc": "진리표의 논리방식은 2번입니다."
     },{
         "subject": "정보처리 기능사",
@@ -519,3 +519,4 @@
     
 
 ]
+

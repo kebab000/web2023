@@ -94,13 +94,13 @@
         "subject" : "정보처리 기능사" ,    
         "question" : "다음 진리표에 해당하는 논리식은?",
         "incorrect_answers" :[
-             "Ā + B",   
-             "Ā ∙ B",    
-             "A + <img style = 'width:30px;' src='../quiz/assets/20110409-1.png'>"
+             "3",   
+             "2",    
+             "1"
         ],
-        "correct_answer": "A ∙ <img style = 'width:30px;' src='../quiz/assets/20110409-1.png'>",
+        "correct_answer": "4",
         "desc" : "입력에서 0 0일때 0이면 And 또는 or 둘중 하나인데요<br>입력에서 0 1 일때 0 이면 And 게이트란걸 알수가있습니다.<br>그런데 1 0에서 1이고 1 1 에서는 0일경우 B' 가 되는거죠<br>그렇기 때문에 And 게이트경우 A·B인데 B' 이기때문에<br>A·B' 가 되는겁니다",
-        "question_img" : "gineungsaJC2010_04_01"
+        "question_img" : "gineungsaJC2011_04_01"
     },{
         "subject" : "정보처리 기능사" ,        
         "question" : " 8 bit를 1 word로 이용하는 컴퓨터에서 op code를 3bit사용하면 인스트럭션을 몇개 사용할 수 있는가?",
