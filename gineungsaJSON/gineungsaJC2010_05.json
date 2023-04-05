@@ -19,7 +19,6 @@
         "infoTime": "2010년 5회",
         "infoNumber" : "20100502",
         "question": "컴퓨터 시스템의 중앙처리장치를 구성하는 하나의 회로로써 산술 및 논리 연산을 수행하는 장치는?",
-        "question_desc": "",
         "correct_answer": "Arithmetic Logic Uni",
         "incorrect_answers":
            [
