@@ -2,7 +2,6 @@
     {
         "subject" : "웹디자인 기능사",
         "question" : "디자인 원리 중 리듬(rhythm)의 요소와 거리가 먼 것은?",
-        "question_desc" : "문제에 대한 설명 부분",
         "correct_answer" : "대칭",
         "incorrect_answers" : ["점증","반복","강조"],
         "desc" : "디자인의 원리에는 통일, 강조, 균형, 비례, 반복, 변화, 조화, 대비, 리듬(율동)이 있으며 리듬은 유사한 형들이 일정한 규칙과 질서를 유지할 때 나타나는 현상을 말한다."
@@ -210,25 +209,23 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "HTML 태그에서 “cellpadding” 에 대해 올바르게 설명한 것은?",
-        "question_img": "gisa2020_01_01",
         "correct_answer" : "“table” 태그에서만 쓰는 속성으로 셀 구분선과 셀 안의 문자간의 여백을 설정한다.",
         "incorrect_answers" : [
                 "“table” 태그에서만 쓰는 속성으로 셀과 셀 사이의 간격을 설정한다.",
                 "“table” 태그에 삽입하면 테이블의 전체의 높이를 설정한다.",
                 "“table” 태그에 삽입하면 해당 셀의 높이를 설정한다."
             ],
-            "desc" : "2번은 cell spacing 이다."
+        "desc" : "2번은 cell spacing 이다."
     },{
         "subject": "웹디자인 기능사",
         "question" : "연산자 좌우의 검색어를 모두 포함하는 데이터를 찾는 정보검색 연산자는?",
-        "question_img": "gisa2020_01_02",
         "correct_answer" : "AND",
         "incorrect_answers" : [
                 "OR",
                 "NOT",
                 "AND NOT"
-            ]        ,
-            "desc" : "OR : 둘 중 어느 하나만 포함되어 있어도 해당 정보 검색<br>AND : 두가지 키워드 모두 포함되어 있는 정보 검색<br>NOT : 키워드 정보를 제외하고 검색"
+        ]        ,
+        "desc" : "OR : 둘 중 어느 하나만 포함되어 있어도 해당 정보 검색<br>AND : 두가지 키워드 모두 포함되어 있는 정보 검색<br>NOT : 키워드 정보를 제외하고 검색"
     },{
         "subject": "웹디자인 기능사",
         "question" : "웹페이지 작성 언어들 중 그 특성이 다른 하나는?",
@@ -282,7 +279,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "전용선을 이용하여 인터넷을 접속하려고 한다. 네트워크 환경 설정 시 입력해야 할 내용으로 올바르지 않은 것은?",
-        "question_desc": "- 서비스 호출, 컴퍼넌트 재사용 등 다양한 환경을 지원하는 테스트 프레임워크<br> - 각 테스트 대상 분산 환경에 데몬을 사용하여 테스트 대상 프로그램을 통해 테스트를 수행하고, 통합하여 자동화하는 검증 도구",
         "correct_answer" : "접속 전화번호",
         "incorrect_answers" : [
                 "게이트웨이",
@@ -333,7 +329,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음 HTML 태그 중 성격이 다른 태그는?",
-        "question_img": "gisa2020_01_03",
         "correct_answer" : "&lt;BR> &lt;/BR>",
         "incorrect_answers" : [
                 "&lt;OL> &lt;/OL>",
@@ -374,7 +369,7 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "아래 스크립트를 분석한 내용으로 잘못된 것은?",
-        "question_desc" : "<A href='#' onMouseOver='window.document.bgColor='yellow'' onMouseOut = 'window.document.bgColor='red'' onClick='window.document.bgColor='white''> 안녕하세요 </A>",
+        "question_desc" : "&lt;A href='#' onMouseOver='window.document.bgColor='yellow'' onMouseOut = 'window.document.bgColor='red'' onClick='window.document.bgColor='white''> 안녕하세요 &lt;/A>",
         "correct_answer" : "마우스로 “안녕하세요”를 클릭하면 새로운 팝업창이 열리고, 문자색이 변한다.",
         "incorrect_answers" : [
                 "“안녕하세요”에 마우스 포인터가 닿으면 배경색이 노란색으로 변한다.",
@@ -416,7 +411,7 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음은 무엇에 관한 설명인가?<br>-웹사이트의 전체구조, 화면구성, 콘텐츠 정보 등을 작성해 보는 것이다.<br>-화면 단위로 삽입될 구성 요소 및 구체적 내용을 정리해 놓는다.",
-        "question_desc": "a. SELECT DEPT FROM STUDENT;<br>b. SELECT DISTINCT DEPT FROM STUDENT;",
+        "question_desc" : "- 웹사이트의 전체구조, 화면구성, 콘텐츠정보 등을 작성해 보는 것이다<br>- 화면 단위로 삽일될 구성 요소 및 구체적 내용을 정리해 놓는다.",
         "correct_answer" : "스토리보드",
         "incorrect_answers" : [
                 "레이아웃",
@@ -427,7 +422,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "3차원 대상물 표면에 2차원의 이미지를 입히는 과정을 무엇이라고 하는가?",
-        "question_desc": "과목(<i style='text-decoration: underline'>과목번호</i>, 과목명)<br>수강(<i style='text-decoration: underline'>수강번호</i>,학번,과목번호,학기)",
         "correct_answer" : "텍스처 매핑(Texture Mapping)",
         "incorrect_answers" : [
                 "쉐이딩(Shading)",
@@ -560,7 +554,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음 웹 디자인 과정을 순서대로 올바르게 나열한 것은?<br>ⓐ그림, 동영상, 소리파일 제작<br>ⓑ목표설정<br>ⓒ웹사이트에 업로드<br>ⓓ웹 에디터로 작성<br>ⓔ스토리 보드 제작",
-        "question_desc": "후보키는 릴레이션에 있는 모든 튜플에 대해 유일성과 (  )을 만족시켜야 한다.",
         "correct_answer" : "ⓑ-ⓔ-ⓐ-ⓓ-ⓒ",
         "incorrect_answers" : [
                 "ⓑ-ⓐ-ⓓ-ⓔ-ⓒ",
@@ -571,7 +564,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "다음 소프트웨어 중 2D 평면 디자인을 할 때 사용하는 소프트웨어로만 나열된 것은?<br><br>㉠오토캐드(AutoCAD) ㉡일러스트레이터<br> ㉢하이퍼텍스트 ㉣자바스크립트",
-        "question_img": "gisa2020_01_04",
         "correct_answer" : "(ㄱ), (ㄴ)",
         "incorrect_answers" : [
                 "(ㄷ), (ㄹ)",
@@ -602,7 +594,6 @@
     },{
         "subject": "웹디자인 기능사",
         "question" : "서로 근접해 있는 색들의 영향으로 인하여 닮은 색으로 변해 보이는 현상은 ?",
-        "question_desc": "트랜잭션의 연산은 데이터베이스에 모두 반영되든지 아니면 전혀 반영되지 않아야 한다.",
         "correct_answer" : "동화현상",
         "incorrect_answers" : [
                 "잔상효과",

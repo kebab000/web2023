@@ -93,7 +93,7 @@
         "desc" : "R Flip - Flop은 없습니다."
     },{
         "subject" : "정보처리 기능사",
-        "question" : "다음에 표시된 진리표가 나타내는 회로는?(단, 입력은 A, B이고 출력은 S(Sum)와 C(Carry) 이다.)<br><img style='width:300px' src=img/img10.JPG>",
+        "question" : "다음에 표시된 진리표가 나타내는 회로는?(단, 입력은 A, B이고 출력은 S(Sum)와 C(Carry) 이다.)",
         "question_img" : "gineungsaJC2005_04_03",
         "incorrect_answers" :[
             "AND 회로",
