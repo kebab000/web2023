@@ -478,9 +478,9 @@
         "correct_answer": "jpg", 
         "desc" : "JPG는 정지화상을 표현하는 이미지 파일입니다."
     },{
-        "subject" : "해상도(Resolution)에 관한 설명 중 옳은 것은?" ,
+        "subject" : "웹디자인 기능사?" ,
     
-        "question" : "UNIX에 대한 설명으로 옳지 않은 것은?",
+        "question" : "해상도(Resolution)에 관한 설명 중 옳은 것은?",
         "incorrect_answers" : [  
              "작은 화소 단위를 말한다.",    
              "해상도가 높을수록 이미지의 질은 떨어진다.",   
