@@ -2,8 +2,6 @@
     {
         "subject": "정보처리 기능사",
         "question": "입/출력장치와 주기억장치 사이에 위치하여 데이터 처리속도의 차이를 줄이는데 도움이 되는 장치는?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "입/출력 채널",
         "incorrect_answers": [ 
             "입/출력 채널",
@@ -15,7 +13,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음과 같은 계산에 의해 주소를 지정하는 방식은?",
-        "question_img": "",
         "question_desc": "유효번지 = 프로그램카운터(PC)+주소부분(Operand)",
         "correct_answer": "상대주소지정",
         "incorrect_answers": [
@@ -28,8 +25,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "(11111)₂+ (01011)₂의 결과로 옳은 것은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "(101010)₂",
         "incorrect_answers": [
             "(101010)₂",
@@ -41,8 +36,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "동시에 여러 개의 입/출력 장치를 제어할 수 있는 채널(Channel)은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "Multiplexer",
         "incorrect_answers": [
             "Multiplexer",
@@ -54,7 +47,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음과 같은 설명에 해당되는 용어는?",
-        "question_img": "",
         "question_desc": "컴퓨터가 정상적인 업무를 수행하는 도중에 발생하는 예기치 않은 일들에 대하여 컴퓨터의 작동이 중단 없이 계속적으로 업무를 수행할 수 있도록 하는 기능",
         "correct_answer": "Interrup",
         "incorrect_answers": [
@@ -67,8 +59,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "기억장치에서 읽어낸 명령을 받고 이것을 실행하기 위하여 일시 기억하는 레지스터는?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "명령(instruction)",
         "incorrect_answers": [
             "명령(instruction)",
@@ -80,8 +70,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "2진수 (110010101011)2을 8진수와 16진수로 올바르게 변환한 것은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "(6253)8, (CAB)16",
         "incorrect_answers": [
             "(5253)8, (BAB)16",
@@ -93,8 +81,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "이항(binary) 연산에 해당하는 것은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "AND",
         "incorrect_answers": [
             "COMPLEMENT",
@@ -107,7 +93,6 @@
         "subject": "정보처리 기능사",
         "question": "다음 블록화 레코드에서 블록화 인수는?", 
         "question_img": "img src='gineungsaJC2009_05_01'",
-        "question_desc": "",
         "correct_answer": "3",
         "incorrect_answers": [
             "1",
@@ -119,8 +104,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "불(Boolean) 대수의 정리 중 틀린 것은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "1 + A = A",
         "incorrect_answers": [
             "1 + A = A",
@@ -132,8 +115,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "원격지에 설치된 입/출력 장치는?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "단말장치",
         "incorrect_answers": [
             "변/복조장치",
@@ -145,8 +126,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 주소지정 방법 중 처리속도가 가장 빠른 것은?",
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "즉시주소지정(Immediate Addressing)",
         "incorrect_answers": [
             "직접주소지정(Direct Addressing)",
@@ -158,8 +137,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "정보검색 엔진에서 AND, OR, NOT과 같은 연산자가 사용된다. 이 연산자를 무슨 연산자라 하는가?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "불 연산자",
         "incorrect_answers": [
             "불 연산자",
@@ -172,7 +149,6 @@
         "subject": "정보처리 기능사",
         "question": "다음 진리표와 같이 연산이 행해지는 게이트는?",
         "question_img": "img src='gineungsaJC2009_05_02'",
-        "question_desc": "",
         "correct_answer": "AND",
         "incorrect_answers": [
             "OR",
@@ -185,7 +161,6 @@
         "subject": "정보처리 기능사",
         "question": "다음 논리회로의 논리식은?", 
         "question_img": "img src='gineungsaJC2009_05_03'",
-        "question_desc": "",
         "correct_answer": "불 연산자",
         "incorrect_answers": [
             "불 연산자",
@@ -198,7 +173,6 @@
         "subject": "정보처리 기능사",
         "question": "다음 회로(Circuit)에서 결과가 “1”(불이 켜진 상태)이 되기 위해서는 A와 B는 각각 어떠한 값을 갖는가?", 
         "question_img": "img src='gineungsaJC2009_05_04'",
-        "question_desc": "",
         "correct_answer": "A = 1, B = 1",
         "incorrect_answers": [
             "A = 0, B = 1",
@@ -210,8 +184,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "명령어의 구성이 연산자부가 3bit, 주소부는 5bit로 되어있을 때, 이 명령어를 사용하는 컴퓨터는 최대 몇 가지의 동작이 가능한가?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "8",
         "incorrect_answers": [
             "256",
@@ -223,8 +195,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "입/출력 장치의 동작속도와 전자계산기 내부의 동작속도를 맞추는데 사용되는 레지스터는?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "버퍼 레지스터",
         "incorrect_answers": [
             "버퍼 레지스터",
@@ -236,8 +206,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "연산 후 입력 자료가 변하지 않고 보존되는 특징의 장점을 갖는 명령어 형식은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "3-주소 명령어 형식",
         "incorrect_answers": [
             "0-주소 명령어 형식",
@@ -249,8 +217,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "RS Flip-Flop 회로의 동작에서 R=1, S=1을 입력하였을 때 출력으로 옳은 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "부정(not allowed)",
         "incorrect_answers": [
             "1",
@@ -262,8 +228,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "프레젠테이션의 기능과 역할에 대한 설명으로 틀린 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "컴퓨터를 이용하여 계산과 관련된 작업을 쉽게 처리 분석하여 활용할 수 있도록 개발된 응용프로그램",
         "incorrect_answers": [
             "정보 전달 및 의사 결정 도구",
@@ -275,8 +239,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도메인에 대한 설명으로 가장 적합한 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "하나의 속성에 취할 수 있는 값의 범위",
         "incorrect_answers": [
             "하나의 속성에 취할 수 있는 값의 범위",
@@ -288,8 +250,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "SQL 명령을 사용 용도에 따라 구분할 경우, 다음 중 성격이 나머지 셋과 다른 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "INSERT",
         "incorrect_answers": [
             "CREATE",
@@ -301,8 +261,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "SQL에서 검색결과에 대한 레코드의 중복을 제거하기 위해 사용하는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "DISTINCT",
         "incorrect_answers": [
             "DESC",
@@ -314,8 +272,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "SQL의 SELECT 문에서 특정 열의 값을 기준으로 정렬할 때 사용하는 절은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "ORDER BY 절",
         "incorrect_answers": [
             "SORT BY 절",
@@ -327,8 +283,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "스프레드시트에서 반복되고 규칙적인 작업을 일괄 자동처리 하는 기능은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "매크로 기능",
         "incorrect_answers": [
             "차트 기능",
@@ -340,8 +294,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "스프레드시트의 기능과 거리가 먼 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "동영상 처리 및 애니메이션 효과를 구현할 수 있다.",
         "incorrect_answers": [
             "데이터 연산결과를 사용자가 다양한 서식으로 자유롭게 표현한다.",
@@ -353,8 +305,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "데이터베이스관리자(DBA)의 임무와 거리가 먼 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "일반 사용자의 고급 질의문을 저급 DML 명령어로 변환",
         "incorrect_answers": [
             "시스템 문서화에 표준을 정하여 시행",
@@ -366,8 +316,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "데이터베이스에서 정보 부재를 명시적으로 표시하기 위해 사용하는 특수한 데이터 값은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "널(null)",
         "incorrect_answers": [
             "공백(blank)",
@@ -379,7 +327,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 SQL 문의 의미로 적합한 것은?", 
-        "question_img": "",
         "question_desc": "SELECT * FROM 사원;",
         "correct_answer": "사원 테이블에서 전체 레코드의 모든 필드를 검색한다.",
         "incorrect_answers": [
@@ -392,7 +339,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 ( )안에 공통으로 들어갈 알맞은 용어는?", 
-        "question_img": "",
         "question_desc": "When the program and data are redy to be used, they are copied into the primary memory unit from an input device or storage device. Once the program and data have been loaded into the primary memory, the() Performs computation on the data. The () is made up of a control unit and an arithm etical logical unit.",
         "correct_answer": "Central Processing Unit",
         "incorrect_answers": [
@@ -405,7 +351,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 보기는 유닉스(UNIX)의 어떤 작업과 가장 관계가 있는가?", 
-        "question_img": "",
         "question_desc": "vi, ed, emacs",
         "correct_answer": "편집",
         "incorrect_answers": [
@@ -418,8 +363,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": " “윈도 98”의 단축키 중 활성화된 창을 닫고 프로그램을 종료하는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "Alt + F4 키",
         "incorrect_answers": [
             "Ctrl + C 키",
@@ -431,8 +374,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도스(MS-DOS)에서 별도의 실행 파일이 존재하지 않고 'COMMAND.COM'이 메모리에 상주하고 있을 경우, 항상 사용할 수 있는 명령어를 의미하는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "내부 명령어",
         "incorrect_answers": [
             "내부 명령어",
@@ -444,8 +385,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'의 탐색기에서 이웃하는 파일들을 선택할 때 사용하는 키와 이웃하지 않는 파일들을 선택할 때 사용하는 키의 나열이 순서적으로 옳은 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "Shift, Ctrl",
         "incorrect_answers": [
             "Ctrl, Alt",
@@ -457,8 +396,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도스에서 DIR 명령은 현재 디렉토리와 파일 등에 관한 정보를 표시해 주는 명령이다. 이 명령의 옵션(Option) 중 하위 디렉토리의 정보까지 표시해 주는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "DIR/S",
         "incorrect_answers": [
             "DIR/P",
@@ -470,8 +407,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'의 찾기 메뉴에서 지정할 수 있는 형식이 아닌 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "파일 속성",
         "incorrect_answers": [
             "파일 속성",
@@ -483,8 +418,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "UNIX에서 현재의 작업 디렉토리가 어디인지를 확인하는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "pwd",
         "incorrect_answers": [
             "pwd",
@@ -496,7 +429,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음은 무엇을 설명하고 있는가?", 
-        "question_img": "",
         "question_desc": "Jobs are submitted in sequential batches on input devices cuch as card readers, and job results are similarly received in batches from output devices such as printers.",
         "correct_answer": "Batch Processing",
         "incorrect_answers": [
@@ -509,8 +441,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도스(MS-DOS)에서 디스크의 상태를 점검하는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "CHKDSK",
         "incorrect_answers": [
             "CHKDSK",
@@ -522,8 +452,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "UNIX에서 파일의 내용을 화면에 보여 주는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "cat",
         "incorrect_answers": [
             "rm",
@@ -535,8 +463,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'에서 새로운 하드웨어를 장착하고 시스템을 가동시키면 자동으로 하드웨어를 인식하고 실행하는 기능은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "Plug &Play 기능",
         "incorrect_answers": [
             "Interrupt 기능",
@@ -548,8 +474,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'에서 도스를 실행시켰더니 전체화면 형태로 도구들이 보이지 않아 불편하였다. 도스의 창 형태로 전환하려면 어떤 키를 눌러야 하는가?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "Alt + Enter",
         "incorrect_answers": [
             "Ctrl + Space",
@@ -561,8 +485,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'에서 도스를 실행시켰더니 전체화면 형태로 도구들이 보이지 않아 불편하였다. 도스의 창 형태로 전환하려면 어떤 키를 눌러야 하는가?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "System Shell",
         "incorrect_answers": [
             "C Shell",
@@ -574,8 +496,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도스(MS-DOS)에서 감추어진 파일의 속성을 해제하는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "ATTRIB / -H",
         "incorrect_answers": [
             "ATTRIB / +A",
@@ -587,8 +507,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'에서 클립보드(CLIPBOARD)의 역할은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "프로그램 간에 전송되는 자료를 일시적으로 보관하여 준다.",
         "incorrect_answers": [
             "도스 영역을 확보해 준다.",
@@ -600,8 +518,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "'윈도 98'의 특징 설명으로 틀린 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "16비트 환경의 운영체제이다.",
         "incorrect_answers": [
             "16비트 환경의 운영체제이다.",
@@ -613,8 +529,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "컴퓨터에서 수행중인 프로그램을 의미하는 용어는?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "프로세스",
         "incorrect_answers": [
             "레지스터",
@@ -626,8 +540,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "도스(MS-DOS)에서 하드디스크의 파티션을 설정하고 논리적 드라이브 번호를 할당하는 명령은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "FDISK",
         "incorrect_answers": [
             "FORMAT",
@@ -639,7 +551,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "운영체제를 기능상 분류했을 경우 다음 내용에 해당하는 프로그램은?", 
-        "question_img": "",
         "question_desc": "작업의 연속 처리를 위한 스케줄 및 시스템 자원 할당 등을 담당",
         "correct_answer": "작업 관리 프로그램",
         "incorrect_answers": [
@@ -652,8 +563,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 중 데이터 전송계에 해당되지 않는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "데이터베이스장치",
         "incorrect_answers": [
             "데이터베이스장치",
@@ -665,8 +574,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "단말기가 12개인 경우 이를 모두 망형으로 네트워크를 형성하고자 할 때 최소로 필요한 회선 수는?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "66",
         "incorrect_answers": [
             "33",
@@ -678,8 +585,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 중 PCM 변조 절차와 가장 거리가 먼 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "다중화(Multiplexing)",
         "incorrect_answers": [
             "표본화(Sampling)",
@@ -691,8 +596,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 중 데이터 전송매체로 잡음과 보안에 가장 우수한 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "광섬유케이블",
         "incorrect_answers": [
             "가입전화선",
@@ -704,8 +607,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "인터넷 상에서 메일을 주고받을 수 있는 프로토콜에 해당하는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "SMTP",
         "incorrect_answers": [
             "HTTP",
@@ -717,8 +618,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "공중파 TV 방송신호는 일정한 대역폭에 맞추어 음성과 영상신호들을 각 채널 반송파에 할당하여 전송한다. 이러한 방식에 해당되는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "주파수분할 다중화",
         "incorrect_answers": [
             "시분할 다중화",
@@ -730,8 +629,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "회선교환방식에 대한 일반적인 설명으로 틀린 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "접속에는 짧은 시간이 소요되며 전송지연은 길다.",
         "incorrect_answers": [
             "고정된 대역폭 전송방식이다.",
@@ -743,8 +640,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "광섬유케이블에서 정보전송의 기본 현상은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "전반사",
         "incorrect_answers": [
             "굴절",
@@ -756,8 +651,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "개방형 시스템(OSI) 계층 모델에서 네트워크 구조에 대한 계층 순서가 차례대로 옳게 된 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "물리계층 - 데이터링크계층 - 네트워크계층 - 트랜스포트계층 - 세션계층 - 프리젠테이션계층 - 응용계층",
         "incorrect_answers": [
             "물리계층 - 데이터링크계층 - 네트워크계층 - 트랜스포트계층 - 세션계층 - 프리젠테이션계층 - 응용계층",
@@ -769,8 +662,6 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 중 멀티미디어 요소로 볼 수 없는 것은?", 
-        "question_img": "",
-        "question_desc": "",
         "correct_answer": "DVD",
         "incorrect_answers": [
             "그래픽",

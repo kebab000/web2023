@@ -217,9 +217,9 @@
     },{
         "subject": "소프트웨어 개발",
         "question": "'윈도 98'에서 여러 개의 활성화 된 창을 순차적으로 전환 할 때 사용하는 단축키는?",
-        "correct_answer": "<Alt> + <Esc>",
-        "incorrect_answers": ["<Alt> + <Tab>", "<Ctrl> + <Tab>", "<Shift> + <Tab>"],
-        "desc": "작업창 전환<br>순차 : Alt + Esc<br>직접 : Alt + Tab",
+        "correct_answer": "&lt;Alt&gt; + &lt;Esc&gt;",
+        "incorrect_answers": ["&lt;Alt&gt; + &lt;Tab&gt;", "&lt;Ctrl&gt; + &lt;Tab&gt;", "&lt;Shift&gt; + &lt;Tab&gt;"],
+        "desc": "작업창 전환&lt;br&gt;순차 : Alt + Esc&lt;br&gt;직접 : Alt + Tab",
         "keyword_num": "31"
     },{
         "subject": "소프트웨어 개발",

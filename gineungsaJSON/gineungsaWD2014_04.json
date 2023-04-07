@@ -86,7 +86,6 @@
         "correct_answer": "구성주의",
         "incorrect_answers": [
             "기능주의",
-            "구성주의",
             "역사주의",
             "미래주의"
         ],
@@ -259,7 +258,7 @@
         "incorrect_answers": [
             "TCP",
             "IP",
-            "FTP"
+            "ARP"
         ],
         "desc": "주소 결정 프로토콜(Address Resolution Protocol, ARP)"
     },{
@@ -309,7 +308,7 @@
         "incorrect_answers": [
             "print()",
             "insert()",
-            "insert()"
+            "input()"
         ],
         "desc":"자바스크립트의 Document 객체에서 화면에 글자를 출력하기 위해 사용하는 함수는 write()입니다."
     },{
@@ -371,7 +370,7 @@
             "사용자의 동작에 반응하는 효과를 낼 수 있다.",
             "애니메이션과 사운드가 통합된 결과물을 얻을 수 있다."
         ],
-        "desc": "실사와 같은 애니메이션을 제작하기에 가장 적합합니다."
+        "desc": "실사와 같은 애니메이션을 제작하기에 가장 적합하지 않습니다."
     },{
         "subject": "웹그래픽스 디자인",
         "question": "다음이 설명하고 있는 것은?",
