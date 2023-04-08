@@ -92,7 +92,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 블록화 레코드에서 블록화 인수는?", 
-        "question_img": "img src='gineungsaJC2009_05_01'",
+        "question_img": "gineungsaJC2009_05_01",
         "correct_answer": "3",
         "incorrect_answers": [
             "1",
@@ -148,7 +148,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 진리표와 같이 연산이 행해지는 게이트는?",
-        "question_img": "img src='gineungsaJC2009_05_02'",
+        "question_img": "gineungsaJC2009_05_02",
         "correct_answer": "AND",
         "incorrect_answers": [
             "OR",
@@ -160,7 +160,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 논리회로의 논리식은?", 
-        "question_img": "img src='gineungsaJC2009_05_03'",
+        "question_img": "gineungsaJC2009_05_03",
         "correct_answer": "불 연산자",
         "incorrect_answers": [
             "불 연산자",
@@ -172,7 +172,7 @@
     },{
         "subject": "정보처리 기능사",
         "question": "다음 회로(Circuit)에서 결과가 “1”(불이 켜진 상태)이 되기 위해서는 A와 B는 각각 어떠한 값을 갖는가?", 
-        "question_img": "img src='gineungsaJC2009_05_04'",
+        "question_img": "gineungsaJC2009_05_04",
         "correct_answer": "A = 1, B = 1",
         "incorrect_answers": [
             "A = 0, B = 1",

@@ -6,7 +6,7 @@
         "question_desc": "명령 레지스터(Instruction Register) : 현재 실행중인 명령을 기억하는 레지스터 입니다.",
         "correct_answer": "명령 레지스터(Instrudction Register)",
         "incorrect_answer": ["인덱스 레지스터(Index Register)","누산기(Accumulator)","메모리 레지스터(Memory Register)"],
-        "desc": "명령 레지스터(Instruction Register) : 현재 실행중인 명령을 기억하는 레지스터 입니다.",
+        "desc": "명령 레지스터(Instruction Register) : 현재 실행중인 명령을 기억하는 레지스터 입니다."
     },{
         "subject": "정보처리 기능사",
         "question": "다음 중 RISC(Reduced Instruction Set Computer)의 설명으로 옳은 것은?",
@@ -101,7 +101,7 @@
         "desc": "위에 회로는 AND 연산. 즉, 1 AND 1 = 1밑에 회로도 AND 연산. 즉, 1 AND 0 = 0(AND 연산 = 둘다 1이여만 결과값이 1이됨)마지막으로 OR 연산. 1 OR 0 = 1 이 나옵니다.(OR 연산 = 둘중에 하나라도 1이 나오면 결과값은 1)[해설작성자 : 우석대 정보보안학과]CBT 풀면서 이러한 문제 많이 보셨을텐데 이러한 논리회로에서 출력값은 무조건 0 아니면 1 입니다.그러니까 1번답과 4번답처럼 나온다면 무시하고 나머지 번호에서 풀어보실 수 있습니다."
     },{
         "subject": "정보처리 기능사",
-        "question": "ALU의 구성요소가 아닌 것은주소접근 방식 중 약식주소 표현 방식에 해당하는 것은?",
+        "question": "주소접근 방식 중 약식주소 표현 방식에 해당하는 것은?",
         "correct_answer": "계산에 의한 주소",
         "incorrect_answer": ["직접 주소", "간접 주소", "자료 자신"],
         "desc": "계산에 의한 주소 지정오퍼랜드 안에 들어있는 값과 특정 레지스터안에 있는값을 계산하여 주소를 구한다.데이터의 길이에 제한이 있으나 빠르다는 장점이있습니다."
