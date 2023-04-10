@@ -89,19 +89,50 @@
             let sliderCount = slider.length; // 이미지 갯수
             let sliderInterval = 3000;  //이미지 변경 시간
 
+            // setInterval(() => {
+            // //0 1 2 3 4 0 1 2 3 4 0 1 2 3 4  // currentIndex
+            // //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 // nextIndex
+            // let nextIndex = (currentIndex + 1) % sliderCount ;
+
+            // slider[currentIndex].style.opacity="0"; 
+            // slider[nextIndex].style.opacity="1";
+
+            // currentIndex = nextIndex;
+
+            // },sliderInterval);
+            // slider[0].style.opacity="0"; // 첫번째 이미지를 안보이게
+            // slider[1].style.opacity="1"; // 두번째 이미지를 보이게
+        </script>
+        <!-- GSAP -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script>
             setInterval(() => {
-            //0 1 2 3 4 0 1 2 3 4 0 1 2 3 4  // currentIndex
-            //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 // nextIndex
-            let nextIndex = (currentIndex + 1) % sliderCount ;
+                let nextIndex = (currentIndex + 1) % sliderCount;
+                
+                gsap.to(slider[currentIndex], { opacity: 0 });
+                gsap.to(slider[nextIndex], { opacity: 1 });
+                currentIndex = nextIndex;
+            }, sliderInterval);
+        </script> -->
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script>
+            // 선택자 
+            const sliderWrap1 = $(".slider__wrap");
+            const slider1 = sliderWrap1.find(".slider");
 
-            slider[currentIndex].style.opacity="0"; 
-            slider[nextIndex].style.opacity="1";
+            
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % $(".slider").length;
+                // Fade out the current slide using jQuery
+                slider1.eq(currentIndex).fadeOut(0);
 
-            currentIndex = nextIndex;
+                // Fade in the next slide using jQuery
+                slider1.eq(nextIndex).fadeIn(1);
 
-            },sliderInterval);
-            slider[0].style.opacity="0"; // 첫번째 이미지를 안보이게
-            slider[1].style.opacity="1"; // 두번째 이미지를 보이게
+                currentIndex = nextIndex;
+            }, sliderInterval);
         </script>
     </body>
 </html>
