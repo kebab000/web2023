@@ -81,8 +81,6 @@
         let currentIndex = 0; // 현재 보이는 이미지
         let sliderCount = slider.length; // 이미지 갯수
         let sliderInterval = 3000;  //이미지 변경 시간
-        
-    
     </script>
         
 <!-- javascript -->
@@ -93,14 +91,14 @@
         // sliderInner.style.transform = translateX("-2400px");
         // sliderInner.style.transform = translateX("-3200px");
         // sliderInner.style.transform = translateX("-0px");
-        // javascript
-        // sliderInner.style.transiton = "all 0.6s";
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % sliderCount ;
+        javascript
+        sliderInner.style.transiton = "all 0.6s";
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount ;
 
-        //     console.log(currentIndex)
-        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex + "px)"
-        // },sliderInterval);
+            console.log(currentIndex)
+            sliderInner.style.transform = "translateX("+ -800 * currentIndex + "px)"
+        },sliderInterval);
     </script>
     <!-- GSAP -->
    <!-- GSAP -->
