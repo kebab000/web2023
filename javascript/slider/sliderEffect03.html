@@ -118,7 +118,7 @@
     <script>
         setInterval(() => {
             currentIndex = (currentIndex + 1) % sliderCount;
-            $(".slider__inner").css("position", "relative")
+            $(".slider__inner").css("position", "relative");
             $(".slider__inner").animate({top : -520 * currentIndex}, 1000, "easeOutElastic");
         }, sliderInterval);
     </script>

@@ -79,6 +79,12 @@
         .slider__dot .dot.active {
             background-color: rgba(225, 225, 225, 1);
         }
+        #footer {
+            position: absolute;
+            right: 500px;
+            bottom: 20px;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body class="img06 bg06 font06">
@@ -120,10 +126,10 @@
         </div>
     </main>
     <!-- //main -->
-    <!-- <footer id="footer">
+    <footer id="footer">
         <a href="mailto:imkebab00@gmail.com">im.kebab00@gmail.com</a>
     </footer>
-    //footer -->
+    <!-- //footer -->
     <script>
         // 선택자 
         const sliderWrap = document.querySelector(".slider__wrap");     
@@ -146,6 +152,7 @@
 
             //첫 번째 닷 메뉴한테 활성화 표시하기
             sliderDot.firstChild.classList.add("active");
+
         }
 
         init();
@@ -154,6 +161,10 @@
             sliderInner.style.transition = "all 400ms";
             sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
             currentIndex = num;
+            // 닷 메뉴 활성화 하기
+            let dotActive = document.querySelectorAll(".slider__dot .dot");
+            dotActive.forEach((active) => active.classList.remove("active"));
+            dotActive[num].classList.add("active");
         }
         // 버튼을 클릭했을 때
         sliderBtn.forEach((btn, index) => {
