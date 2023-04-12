@@ -135,7 +135,7 @@
             // sliderInner.appendChild(sliderClone);
             currentIndex++;
             $(".slider__inner").css("position", "relative");
-            $(".slider__inner").animate({left : -800 * currentIndex}, 600);
+            $(".slider__inner").animate({left : -sliderWidth * currentIndex}, 600);
             
             // 마지막 이미지에 위치 했을 때
             if(currentIndex == sliderCount){
