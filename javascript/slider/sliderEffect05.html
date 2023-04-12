@@ -118,12 +118,11 @@
             // 마지막 이미지에 위치 했을 때
             if(currentIndex == sliderCount){
                 setTimeout(() => {
-                    $(".slider__inner").animate({left : 0},0);
+                    $(".slider__inner").animate({top : 0},0);
                 }, 700);
                 currentIndex = 0;
             }
         }, sliderInterval);
-
     </script>
     <!-- GSAP -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
