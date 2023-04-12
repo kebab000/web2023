@@ -25,8 +25,7 @@
             overflow: hidden;
         }
         /* 이미지가 움직이는 영역 */
-        .slider__inner {      
-            display: flex;
+        .slider__inner {
             flex-wrap: wrap;
             width: 4800px;
             height: 520px;
@@ -39,10 +38,10 @@
         }
     </style>
 </head>
-<body class="img05 bg05 font05">
+<body class="bg05 font05">
     <header id="header">
-        <h1>Javascript slider Effect03</h1>
-        <p>슬라이더 이펙트 : 좌로 움직이기</p>
+        <h1>Javascript slider Effect05</h1>
+        <p>슬라이더 이펙트 : 상하로 움직이기</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
             <li><a href="sliderEffect02.html">2</a></li>
@@ -81,34 +80,69 @@
         let currentIndex = 0; // 현재 보이는 이미지
         let sliderCount = slider.length; // 이미지 갯수
         let sliderInterval = 3000;  //이미지 변경 시간
-        let sliderWidth = slider[0].clientWidth;    //이미지 가로 값
+        let sliderHeight = slider[0].clientHeight;    //이미지 가로 값
         let sliderClone = sliderInner.firstElementChild.cloneNode(true); // 첫번째 이미지 복사
 
         // 복사한 첫번째 이미지 붙여넣기
         sliderInner.appendChild(sliderClone);
-
-        function sliderEffect(){
-            currentIndex++;
-
-            sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)"
-
-            // 마지막 이미지에 위치 했을 때 
-            if (currentIndex == sliderCount ){
-                setTimeout(() => {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateX(0px)";
-                }, 700);
-            }
-            currentIndex = 0;
-        }
-
-        setInterval(sliderEffect, sliderInterval)
     </script>
     <!-- javascript -->
+    <!-- <script>
+        function sliderEffect(){
+                    currentIndex++;
+                    sliderInner.style.transition = "all 0.6s";
+                    sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)"
+
+                    // 마지막 이미지에 위치 했을 때 
+                    if (currentIndex == sliderCount ){
+                        setTimeout(() => {
+                            sliderInner.style.transition = "0s";
+                            sliderInner.style.transform = "translateY(0px)";
+                        }, 700);
+                    currentIndex = 0;
+                    }
+                }
+        setInterval(sliderEffect,sliderInterval);
+    </script> -->
+    <!-- jquery -->
+    <!-- <script>
+        function sliderEffect(){
+                    currentIndex++;
+                    sliderInner.style.transition = "all 0.6s";
+                    sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)"
+
+                    // 마지막 이미지에 위치 했을 때 
+                    if (currentIndex == sliderCount ){
+                        setTimeout(() => {
+                            sliderInner.style.transition = "0s";
+                            sliderInner.style.transform = "translateY(0px)";
+                        }, 700);
+                    currentIndex = 0;
+                    }
+                }
+        setInterval(sliderEffect,sliderInterval);
+    </script> -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-
+        function sliderEffect() {
+                sliderInner.appendChild(sliderClone);
+                currentIndex++
+                gsap.to(".slider__inner", {
+                    x : -800 * currentIndex,
+                    duration : 0.6,
+                });
+                // 마지막 이미지에 위치 했을 때
+                if(currentIndex == sliderCount){
+                    setTimeout(() => {
+                        gsap.to(".slider__inner", {
+                            x : 0,
+                            duration : 0
+                        });
+                    },700);
+                    currentIndex = 0;
+                }}
+        setInterval(sliderEffect,sliderInterval);
     </script>
-
 </body>
 </html>
