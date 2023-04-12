@@ -112,7 +112,7 @@
                 sliderInner.appendChild(sliderClone);
                 currentIndex++
                 gsap.to(".slider__inner", {
-                    x : -800 * currentIndex,
+                    x : -sliderWidth * currentIndex,
                     duration : 0.6,
                 });
                 // 마지막 이미지에 위치 했을 때

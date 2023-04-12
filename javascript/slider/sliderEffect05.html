@@ -38,7 +38,7 @@
         }
     </style>
 </head>
-<body class="bg05 font05">
+<body class="img05 bg05 font05">
     <header id="header">
         <h1>Javascript slider Effect05</h1>
         <p>슬라이더 이펙트 : 상하로 움직이기</p>
@@ -105,44 +105,47 @@
         setInterval(sliderEffect,sliderInterval);
     </script> -->
     <!-- jquery -->
-    <!-- <script>
-        function sliderEffect(){
-                    currentIndex++;
-                    sliderInner.style.transition = "all 0.6s";
-                    sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)"
 
-                    // 마지막 이미지에 위치 했을 때 
-                    if (currentIndex == sliderCount ){
-                        setTimeout(() => {
-                            sliderInner.style.transition = "0s";
-                            sliderInner.style.transform = "translateY(0px)";
-                        }, 700);
-                    currentIndex = 0;
-                    }
-                }
-        setInterval(sliderEffect,sliderInterval);
-    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        setInterval(() => {
+            // sliderInner.appendChild(sliderClone);
+            currentIndex++;
+            $(".slider__inner").css("position", "relative");
+            $(".slider__inner").animate({top : -sliderHeight * currentIndex}, 600);
+            
+            // 마지막 이미지에 위치 했을 때
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    $(".slider__inner").animate({left : 0},0);
+                }, 700);
+                currentIndex = 0;
+            }
+        }, sliderInterval);
+
+    </script>
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
         function sliderEffect() {
                 sliderInner.appendChild(sliderClone);
                 currentIndex++
                 gsap.to(".slider__inner", {
-                    x : -800 * currentIndex,
+                    y : -sliderHeight * currentIndex,
                     duration : 0.6,
                 });
                 // 마지막 이미지에 위치 했을 때
                 if(currentIndex == sliderCount){
                     setTimeout(() => {
                         gsap.to(".slider__inner", {
-                            x : 0,
+                            y : 0,
                             duration : 0
                         });
                     },700);
                     currentIndex = 0;
                 }}
         setInterval(sliderEffect,sliderInterval);
-    </script>
+    </script> -->
 </body>
 </html>
