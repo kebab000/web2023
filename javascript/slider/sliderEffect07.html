@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transitionn" content="same-origin">
-    <title>06. 슬라이드이펙트</title>
+    <title>07. 슬라이드이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
 
@@ -76,13 +76,14 @@
     }
     .slider__btn a:hover {
         background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
     }
     
     </style>
 </head>
 <body class="img07 bg02 font07">
     <header id="header">
-        <h1>Javascript slider Effect06</h1>
+        <h1>Javascript slider Effect07</h1>
         <p>슬라이더 이펙트 : 좌로 움직이기 : dot 메뉴 추가</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
@@ -145,7 +146,7 @@
             slider.thumnails.innerHTML = slider.images.innerHTML;
 
             // 클릭했을 때
-            let thumnailNodes = slider.thumnails.querySelectorAll("img")
+            let thumnailNodes = slider.thumnails.querySelectorAll("img");
             thumnailNodes[currentIndex].classList.add("active");
 
             // 썸네일 이미지 클릭하기
@@ -154,7 +155,7 @@
             //     thumnailNodes[i].addEventListener("click", function(){
                         // alert(this.src)
             //     })
-            // }
+            // } 
             // for(let i=0; i<thumnailNodes.length; i++){
             //     thumnailNodes[i].addEventListener("click", function(){
             //         slider.thumnails.querySelector("img.active").classList.remove("active");

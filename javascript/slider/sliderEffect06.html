@@ -81,7 +81,7 @@
         }
         #footer {
             position: absolute;
-            right: 500px;
+            right: 00px;
             bottom: 20px;
             transform: translateX(-50%);
         }
@@ -130,9 +130,9 @@
         </div>
     </main>
     <!-- //main -->
-    <footer id="footer">
+    <!-- <footer id="footer">
         <a href="mailto:imkebab00@gmail.com">im.kebab00@gmail.com</a>
-    </footer>
+    </footer> -->
     <!-- //footer -->
     <script>
         // 선택자 
@@ -182,11 +182,17 @@
                 }
             })
         })
+        // dot버튼을 누르면 해당 번호의 사진으로넘어감
+        let imageNodes = sliderWrap.querySelectorAll("img");
+        let dot = sliderWrap.querySelectorAll(".slider__dot .dot");
+        dot.forEach((el, i) => {
+            el.addEventListener("click", function(){
+                sliderWrap.querySelector(".dot.active").classList.remove("active");
+                el.classList.add("active");
+                sliderInner.style.transition = "all 400ms";
+                sliderInner.style.transform = "translateX("+ -sliderWidth * i +"px)";
+            })
+        });
     </script>
-    <!-- javascript -->
-    <script>
-
-    </script>
-
 </body>
 </html>
