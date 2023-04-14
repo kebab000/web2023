@@ -87,14 +87,8 @@
     </script>
         
 <!-- javascript -->
-    <!-- <script>
-        sliderInner.style.transform = translateX("-0px");
-        sliderInner.style.transform = translateX("-800px");
-        sliderInner.style.transform = translateX("-1600px");
-        sliderInner.style.transform = translateX("-2400px");
-        sliderInner.style.transform = translateX("-3200px");
-        sliderInner.style.transform = translateX("-0px");
-        javascript
+    <script>
+        // javascript
         sliderInner.style.transition = "all 1s";
         setInterval(() => {
             currentIndex = (currentIndex + 1) % sliderCount ;
@@ -102,7 +96,7 @@
             console.log(currentIndex)
             sliderInner.style.transform = "translateY("+ -520 * currentIndex + "px)"
         },sliderInterval);
-     </script> -->
+     </script>
     <!-- GSAP -->
     <!-- GSAP -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -117,7 +111,7 @@
             }, sliderInterval);
         </script> -->
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
         setInterval(() => {
@@ -125,6 +119,6 @@
             $(".slider__inner").css("position", "relative");
             $(".slider__inner").animate({top : -520 * currentIndex}, 1000, "easeOutElastic");
         }, sliderInterval);
-    </script>
+    </script> -->
 </body>
 </html>
