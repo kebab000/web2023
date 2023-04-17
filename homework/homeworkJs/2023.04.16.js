@@ -1,6 +1,6 @@
 const lottonum = document.querySelectorAll(".number p");
 const clickBtn = document.querySelector(".click");
-const random = Math.floor( Math.random()*45)+1;
+
 let numLength = lottonum.length
 let num = []
 
