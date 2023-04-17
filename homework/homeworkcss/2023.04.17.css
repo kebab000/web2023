@@ -5,23 +5,31 @@
 }
 .wrap {
     margin: 0 auto;
-    display: flex;
     justify-content: center;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 1000px;
     height: 800px;
-
-    
+    position: relative;
+    overflow: hidden;
+}
+.slider__inner {
+    width: 1000px;
+    height: 800px;
+}
+.slider__inner > div > img {
+    width: 1000px;
+    height: 800px;
 }
 .ddd {
-    margin: 10% 0;
+    position: absolute;
+    left: 9em;
+    top: 30px;
     width: 700px;
+    margin-top: 50px;
     border: 3px solid #fff;
     text-align: center;
     color: #fff;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
 
 }
 .p {
