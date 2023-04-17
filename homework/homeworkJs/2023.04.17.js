@@ -19,15 +19,11 @@ const dataQuestion = () => {
         document.querySelector(".ddd .p").innerHTML=items.quotes[bb].quote
         document.querySelector(".ddd .q").innerHTML=items.quotes[bb].author
         if(aa == 1){
-            document.querySelector(".slider.s1 img").src = `https://source.unsplash.com/random/?city&t=${new Date().getTime()}`;
-            document.querySelector(".slider.s3 img").src = `https://source.unsplash.com/random/?forest&t=${random2}`;
+            document.querySelector(".slider.s3 img").src = `https://source.unsplash.com/random/?moutian&t=${random2}`;
         } else if (aa == 2) {
             document.querySelector(".slider.s1 img").src = `https://source.unsplash.com/random/?city&t=${new Date().getTime()}`;
-            document.querySelector(".slider.s2 img").src = `https://source.unsplash.com/random/?star&t=${random1}`;
         } else {
             document.querySelector(".slider.s2 img").src = `https://source.unsplash.com/random/?star&t=${random1}`;
-            document.querySelector(".slider.s3 img").src = `https://source.unsplash.com/random/?forest&t=${random2}`;
-
         }
     });
 };
