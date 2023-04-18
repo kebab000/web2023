@@ -163,12 +163,14 @@
             // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop
             // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop
 
+            // for 문
             // for(i=1; i<10; i++){
             //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop
             // }
-            document.querySelectorAll(".info ul li").forEach((el, i)=>{
-                document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop
-            }) 
+            // forEach 문
+            // document.querySelectorAll(".info ul li").forEach((el, i)=>{
+            //     document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop
+            // }) 
 
             document.querySelectorAll(".parallax__item").forEach((el, i)=>{
                if (scrollTop >= el.offsetTop -2){
@@ -179,7 +181,7 @@
                };
             });
 
-            document.querySelectorAll(".parallax__nav li a").forEach(li => {
+            document.querySelectorAll(".parallax__nav li a").forEach(li => { 
                 li.addEventListener("click", (e) => {
                     e.preventDefault();
                     document.querySelector(li.getAttribute("href")).scrollIntoView({
@@ -187,7 +189,14 @@
                     })
                 })
             });
-            
+            //for in
+            // for(let i in document.querySelectorAll(".info ul li")){
+            //     document.querySelector(".info .offset"+(parseInt(i)+1)).innerText = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
+            // }
+            // for of
+            for (const [i, el] of document.querySelectorAll(".info ul li span").entries()){
+                el.innerHTML = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
+            }
         })
     </script>
 </body>
