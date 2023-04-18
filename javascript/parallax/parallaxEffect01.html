@@ -153,24 +153,15 @@
             //info
             document.querySelector(".scroll span").innerHTML = parseInt(scrollTop);
 
-            // document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop
-            // document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop
-            // document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop
-            // document.querySelector(".info .offset4").innerText = document.getElementById("section4").offsetTop
-            // document.querySelector(".info .offset5").innerText = document.getElementById("section5").offsetTop
-            // document.querySelector(".info .offset6").innerText = document.getElementById("section6").offsetTop
-            // document.querySelector(".info .offset7").innerText = document.getElementById("section7").offsetTop
-            // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop
-            // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop
-
-            // for 문
-            // for(i=1; i<10; i++){
-            //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop
-            // }
-            // forEach 문
-            // document.querySelectorAll(".info ul li").forEach((el, i)=>{
-            //     document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop
-            // }) 
+            document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop
+            document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop
+            document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop
+            document.querySelector(".info .offset4").innerText = document.getElementById("section4").offsetTop
+            document.querySelector(".info .offset5").innerText = document.getElementById("section5").offsetTop
+            document.querySelector(".info .offset6").innerText = document.getElementById("section6").offsetTop
+            document.querySelector(".info .offset7").innerText = document.getElementById("section7").offsetTop
+            document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop
+            document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop
 
             document.querySelectorAll(".parallax__item").forEach((el, i)=>{
                if (scrollTop >= el.offsetTop -2){
@@ -189,14 +180,22 @@
                     })
                 })
             });
+            // for 문
+            // for(i=1; i<10; i++){
+            //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop
+            // }
+            // forEach 문
+            // document.querySelectorAll(".info ul li").forEach((el, i)=>{
+            //     document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop
+            // }) 
             //for in
             // for(let i in document.querySelectorAll(".info ul li")){
             //     document.querySelector(".info .offset"+(parseInt(i)+1)).innerText = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
             // }
             // for of
-            for (const [i, el] of document.querySelectorAll(".info ul li span").entries()){
-                el.innerHTML = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
-            }
+            // for (const [i, el] of document.querySelectorAll(".info ul li span").entries()){
+            //     el.innerHTML = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
+            // }
         })
     </script>
 </body>
