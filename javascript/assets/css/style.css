@@ -34,25 +34,26 @@
  #header h1 a {
      font-size: 80px;
      font-weight: 800;
-     color: #0243f1;
+     color: #844aa3;
  }
  #header nav ul li {
      display: inline;
  }
  #header nav ul li a {
-     border: 1px dashed #0243f1;
-     color: #0243f1;
+    border-radius: 2px;
+     border: 1px dashed #844aa3;
+     color: #844aa3;
      padding: 10px 20px;
      margin: 6px 3px;
      display: inline-block;
      transition: background-color 0.3s, color 0.3s;
  }
  #header nav ul li a:hover {
-     background-color: #0243f1;
+     background-color: #844aa3;
      color: #fff;
  }
  #header nav ul li.active a {
-     background-color: #0243f1;
+     background-color: #844aa3;
      color: #fff;
  }
  @media (max-width: 600px){
@@ -88,7 +89,7 @@
  }
  .main__menu li strong::before {
      content: '';
-     background: #ff8080;
+     background: #d380ff;
      position: absolute;
      left: 0;
      bottom: 0;
@@ -101,15 +102,24 @@
  .main__menu li:hover strong::before {
      height: 100%;
  }
+ .main__menu > span {
+    font-size: 18px;
+    margin-bottom: 5px;
+    background-color: #660c96d7;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+}
  .main__desc h3 {
      font-size: 24px;
      margin-bottom: 5px;
  }
  .main__desc p {
      margin-bottom: 15px;
-     border-left: 5px solid #0243F1;
+     border-left: 5px solid #844aa3;
      padding: 12px 10px 10px 20px;
      background-color: #F5F5F5;
+     border-radius: 2px;
  }
  .main__desc ul {
      padding-left: 15px;
@@ -126,14 +136,16 @@
      padding: 10px;
      margin-bottom: 50px;
      transition: all 0.2s;
+     border-radius: 2px;
  }
  .main__desc a:hover {
-     border-color: #0243f1;
+     border-color: #844aa3;
      background-color: #dae4ff;
  }
  .main__sample {
      padding-top: 40px;
  }
+
  .main__sample .sample {
      margin-top: 100px;
  }
@@ -157,7 +169,7 @@
      margin-bottom: 10px;
  }
  .main__sample .notice {
-     border-left: 5px solid #0243f1;
+     border-left: 5px solid #844aa3;
      padding: 13px 10px 10px 15px;
      background-color: #f6f6f6;
  }
@@ -178,7 +190,7 @@
      content: '';
      width: 5px;
      height: 5px;
-     background-color: #0243f1;
+     background-color: #844aa3;
      position: absolute;
      left: 0;
      top: 9px;

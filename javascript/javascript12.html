@@ -48,27 +48,28 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
-                    <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
-                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
-                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</a></li>
-                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
-                    <li><a href="#">06. 데이터 이펙트 : 1부터 100까지 합 구하기</a></li>
-
-                    <li><a href="#">07. 데이터 이펙트 : for()문을 이용하여 테이블 만들기</a></li>
-                    <li><a href="#">08. 데이터 이펙트 : 중첩 for()문을 이용하여 구구단 만들기</a></li>
-                    <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수 파란색)</a></li>
-                    <li><a href="#">10. 데이터 이펙트 : 테이블 25칸(3의 배수만 나오고 5의 배수는 파란색)</a></li>
-                    <li><a href="#">11. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</a></li>
+                    <li><a href="#sample01">01. <strong>데이터 이펙트 : 1부터 100까지 출력하기</strong></a></li>
+                    <li><a href="#sample02">02. <strong>데이터 이펙트 : 0부터 50까지 출력하기</strong></a></li>
+                    <li><a href="#sample03">03. <strong>데이터 이펙트 : 1부터 100까지 짝수만 출력하기</strong></a></li>
+                    <li><a href="#sample04">04. <strong>데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</strong></a></li>
+                    <li><a href="#sample05">05. <strong>데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</strong></a></li>
+                    <li><a href="#sample06">06. <strong>데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</strong></a></li>
+                    <li><a href="#sample07">07. <strong>데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</strong></a></li>
+                    <li><a href="#sample08">08. <strong>데이터 이펙트 : 테이블 25칸(짝수: 빨간색, 홀수: 파란색)</strong></a></li>
+                    <li><a href="#sample09">09. <strong>데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색))</strong></a></li>
+                    <li><a href="#sample10">10. <strong>데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</strong></a></li>
+                    <li><a href="#sample11">11. <strong>데이터 이펙트 : 1부터 100까지 합 구하기</strong></a></li>
                 </ul>
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
                     <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
                     <p>for문에 증감 연산자를 사용하여 1-100까지 출력하는 예제입니다.</p>
-<pre data-line="1-3" class="line-numbers"><code class="language-js">for(i=1; i&lt=100; i++){    //반복문 for문 설정
-    console.log(i);
-};
+<pre class="line-numbers"><code class="language-js">{
+    for(i=1; i&lt=100; i++){    //반복문 for문 설정
+        console.log(i);
+    };
+}
 </code></pre>
                     <div class="result">
                         <details>
@@ -87,9 +88,11 @@
                     <h3>02. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
                     <p>for문에 증감 연산자를 사용하여 0-50까지 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="1-3" class="line-numbers"><code class="language-js">for(i=0; i&lt=50; i++){
-    console.log(i);  //초기값을 0으로 설정하고 1씩 증가시켜서 50까지 출력하였습니다.
-};
+<pre class="line-numbers"><code class="language-js">{
+    for(i=0; i&lt=50; i++){
+        console.log(i);  //초기값을 0으로 설정하고 1씩 증가시켜서 50까지 출력하였습니다.
+    };
+}
 </code></pre>
                     </div>      
                     <div class="result">
@@ -110,9 +113,11 @@
                     <h3>03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</h3>
                     <p>for문에 증감 연산자를  사용하여 1-100까지 짝수만 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="1-3" class="line-numbers"><code class="language-js">for(i=0; i&lt=100; i+=2){
+<pre class="line-numbers"><code class="language-js">{
+    for(i=0; i&lt=100; i+=2){
         console.log(i);  // 초기 값을 0으로 설정하고 2씩 증가시켜서 짝수만 출력하였습니다.
     };
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -132,17 +137,19 @@
                     <h3>04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</h3>
                     <p>for문에 증감 연산자와 if문을 사용하여 1-100까지 5의 배수만 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="1,2,3,4,6,7,8,9,10,11,12" class="line-numbers"><code class="language-js">// 1. for문에 증감연사자를 사용하여 5의 배수만 출력하는 예제입니다.
-for(i=0; i&lt=100; i+=5){
-    console.log(i);  // 초기값을 0으로 설정하고 5씩 증가시켜서 5의 배수만 출력하였습니다.
-}; 
+<pre class="line-numbers"><code class="language-js">{
+    // 1. for문에 증감연사자를 사용하여 5의 배수만 출력하는 예제입니다.
+    for(i=0; i&lt=100; i+=5){
+        console.log(i);  // 초기값을 0으로 설정하고 5씩 증가시켜서 5의 배수만 출력하였습니다.
+    }; 
 
-// 2. if문을 이용해서 1-100까지 5의 배수만 출력하는 예제입니다.
-for(i=0; i&lt=100; i++){
-    if(i % 5 == 0){
-        console.log(i);  //초기값을 0으로 설정하고 i를 100까지 1씩 증가시키고 
-    };                        //5로 나눈 후에 나머지의 값이 0이면 출력하는 예제입니다.
-}; 
+    // 2. if문을 이용해서 1-100까지 5의 배수만 출력하는 예제입니다.
+    for(i=0; i&lt=100; i++){
+        if(i % 5 == 0){
+            console.log(i);  //초기값을 0으로 설정하고 i를 100까지 1씩 증가시키고 
+        };                        //5로 나눈 후에 나머지의 값이 0이면 출력하는 예제입니다.
+    }; 
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -172,13 +179,16 @@ for(i=0; i&lt=100; i++){
                     <p> 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하는 예제입니다.</p>
 
                     <div class="script">
-<pre data-line="1-7" class="line-numbers"><code class="language-js">for(i=1; i"&lt 100; i++){
-    if(i%2 == 0){
-    document.write("&lt span style='color:blue' &gt "+i+"&lt/span&gt");
-    };       //  i 를 2로 나눈 값이 0 이면(즉 짝수이면) 파란색으로 나타낸다.
-    if(i%2 == 1){
-        document.write("&lt span style='color:red' &gt "+i+"&lt/span&gt");
-    };       //  i 를 2로 나눈 값이 1 이면(즉 홀수이면) 빨간색으로 나타낸다.
+<pre class="line-numbers"><code class="language-js">{
+    for(i=1; i"&lt 100; i++){
+        if(i%2 == 0){
+        document.write("&lt span style='color:blue' &gt "+i+"&lt/span&gt");
+        };       //  i 를 2로 나눈 값이 0 이면(즉 짝수이면) 파란색으로 나타낸다.
+        if(i%2 == 1){
+            document.write("&lt span style='color:red' &gt "+i+"&lt/span&gt");
+        };       //  i 를 2로 나눈 값이 1 이면(즉 홀수이면) 빨간색으로 나타낸다.
+    }
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -202,11 +212,13 @@ for(i=0; i&lt=100; i++){
                     <p> 1부터 100까지의 합을 출력하는 예제입니다.</p>
 
                     <div class="script">
-<pre data-line="1-5" class="line-numbers"><code class="language-js">let sum = 0;
+<pre class="line-numbers"><code class="language-js">{
+    let sum = 0;
     for(i=1; i&lt;101; i++){
         sum += i;
     }
-document.write(sum);
+    document.write(sum);   
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -227,20 +239,22 @@ document.write(sum);
                     <h3>07. 데이터 이펙트 : for()문을 이용하여 테이블 만들기</h3>
                     <p>for()문을 이용하여 10*10테이블을 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="1,3,4,6,7,8,10,11,12,,14" class="line-numbers"><code class="language-js">let table = "&lt table border='1'&gt";
-        
-for(let i=1; i&lt=10; i++){
-    table +="&lttr&gt";
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt table border='1'&gt";
+            
+    for(let i=1; i&lt=10; i++){
+        table +="&lttr&gt";
 
-    for(let j=1;j&lt=10;j++){
-    table +="&lttd&gt"+j+"&lt/td&gt";
-    };
+        for(let j=1;j&lt=10;j++){
+        table +="&lttd&gt"+j+"&lt/td&gt";
+        };
 
-    table +="&lt/tr&gt";
-};    
-table += "&lt/table&gt";    
+        table +="&lt/tr&gt";
+    };    
+    table += "&lt/table&gt";    
 
-document.write(table);
+    document.write(table);
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -270,15 +284,17 @@ document.write(table);
                     <h3>08. 데이터 이펙트 : 중첩 for()문을 이용하여 구구단 만들기</h3>
                     <p>for()문을 이용하여 구구단을 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="1,2,4,5,6,7,8,9" class="line-numbers"><code class="language-js">for(let i=2; i&lt=9; i++){
-    document.write(i+"단","&ltbr&gt");
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=2; i&lt=9; i++){
+        document.write(i+"단","&ltbr&gt");
 
-    for(let j=1; j&lt=9; j++){
-        document.write(i + " * " + j +"="+ i*j);
+        for(let j=1; j&lt=9; j++){
+            document.write(i + " * " + j +"="+ i*j);
+            document.write("&ltbr&gt");
+        };
         document.write("&ltbr&gt");
     };
-    document.write("&ltbr&gt");
-};
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -306,22 +322,24 @@ document.write(table);
                     <p> 테이블 25칸(짝수:빨간색, 홀수 파란색)을 출력하는 예제입니다.</p>
 
                     <div class="script">
-<pre data-line="1-16" class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
-let count = 0;
-for(let i=0; i&lt;5; i++){
-    table += "&lt;tr&gt;";
-    for(let j=0; j&lt;5; j++){
-        count++;
-        if(count %  2 == 0){
-            table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
-        }else {
-            table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table border='1'&gt;";
+    let count = 0;
+    for(let i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+            count++;
+            if(count %  2 == 0){
+                table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+            }else {
+                table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+            };
         };
+        table += "&lt;/tr&gt;";
     };
-    table += "&lt;/tr&gt;";
-};
-table += "&lt;/table&gt;";
-document.write(table);
+    table += "&lt;/table&gt;";
+    document.write(table);
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -357,22 +375,24 @@ document.write(table);
                     <p>테이블 25칸(3의 배수만 나오고 5의 배수는 파란색)을 출력하는 예제입니다.</p>
 
                     <div class="script">
-<pre data-line="1-16" class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
-let count = 0;
-for(let i=0; i&lt;5; i++){
-    table += "&lt;tr&gt;";
-    for(let j=0; j&lt;5; j++){
-        count+=3;
-        if(count %  5 == 0){
-            table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
-        }else {
-            table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table border='1'&gt;";
+    let count = 0;
+    for(let i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+            count+=3;
+            if(count %  5 == 0){
+                table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+            }else {
+                table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";
+            };
         };
+        table += "&lt;/tr&gt;";
     };
-    table += "&lt;/tr&gt;";
-};
-table += "&lt;/table&gt;";
-document.write(table);
+    table += "&lt;/table&gt;";
+    document.write(table);
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -407,16 +427,18 @@ document.write(table);
                     <h3>11. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</h3>
                     <p>배열에서 10보다 큰 수를 찾아 출력하는 예제입니다.</p>
                     <div class="script">
-<pre data-line="" class="line-numbers"><code class="language-js">const arr = [1, 3, 5, 7, 9, 11, 13, 15, 17 ,19];
+<pre class="line-numbers"><code class="language-js">{
+    const arr = [1, 3, 5, 7, 9, 11, 13, 15, 17 ,19];
 
-document.write("10보다 큰 숫자 찾기");
-document.write("결과 :");
+    document.write("10보다 큰 숫자 찾기");
+    document.write("결과 :");
 
-for(let i=0; i&lt;=arr.length; i++){   //arr.length란 arr배열의 요소 갯수를 뜻합니다.
-    if(arr[i] &gt; 10){
-        document.write(arr[i] + " ");
+    for(let i=0; i&lt;=arr.length; i++){   //arr.length란 arr배열의 요소 갯수를 뜻합니다.
+        if(arr[i] &gt; 10){
+            document.write(arr[i] + " ");
+        };
     };
-};
+}
 </code></pre>
                     </div>
                     <div class="result">
@@ -450,11 +472,5 @@ for(let i=0; i&lt;=arr.length; i++){   //arr.length란 arr배열의 요소 갯�
     <!-- //footer -->
 
     <script src="assets/js/prism.js"></script>
-    <script>
-
-    </script>
-
-
-    
 </body>
 </html>

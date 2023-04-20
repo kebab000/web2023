@@ -10,6 +10,9 @@
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+    <style>
+
+    </style>
 </head>
 <body>
     <header id="header">
@@ -42,50 +45,53 @@
         </nav>
     </header>
     <!-- //header -->
-
     <main id="main">
         <div class="container">
             <div class="main__menu">
+                <span>선택자</span>
                 <ul>
                     <li><a href="#">01. 요소 메서드 : 선택자 : document.querySelector() : 요소 선택자</a></li>
-                    <li><a href="#">02. 요소 메서드 : 선택자 : document.querySelectorAll() : 모든 요소 선택자</a></li>
+                    <li><a href="#">01. 요소 메서드 : 선택자 : document.querySelectorAll() : 모든 요소 선택자</a></li>
                     <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementById() : 아이디 요소 선택자</a></li>
-                    <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementsByClassName() : 클라스 요소 선택자</a></li>
+                    <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementsByClassName() : 클래스 요소 선택자</a></li>
                     <li><a href="#">01. 요소 메서드 : 선택자 : document.getElementsByTagName() : 태그 요소 선택자</a></li>
                 </ul>
                 <br>
+                <span>텍스트</span>
                 <ul>
                     <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerText() : 요소 텍스트 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerTextContent() : 요소 텍스트() 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerHTML() : 요소 텍스트(태그포함) 설정하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.outerHTML() : 요소 텍스트(태그포함,자식포함) 설정하기</a></li>
+                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.textContent() : 요소 텍스트 설정하기</a></li>
+                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.innerHTML() : 요소 텍스트(태그 포함) 설정하기</a></li>
+                    <li><a href="#">01. 요소 메서드 : 텍스트 : element.outerHTML() : 요소 텍스트(태그 포함, 자식 포함) 설정하기</a></li>
                 </ul>
                 <br>
+                <span>클래스</span>
                 <ul>
                     <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.add() : 클래스 추가하기</a></li>
                     <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.remove() : 클래스 삭제하기</a></li>
                     <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.toggle() : 클래스 추가/삭제하기</a></li>
-                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.contains() : 클래스 존재 여부 확인하기</a></li>
+                    <li><a href="#">01. 요소 메서드 : 클래스 : element.classList.contains() : 클래스 존재 여부 확인</a></li>
                     <li><a href="#">01. 요소 메서드 : 클래스 : element.style.속성명 : CSS 스타일 설정</a></li>
                 </ul>
+                <br>
+                <span>요소의 크기</span>
                 <ul>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientWidth : 요소의 가로 값(마진/보더 미포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientHeight : 요소의 세로 값(마진/보더 미포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientTOP : 요소의 Y축 값(부모 기준)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientleft : 요소의 X축 값(부모 기준)</a></li>
-
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetWidth : 요소의 가로 값(마진/보더 포함)</a></li>
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetHeight : 요소의 세로 값(마진/보더 포함)</a></li>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientWidth : 요소의 가로값(마진/보더 미포함)</a></li>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientHeight : 요소의 세로값(마진/보더 미포함)</a></li>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientTop : 요소의 Y축 값(부모 기준)</a></li>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.clientLeft : 요소의 X축 값(부모 기준)</a></li>
+                    <br>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetWidth : 요소의 가로값(보더/패딩 포함)</a></li>
+                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetHeight : 요소의 세로값(보더/패딩 포함)</a></li>
                     <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetTop : 요소의 Y축 값(문서 기준)</a></li>
                     <li><a href="#">01. 요소 속성 : 크기 및 위치 : element.offsetLeft : 요소의 X축 값(문서 기준)</a></li>
-
-                    <li><a href="#">01. 요소 속성 : 크기 및 위치 : getBoundingClinetRect : 요소의 크기 및 위치 값을 설정</a></li>
+                    <br>
+                    <li><a href="#">01. 요소 메서드 : 크기 및 위치 : element.getBoundingClientRect() : 요소의 크기 및 위치 값을 설정</a></li>
                 </ul>
             </div>
         </div>
     </main>
     <!-- //main -->
-
     <footer id="footer">
         <a href="mailto:im.kebab00@gmail.com">im.kebab00@gmail.com</a>
     </footer>
