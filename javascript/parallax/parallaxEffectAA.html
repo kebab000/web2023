@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+        <title>패럴랙스 효과 AA</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ReciaSerifDisplay;
+        }
+        body {
+            height: 20000px;
+            background-color: #E0E4DD;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .fixed1 {
+            position: fixed;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .fixed2 {
+            position: fixed;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .fixed3 {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .fixed4 {
+            position: fixed;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .fixed5 {
+            position: fixed;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1{
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text3 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: vw;
+            word-break: keep-all;
+            text-align: center;
+        }
+        .s1-img1 {
+            width: 200vw;
+            height: 100vh;
+
+        }
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s1-img1-15 {
+            position: fixed;
+            left: 50%;
+            top: 89%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            border: 5px solid #000;
+        }
+        .s1-img2 {
+            width: 100vh;
+            height: 70vh;
+            
+        }
+        .s1-img2 > div {
+            width: 100vh;
+            height: 70vh;
+            border: 3px solid #000;
+            background-image: url(img/parallaxEffectAA01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .s1-img3 {
+            width: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            filter:saturate(0); 
+        }
+        .s1-img3 > div:nth-child(1) {
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA02.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .s1-img3 > div:nth-child(2){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA03.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .s1-img3 > div:nth-child(3){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA04.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .s1-img3 > div:nth-child(4){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA05.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .s1-img4 {
+            width: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            filter:saturate(0); 
+        }
+        .s1-img4 > div:nth-child(1) {
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA06.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .s1-img4 > div:nth-child(2){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA07.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .s1-img4 > div:nth-child(3){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA08.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .s1-img4 > div:nth-child(4){
+            border: 1px solid #000;
+            width: 49vh;
+            height: 35vh;
+            background-image: url(img/parallaxEffectAA09.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .s1-img1 > div > div {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+        }
+        .s1-img1-1 {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .s1-img1-1 > div:first-child {
+            background-image: url(https://kebab000.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-1 > div:last-child {
+            background-image: url(https://siyoenkim.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-2 {
+            height: 20vh;
+        }
+        .s1-img1-2 > div:first-child {
+            background-image: url(https://dkseho9121.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-2 > div:last-child {
+            background-image: url(https://seolhee313.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-3 {
+            height: 20vh;
+        }
+        .s1-img1-3 > div:first-child {
+            background-image: url(https://jinyongjang.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-3 > div:last-child {
+            background-image: url(https://chohena.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-4{
+            height: 20vh;
+        }
+        .s1-img1-4 > div:first-child {
+            background-image: url(https://kimdohyun2002.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-4 > div:last-child {
+            background-image: url(https://jhwangwoo.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-5{
+            height: 20vh;
+        }
+        .s1-img1-5 > div:first-child {
+            background-image: url(https://yeodaseul4355.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-5 > div:last-child {
+            background-image: url(https://hyejeong3283.github.io/web2023/assets/ico/icon%2001.jpg);
+        }
+        .s1-img1-6{
+            height: 20vh;
+        }
+        .s1-img1-6 > div:first-child {
+            background-image: url(https://dkdlelw.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-6 > div:last-child {
+            background-image: url(https://lee3ll.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-7{
+            height: 20vh;
+        }
+        .s1-img1-7 > div:first-child {
+            background-image: url(https://jo0132.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-7 > div:last-child {
+            background-image: url(https://dlgnsrb227.github.io/web2023/assets/ico/icon.jpg);
+
+        }
+        .s1-img1-8{
+            height: 20vh;
+        }
+        .s1-img1-8 > div:first-child {
+            background-image: url(https://younajeong.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-8 > div:last-child {
+            background-image: url(https://dongjin6539.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-9{
+            height: 20vh;
+        }
+        .s1-img1-9 > div:first-child {
+            background-image: url(https://hyeonbeen97.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-9 > div:last-child {
+            background-image: url(https://fitalux.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-10{
+            height: 20vh;
+        }
+        .s1-img1-10 > div:first-child {
+            background-image: url(https://webstoryboy.github.io/web2023/assets/ico/icon8.jpg);
+        }
+        .s1-img1-10 > div:last-child {
+            background-image: url(https://ehcjswo.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-11{
+            height: 20vh;
+        }
+        .s1-img1-11 > div:first-child {
+            background-image: url(https://xlsak5.github.io/testAnGyonam/assets/ico/icon.jpg);            
+        }
+        .s1-img1-11 > div:last-child {
+            background-image: url(https://hyunmijin.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-12{
+            height: 20vh;
+        }
+        .s1-img1-12 > div:first-child {
+            background-image: url(https://daanbi1345.github.io/web2023/assets/ico/icon11.jpg);
+        }
+        .s1-img1-12 > div:last-child {
+            background-image: url(https://ture403.github.io/web2023/assets/ico/icon.jpg);
+        } 
+        .s1-img1-13{
+            height: 20vh;
+        }
+        .s1-img1-13 > div:first-child {
+            background-image: url(https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg);
+        }
+        .s1-img1-13 > div:last-child {
+            background-image: url(https://aimeekwon.github.io/web2023/assets/ico/icon.jpg);
+        }
+        .s1-img1-14{
+            height: 20vh;
+        }
+        .s1-img1-14 > div:first-child {
+            background-image: url(https://getgrovy.github.io/web2023/assets/ico/icon01.jpg);
+        }
+        .s1-img1-14 > div:last-child {
+            background-image: url(https://leeyouna21.github.io/web2023/assets/ico/icon01.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+    <section id="section1">
+        <div class="s1-text1 fixed"
+            data-0 ="font-size:0vw; opacity: 1"
+            data-700="font-size:30vw; opacity: 1"
+            data-1000="font-size:30vw; opacity: 1"
+            data-1500="font-size:0vw; opacity: 0"
+        >Hello</div>
+        <div class="s1-text2 fixed"
+            data-1200 ="font-size:0vw;opacity:1; transform: translate(-50%,-50%) rotate(0deg)",
+            data-1700="font-size:30vw;opacity:1; transform: translate(-50%,-50%) rotate(360deg)"
+            data-3000="font-size:30vw;opacity:1; transform: translate(-50%,-50%) rotate(360deg)"
+            data-3500="font-size:0vw; opacity:0; transform: translate(-50%,-50%) rotate(360deg)"
+        >World</div>
+        <div class="s1-text3 fixed"
+            data-3500 ="font-size:0vw; opacity: 1"
+            data-4000="font-size:6vw; opacity: 1"
+            data-4300="font-size:6vw; opacity: 1"
+            data-4800="font-size:0vw; opacity: 0"
+        >Web's 2023 Class <br> 2023.02.13 Start!</div>
+        <div class="s1-text3 fixed"
+            data-6700 ="font-size:0vw; opacity: 1"
+            data-7000="font-size:6vw; opacity: 1"
+            data-7300="font-size:6vw; opacity: 1"
+            data-8000="font-size:0vw; opacity: 0"
+        >Keep up the good work.</div>
+        
+        <div class="s1-img2 fixed"
+        data-0 ="opacity: 0"
+        data-4500 ="opacity: 0"
+        data-4900="opacity: 1"
+        data-5300="opacity: 0"
+    >
+    <div></div>
+    <p>2023.03.10 첫 회식</p>
+    </div>
+    <div class="s1-img3 fixed"
+        data-0 ="opacity: 0"
+        data-5200 ="opacity: 0"
+        data-5600="opacity: 1"
+        data-6000="opacity: 0"
+    >
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>2023.04월 조별과제1</p>
+    </div>
+    <div class="s1-img4 fixed"
+        data-0 ="opacity: 0"
+        data-5900 ="opacity: 0"
+        data-6300="opacity: 1"
+        data-6700="opacity: 0"
+    >
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>2023.04월 조별과제2</p>
+    </div>
+        <!-- //해보는거임 -->
+        <div class="s1-img1 fixed"
+            >
+            <div class="s1-img1-11 fixed1"
+            data-1700="width :200vw;"
+            data-2600="width :20vw"
+            data-3100="width :98vw;"
+            data-6100="width :98vw;"
+            data-7000="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-12 fixed2"
+           data-2000="width :200vw;"
+            data-2700="width :20vw"
+            data-3200="width :98vw;"
+            data-6000="width :98vw;"
+            data-6900="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-13 fixed3"
+            data-2100="width :200vw;"
+            data-2800="width :20vw"
+            data-3300="width :98vw;"
+            data-5900="width :98vw;"
+            data-6800="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-14 fixed4"
+            data-2200="width :200vw;"
+            data-2900="width :20vw"
+            data-3400="width :98vw;"
+            data-6000="width :98vw;"
+            data-6900="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-6 fixed1"
+            data-1700="width :200vw;"
+            data-2600="width :20vw"
+            data-3100="width :98vw;"
+            data-5400="width :98vw;"
+            data-5600="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-7 fixed2"
+           data-2000="width :200vw;"
+            data-2700="width :20vw"
+            data-3200="width :98vw;"
+            data-5500="width :98vw;"
+            data-5700="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-8 fixed3"
+            data-2100="width :200vw;"
+            data-2800="width :20vw"
+            data-3300="width :98vw;"
+            data-5600="width :98vw;"
+            data-5800="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-9 fixed4"
+            data-2200="width :200vw;"
+            data-2900="width :20vw"
+            data-3400="width :98vw;"
+            data-5700="width :98vw;"
+            data-5900="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+        <div class="s1-img1-10 fixed5"
+            data-2300="width :200vw;"
+            data-3000="width :20vw"
+            data-3500="width :98vw;"
+            data-6100="width :98vw;"
+            data-7000="width :200vw;"
+        >
+            <div></div>
+            <div></div>
+        </div>
+            <!-- // -->
+            <div class="s1-img1-1 fixed1"
+                data-1700="width :200vw;"
+                data-2600="width :20vw"
+                data-3100="width :98vw;"
+                data-4300="width :98vw;"
+                data-4800="width :200vw;"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-2 fixed2"
+                data-2000="width :200vw;"
+                data-2700="width :20vw"
+                data-3200="width :98vw;"
+                data-4400="width :98vw;"
+                data-5300="width :200vw;"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-3 fixed3"
+                data-2100="width :200vw;"
+                data-2800="width :20vw"
+                data-3300="width :98vw;"
+                data-4500="width :98vw;"
+                data-5400="width :200vw;"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-4 fixed4"
+                data-2200="width :200vw;"
+                data-2900="width :20vw"
+                data-3400="width :98vw;"
+                data-4600="width :98vw;"
+                data-5500="width :200vw;"
+                >
+                <div></div>
+                <div></div>
+            </div>
+            <div class="s1-img1-5 fixed5"
+                data-2300="width :200vw;"
+                data-3000="width :20vw"
+                data-3500="width :98vw;"
+                data-4700="width :98vw;"
+                data-5600="width :200vw;"
+            >
+                <div></div>
+                <div></div>
+            </div>
+            <!-- 2번째 나타날 사진들 11-20 -->
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY;
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });
+    </script>
+</body>
+</html>
