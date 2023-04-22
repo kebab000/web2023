@@ -75,10 +75,21 @@
     </ul>
   </nav>
   <script>
-    document.querySelector("#bttn").addEventListener("click",()=>{
-        document.querySelector("#bttn").classList.toggle("active");
-        document.querySelector("#nav").classList.toggle("active");
-    });
+   {
+    function func(begin, diff, n){
+        cnt = 1;
+        ret = begin;
+        while(true){
+            cnt += 1;
+            ret *= diff;
+            if(cnt == n) return ret;
+        }
+    }
+
+    console.log(func(1, 3, 4));
+}
+
+    console.log(sum) 
   </script>
 </body>
 </html>

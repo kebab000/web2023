@@ -51,7 +51,7 @@
                     <li><a href="#sample01"><strong>01. string.prototype.at() </strong>               메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
                     <li><a href="#sample02"><strong>02. string.prototype.charAt() </strong>           메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 단일문자를 반환합니다.</a></li>
                     <li><a href="#sample03"><strong>03. string.prototype.charCodeAt() </strong>       메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</a></li>
-                    <li><a href="#sample04"><strong>04. string.prototype.charPointAt() </strong>      메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample04"><strong>04. string.prototype.codePointAt() </strong>      메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
                     <li><a href="#sample05"><strong>05. string.prototype.concat() </strong>           메서드는 매개변수로 전달된 문자열을 받어, 결합된 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample06"><strong>06. string.prototype.includes() 🌳</strong>       메서드는 문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a></li>
                     <li><a href="#sample07"><strong>07. string.prototype.indexOf() 🌳</strong>        메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a></li>
@@ -84,6 +84,99 @@
                 </ul>
             </div>
             <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">"문자열".at([위치값]) </div>
+                    <ul>
+                        <li>at()메서드는 위치값(인덱스 값)을 받아 해당되는 자리의 요소를 반환합니다.</li>
+                        <li>배열과 같이 0부터 첫번째 자리의 요소를 반환하며 -1은 마지막 자리의 요소부터 시작합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript reference".at(0); //j
+    "javascript reference".at(1); //a
+    "javascript reference".at(-1); //e
+    "javascript reference".at(-3); //n
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample02" class="sample">
+                    <h3>02. charAt()</h3>
+                    <div class="notice">"문자열".charAt([위치값]) </div>
+                    <ul>
+                        <li>charAt()메서드는 위치값(인덱스 값)을 받아 해당되는 자리의 요소를 반환합니다.</li>
+                        <li>배열과 같이 0부터 첫번째 자리의 요소를 반환하며 -1부터는 빈 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript reference".charAt(0); //j
+    "javascript reference".charAt(1); //a
+    "javascript reference".charAt(4); //v
+    "javascript reference".charAt(-1); //빈문자열
+    "javascript reference".charAt(10); //빈문자열
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">"문자열".charCodeAt([위치값]) </div>
+                    <ul>
+                        <li>charCodeAt()메서드는 위치값(인덱스 값)을 받아 해당되는 자리의 유니코드 값을 반환합니다.</li>
+                        <li>유니코드(Unicode)는 전 세계 언어의 문자를 정의하기 위한 국제 표준 코드입니다. 즉 언어를 숫자로 표현하는 방식이라고 할 수 있습니다.</li>
+                        <li>이 메서드는 문자열에서 특정 문자를 찾거나, 문자열을 비교하거나, 문자열을 분할하는 등 다양한 상황에서 사용될 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript reference".charCodeAt(0); //106
+    "javascript reference".charCodeAt(1); //97
+    "javascript reference".charCodeAt(4); //115
+    "javascript reference".charCodeAt(-1); //NaN
+    "javascript reference".charCodeAt(24); //NaN
+    "javascript reference".charCodeAt(10); //32
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample04" class="sample">
+                    <h3>04. codePointAt()</h3>
+                    <div class="notice">"문자열".codePointAt([위치값]) </div>
+                    <ul>
+                        <li>codePointAt()메서드는 위치값(인덱스 값)을 받아 해당되는 자리의 유니코드 값을 반환합니다.</li>
+                        <li>유니코드 코드 포인트가 16비트를 초과하는 경우에는 codePointAt()를 사용하여 정확한 코드 포인트 값을 가져올 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript reference".codePointAt(0); //106
+    "javascript reference".codePointAt(1); //97
+    "javascript reference".codePointAt(4); //115
+    "javascript reference".codePointAt(-1); //undefined
+    "javascript reference".codePointAt(24); //undefined
+    "javascript reference".codePointAt(10); //32
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">"문자열".concat([문자열1],[문자열2]) </div>
+                    <ul>
+                        <li>concat()메서드는 기존의 문자열과 입력한 문자열를 합친 값을 반환합니다.</li>
+                        <li>공백이 2개라도 인식을 합니다</li>
+                        <li>문자열이 여러개라도 다 합칠 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".concat("reference"); //javascriptreference
+    "javascript".concat(" reference"); //javascript reference
+    "javascript".concat("  reference"); //javascript  reference
+    "javascript".concat("reference","jQuery"); //javascriptreferencejQuery
+    "javascript".concat(" reference"," jQuery"); //javascript reference jQuery
+}
+</code></pre>
+                    </div>
+                </div>
                 <div id="sample06" class="sample">
                     <h3>06. includes() 🌳</h3>
                     <div class="notice">"문자열".includes("검색값",[위치값]) </div>
@@ -151,6 +244,26 @@
 </code></pre>
                     </div>
                 </div>
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">"문자열".localeCompare([문자열]) </div>
+                    <ul>
+                        <li>localeCompare()메서드는 문자열과 문자열을 비교하여 순서에 따라 값을 반환합니다.</li>
+                        <li>비교되는 값이 비교할 값보다 앞에 있다면 -1를 반환하고 </li>
+                        <li>비교되는 값이 비교할 값과 같다면 0을 반환하며</li>
+                        <li>비교되는 값이 비교할 값보다 뒤에 있다면 1을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "a".localeCompare("b") //-1
+    "a".localeCompare("c") //-1
+    "a".localeCompare("a") //0
+    "b".localeCompare("a") //1
+    "c".localeCompare("a") //1
+}
+</code></pre>
+                    </div>
+                </div>
                 <div id="sample10" class="sample">
                     <h3>10. match() 🌳</h3>
                     <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
@@ -173,6 +286,87 @@
     "javascript reference".match(/r/);             //r
     "javascript reference".match(/r/g);            //r r r
     "javascript reference".match(/w/g);            //null
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">"문자열".normalize(정규화 방식) <br> "유니코드 문자열".normalize(정규화 방식)</div>
+                    <ul>
+                        <li>normalize()메서드는 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다.</li>
+                        <li>정규화 방식은 'NFC', 'NFD', 'NFKC', 'NFKD'가 있습니다. </li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".normalize("NFC")  //javascript
+    "javascript".normalize("NFD")  //javascript
+    "javascript".normalize("NFKC")  //javascript
+    "javascript".normalize("NFKD")  //javascript
+    "\u006a\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074".normalize("NFC")  //javascript
+    "\u006a\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074".normalize("NFD")  //javascript
+    "\u006a\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074".normalize("NFKC")  //javascript
+    "\u006a\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074".normalize("NFKD")  //javascript
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">"문자열".padEnd([문자열의 갯수],[채워넣을 문자열])</div>
+                    <ul>
+                        <li>padEnd()메서드는 현재 문자열에 다른 문자열을 문자열의 끝(우측)부터 채워넣어 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</li>
+                        <li>목표 문자열의 갯수가 현재 문자열의 길이보다 적다면 채워넣지 않고 그대로 반환합니다.</li>
+                        <li>채워넣을 문자열이 너무 길어 목표 문자열의 길이를 초과한다면 좌측 일부를 잘라서 넣습니다.</li>
+                        <li>기본값은 " "(빈문자열)입니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".padEnd(3)  //javascript
+    "javascript".padEnd(3,"reference")  //javascript
+    "javascript".padEnd(12,"reference")  //javascriptre
+    "javascript".padEnd(17,"reference")  //javascriptreferen
+    "javascript".padEnd(19,"reference")  //javascriptreference
+    "javascript".padEnd(24,"reference")  //javascriptreferencerefer
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample14" class="sample">
+                    <h3>14. padStart()</h3>
+                    <div class="notice">"문자열".padStart([문자열의 갯수],[채워넣을 문자열])</div>
+                    <ul>
+                        <li>padStart()메서드는 현재 문자열에 다른 문자열을 문자열의 시작(좌측)부터 채워넣어 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</li>
+                        <li>목표 문자열의 갯수가 현재 문자열의 길이보다 적다면 채워넣지 않고 그대로 반환합니다.</li>
+                        <li>채워넣을 문자열이 너무 길어 목표 문자열의 길이를 초과한다면 좌측 일부를 잘라서 넣습니다.</li>
+                        <li>기본값은 " "(빈문자열)입니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "reference".padStart(15)  //      reference (앞에 빈 문자열이 생김)
+    "reference".padStart(3,"javascript")  //reference
+    "reference".padStart(12,"javascript")  //javreference
+    "reference".padStart(17,"javascript")  //javascrireference
+    "reference".padStart(19,"javascript")  //javascriptreference
+    "reference".padStart(24,"javascript")  //javascriptjavasreference
+}
+</code></pre>
+                    </div>
+                </div>
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">"문자열".repeat([반복할 횟수])</div>
+                    <ul>
+                        <li>repeat() 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.</li>
+                        <li>음수 값을 입력한다면 RangeError가 뜹니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".repeat(-1)  //RangeError 에러가 뜹니다
+    "javascript".repeat(1)  //javascript
+    "javascript".repeat(0)  //" "
+    "javascript".repeat(3)  //javascriptjavascriptjavascript
+    "javascript".repeat(3.5)  //javascriptjavascriptjavascript
 }
 </code></pre>
                     </div>
@@ -324,5 +518,17 @@
     <!-- //footer -->
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+
+        console.log("javascript".repeat(1))
+        console.log("javascript".repeat(0))
+        console.log("javascript".repeat(3))
+        console.log("javascript".repeat(3.2))
+        console.log("javascript".repeat(3.5))
+        console.log("javascript".repeat(3.9))
+
+
+
+    </script>
 </body>
 </html>
