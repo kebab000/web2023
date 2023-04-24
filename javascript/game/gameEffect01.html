@@ -118,21 +118,10 @@
                 top: e.pageY -10,
             })
         })
-        function printTime() {
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = now.getMonth() + 1;
-            const date = now.getDate();
-            const hour = now.getHours();
-            const minute = now.getMinutes();
-            const second = now.getSeconds();
-            const timeString = `${year}년 ${month}월 ${date}일 ${hour}시 ${minute}분 ${second}초`;
-            $(".time").text(timeString);
-            setTimeout(printTime, 1000); // 1초마다 업데이트
-            }
-            $(document).ready(function() {
-                printTime();
-            });
+
+            // $(document).ready(function() {
+            //     printTime();
+            // });
         // printAgent()
         // os검사
         let os = navigator.userAgent.toLowerCase();
@@ -144,9 +133,23 @@
         // 화면크기
         let screenLeft = window.screen.width;
         let screenTop = window.screen.height;
-        document.querySelector(".info .width").innerHTML = screenLeft+"*"+screenTop
+        document.querySelector(".info .width").innerHTML = screenLeft+"*"+screenTop;
+        printTime();
     }
-    
+    function printTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const date = now.getDate();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+            const timeString = `${year}년 ${month}월 ${date}일 ${hour}시 ${minute}분 ${second}초`;
+            $(".time").text(timeString);
+            setTimeout(printTime, 1000); // 1초마다 업데이트
+
+    }
+            
     </script>
 </body>
 </html>
