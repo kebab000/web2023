@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 
 
@@ -38,6 +40,52 @@
                 <span>뮤직 듣기</span>
             </div>
        </div>
+       <!-- 뮤직플레이어 -->
+       <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>주인장의 뮤직 플리</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>
+                        
+
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <P>노래작가 이름</P>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/music_audio01.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">1:10</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재생</span>
+                            <span>
+                                재생
+                            </span>
+                            <span>다음곡 재생</span>
+                            <span>재생목록</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
+        </div>
+    <!-- //뮤직플레이어 -->
     </main>
     <footer id="footer">
         <div class="info"> 현재<span class="iconInfo">---아이콘</span>를<span class="nowInfo">선택하였습니다.</span><br>현재 <span class="os">맥</span> 를사용하고 있으며, 화면 크기는 <span class="width">1920*1080</span> 입니다.</div>
@@ -48,6 +96,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     <script>
     $(".icon1").draggable({containment : ".icon__box",scroll: false,
       start: function() {
@@ -131,9 +180,9 @@
             document.querySelector(".info .os").innerHTML = "윈도우os를"
         }
         // 화면크기
-        let screenLeft = window.screen.width;
-        let screenTop = window.screen.height;
-        document.querySelector(".info .width").innerHTML = screenLeft+"*"+screenTop;
+        let screenWidth = window.screen.width;
+        let screenHeight = window.screen.height;
+        document.querySelector(".info .width").innerHTML = screenWidth+"*"+screenHeight;
         printTime();
     }
     function printTime() {
@@ -147,7 +196,6 @@
             const timeString = `${year}년 ${month}월 ${date}일 ${hour}시 ${minute}분 ${second}초`;
             $(".time").text(timeString);
             setTimeout(printTime, 1000); // 1초마다 업데이트
-
     }
             
     </script>
