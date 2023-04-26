@@ -53,8 +53,6 @@
                         <div class="image">
                             <img src="img/music_view01.png" alt="음악">
                         </div>
-                        
-
                     </div>
                     <div class="music__control">
                         <div class="title">
@@ -63,7 +61,7 @@
                         </div>
                         <div class="progress">
                             <div class="bar">
-                                <audio src="audio/music_audio01.mp3"></audio>
+                                <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
                             </div>
                             <div class="timer">
                                 <span class="current">0:00</span>
@@ -71,14 +69,27 @@
                             </div>
                         </div>
                         <div class="control">
-                            <span>전체 반복</span>
-                            <span>이전곡 재생</span>
                             <span>
-                                재생
+                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
                             </span>
-                            <span>다음곡 재생</span>
-                            <span>재생목록</span>
-
+                            <span>
+                                <i class="prev" id="control-prev" title="이전곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="play" id="control-play" title="재생"></i>
+                            </span>
+                            <span>
+                                <i class="next" id="control-next" title="다음곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="list" id="control-list" title="재생목록"></i>
+                            </span>
+                            <!-- <span class="repeat_one">
+                                
+                            </span>
+                            <span class="repeat_random">
+                                
+                            </span> -->
                         </div>
                     </div>
                 </div>
@@ -90,9 +101,6 @@
     <footer id="footer">
         <div class="info"> 현재<span class="iconInfo">---아이콘</span>를<span class="nowInfo">선택하였습니다.</span><br>현재 <span class="os">맥</span> 를사용하고 있으며, 화면 크기는 <span class="width">1920*1080</span> 입니다.</div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
