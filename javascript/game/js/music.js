@@ -1,52 +1,52 @@
 const allMusic = [
     {
-        name : "1.Deck The Halls - DJ Williams",
-        artist : "몰루",
+        name : "1.Deck The Halls",
+        artist : "DJ Williams",
         img: "music_view01",
         audio: "music_audio01"
     }, {
-        name : "2.Dove Love - Quincas Moreira",
-        artist : "dd",
+        name : "2.Dove Love",
+        artist : "Quincas Moreira",
         img: "music_view02",
         audio: "music_audio02"
     }, {
-        name : "3.Frightmare - Jimena Contreras",
-        artist : "dd",
+        name : "3.Frightmare",
+        artist : "Jimena Contreras",
         img: "music_view03",
         audio: "music_audio03"
     }, {
-        name : "4.Ice & Fire - King Canyon",
-        artist : "dd",
+        name : "4.Ice & Fire",
+        artist : "King Canyon",
         img: "music_view04",
         audio: "music_audio04"
     }, {
-        name : "5.Illusions - Anno Domini Beats",
-        artist : "dd",
+        name : "5.Illusions",
+        artist : "Anno Domini Beats",
         img: "music_view05",
         audio: "music_audio05"
     }, {
-        name : "6.In Memory of Jean Talon - The Mini Vandals",
-        artist : "dd",
+        name : "6.In Memory of Jean Talon",
+        artist : "The Mini Vandals",
         img: "music_view06",
         audio: "music_audio06"
     }, {
-        name : "7.Savior - Telecasted",
-        artist : "dd",
+        name : "7.Savior",
+        artist : "Telecasted",
         img: "music_view07",
         audio: "music_audio07"
     }, {
-        name : "8.Smoke Jacket Blues - TrackTribe",
-        artist : "dd",
+        name : "8.Smoke Jacket Blues",
+        artist : "TrackTribe",
         img: "music_view08",
         audio: "music_audio08"
     }, {
-        name : "9.To Loom Is to Love - The Mini Vandals",
-        artist : "dd",
+        name : "9.To Loom Is to Love",
+        artist : "The Mini Vandals",
         img: "music_view09",
         audio: "music_audio09"
     }, {
-        name : "10.When You're Not Looking - Nathan Moore",
-        artist : "dd",
+        name : "10.When You're Not Looking",
+        artist : "Nathan Moore",
         img: "music_view10",
         audio: "music_audio10"
     }

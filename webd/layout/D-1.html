@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D유형 1번 레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        #aside{
+            width: 200px;
+            height: 850px;
+            background-color: #865151;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #e7e7e7;
+        }
+        #aside nav {
+            width: 100%;
+            height: 750px;
+            background-color: #6a6a6a;
+        }
+        #main{
+            width: calc(100% - 200px);
+            height: 850px;
+            background-color: #caa8a8;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #ffadad;
+            position: relative;
+        }
+        .link{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            right: 0;
+            background-color: #593838;
+        }
+        .link1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+            right: 0;
+            background-color: #43a272;
+        }
+        .link2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 200px;
+            right: 0;
+            background-color: #6c0e0e;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #ffbaba;
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #d2a8a8;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: #a86666;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section id="slider">
+                <div class="link"></div>
+                <div class="link1"></div>
+                <div class="link2"></div>
+            </section>
+            <section id="banner"></section>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+
+        </footer>
+    </div>
+</body>
+</html>
