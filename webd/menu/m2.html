@@ -99,7 +99,7 @@
             background-color: #ccc;
             display: none;
         }
-        .nav > ul > li > ul> li {}
+
         .nav > ul > li > ul > li > a {
             padding: 10px;
             display: block
@@ -160,19 +160,36 @@
             <div class="f2"></div>
             <div class="f3"></div>
         </footer>
+    </div>
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
-            $(".nav > ul > li").mouseover(function(){
-                $(".nav > ul > li").find(".submenu").stop().slideDown()
-            });
+            // $(".nav > ul > li").mouseover(function(){
+            //     $(".nav > ul > li").find(".submenu").stop().slideDown()
+            // });
 
-            $(".nav > ul > li").mouseout(function(){
-                $(".nav > ul > li").find(".submenu").stop().slideUp()
+            // $(".nav > ul > li").mouseout(function(){
+            //     $(".nav > ul > li").find(".submenu").stop().slideUp()
+            // });
+
+            const subMenus = document.querySelectorAll(".nav > ul > li .submenu");
+            document.querySelectorAll(".nav > ul > li").forEach(li => {
+                li.addEventListener("mouseover",(e)=>{
+                    subMenus.forEach((el)=>{
+                        el.style.display = "block";
+                    });
+                });
+                li.addEventListener("mouseout",(e)=>{
+                    li.addEventListener("mouseout",(e)=>{
+                        subMenus.forEach((el)=>{
+                            el.style.display = "none";
+                        });
+                    });
+                });
             });
-            // document.querySelectorAll(".nav > ul > li").forEach(li => {
-            //     li.addEventListener("mouseover",()=>{})
-            // })
-        </script>
-    </div>
+        
+
+</script>
 </body>
 </html>

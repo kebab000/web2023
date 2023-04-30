@@ -97,12 +97,10 @@
             top: 39px;
             width: 100%;
             background-color: #ccc;
-            
-        }
-        .nav > ul > li > ul.blind {
             display: none;
         }
-        .nav > ul > li > ul> li {}
+        .nav > ul > li > ul.blind {
+        }
         .nav > ul > li > ul > li > a {
             padding: 10px;
             display: block
@@ -120,7 +118,7 @@
                 <ul>
                     <li>
                         <a href="#">메뉴1</a>
-                        <ul class="submenu blind">
+                        <ul class="submenu">
                             <li><a href="#">서브 메뉴1-1</a></li>
                             <li><a href="#">서브 메뉴1-2</a></li>
                             <li><a href="#">서브 메뉴1-3</a></li>
@@ -128,14 +126,14 @@
                         </ul>
                     </li>
                     <li><a href="#">메뉴2</a>
-                        <ul class="submenu blind">
+                        <ul class="submenu">
                             <li><a href="#">서브 메뉴2-1</a></li>
                             <li><a href="#">서브 메뉴2-2</a></li>
                             <li><a href="#">서브 메뉴2-3</a></li>
                             <li><a href="#">서브 메뉴2-4</a></li>
                         </ul></li>
                     <li><a href="#">메뉴3</a>
-                        <ul class="submenu blind">
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴3-1</a></li>
                             <li><a href="#">서브메뉴3-2</a></li>
                             <li><a href="#">서브메뉴3-3</a></li>
@@ -143,7 +141,7 @@
                         </ul></li>
                     <li>
                         <a href="#">메뉴4</a>
-                        <ul class="submenu blind">
+                        <ul class="submenu">
                             <li><a href="#">서브 메뉴4-1</a></li>
                             <li><a href="#">서브 메뉴4-2</a></li>
                             <li><a href="#">서브 메뉴4-3</a></li>
@@ -178,8 +176,13 @@
             // });
             document.querySelectorAll(".nav > ul > li").forEach(li => {
                 li.addEventListener("mouseover",(e)=>{
-                    e.querySelectorAll("ul").forEach(el =>{
-                        el.classList.remove(".blind");
+                    li.querySelectorAll(".submenu").forEach((el)=>{
+                        el.style = "display : block;"
+                    })
+                })
+                li.addEventListener("mouseout",(e)=>{
+                    li.querySelectorAll(".submenu").forEach((el)=>{
+                        el.style = "display : none;"
                     })
                 })
             })

@@ -103,7 +103,7 @@
         const iframe = Wrap.querySelector("#main iframe");
 
         layout.forEach((li)=>{
-            li.addEventListener("click",(e,i)=>{
+            li.addEventListener("click",(e)=>{
                 e.preventDefault();
                 let href = li.querySelector("a").getAttribute("href");
                 iframe.setAttribute("src",href);
