@@ -165,27 +165,24 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
-            // $(".nav > ul > li").mouseover(function(){
-            //     $(this).find(".submenu").stop().slideDown()
-            // });
-            // $(".nav > ul > li").mouseout(function(){
-            //     $(".nav > ul > li").find(".submenu").stop().slideUp()
-            // });
-            // $(".nav > ul > li").mouseout(function(){
-            //     $(".nav > ul > li").find(".submenu").stop().slideUp()
-            // });
-            document.querySelectorAll(".nav > ul > li").forEach(li => {
-                li.addEventListener("mouseover",(e)=>{
-                    li.querySelectorAll(".submenu").forEach((el)=>{
-                        el.style = "display : block;"
-                    })
-                })
-                li.addEventListener("mouseout",(e)=>{
-                    li.querySelectorAll(".submenu").forEach((el)=>{
-                        el.style = "display : none;"
-                    })
-                })
-            })
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").stop().slideDown()
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(this).find(".submenu").stop().slideUp()
+            });
+            // document.querySelectorAll(".nav > ul > li").forEach(li => {
+            //     li.addEventListener("mouseover",(e)=>{
+            //         li.querySelectorAll(".submenu").forEach((el)=>{
+            //             el.style = "display : block;"
+            //         })
+            //     })
+            //     li.addEventListener("mouseout",(e)=>{
+            //         li.querySelectorAll(".submenu").forEach((el)=>{
+            //             el.style = "display : none;"
+            //         })
+            //     })
+            // })
         </script>
     </div>
 </body>
