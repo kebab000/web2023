@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 레이아웃 실기 E유형 2번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+            font-size: 16px;
+        }
+        #wrap {
+            width: 100%;
+            height: 100vh;
+        }
+        #top {
+            width: 100%;
+            height: calc(100% - 120px);
+            display: flex;
+        }
+        #header {
+            width: 200px;
+        }
+        #header h1 {
+            width: 100%;
+            height: 15%;
+            background-color: #B3E5FC;
+        }
+        #header nav {
+            width: 100%;
+            height: 85%;
+            background-color: #81D4FA;
+        }
+        #article {
+            width: 400px;
+            height: 100%;
+        }
+        .banner {
+            width: 100%;
+            height: 20%;
+            background-color: #4FC3F7;
+        }
+        .cont1 {
+            width: 100%;
+            height: 30%;
+            background-color: #29B6F6;
+        }
+        .cont2 {
+            width: 100%;
+            height: 30%;
+            background-color: #03A9F4;
+        }
+        .cont3 {
+            width: 100%;
+            height: 20%;
+            background-color: #039BE5;
+        }
+        #slide {
+            width: calc(100% - 600px);
+            background-color: #0288D1;
+        }
+        #footer {
+            width: 100%;
+            height: 120px;
+            display: flex;
+        }
+        .f1 {
+            width: 20%;
+            background-color: #9ed8f7;
+        }
+        .f2 {
+            width: 60%;
+            background-color: #60b0db;
+        }
+        .f3 { 
+            width: 20%;
+            background-color: #4b88a9;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="top">
+            <header id="header">
+                <h1></h1>
+                <nav></nav>
+            </header>
+            <article id="article">
+                <article class="banner"></article>
+                <article class="cont1"></article>
+                <article class="cont2"></article>
+                <article class="cont3"></article>
+            </article>
+            <section id="slide"></section>
+        </div>
+        <footer id="footer">
+            <footer class="f1"></footer>
+            <footer class="f2"></footer>
+            <footer class="f3"></footer>
+        </footer>
+    </div>
+</body>
+</html>

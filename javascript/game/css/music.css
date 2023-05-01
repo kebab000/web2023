@@ -38,7 +38,7 @@
 }
 .music__control {
     background-color: #fff;
-    height: 400px;
+    height: 330px;
     border-radius: 15px;
     margin-top: 200px;
     padding: 0 5%;
@@ -77,6 +77,7 @@
 .music__contents .progress .timer span {
     color: #8f1717;
     font-size: 12px;
+    pointer-events: none;
 }
 .music__control .control {
     width: 100%;
@@ -123,9 +124,87 @@
 .music__control .control span i.repeat_one {
     background-position: -40px 0;
 }
-.music__control .control span i.shuffle {}
+.music__control .control span i.shuffle {
+    background-position: -80px 0px;
+
+}
 .music__control .control span i.stop {
     background-position: -200px 0px;
 
 }
-.music__footer {}
+.music__list {
+    border-radius: 0 0 15px 15px;
+    padding: 10px;    
+    display: none;
+}
+.music__list.show {
+    display: block;
+}
+.music__list h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+.music__list h3 .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-image: url(../img/music_Icon.svg);
+    background-position: -320px 0px ;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+
+}
+.music__list ul {
+    height: 190px;
+    overflow-y: scroll;
+}
+.music__list ul::-webkit-scrollbar {
+    width: 5px;
+}
+.music__list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: #fdfdfd76;
+    border-radius: 10px;
+}
+.music__list::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+}
+.music__list ul  li {
+    margin-right: 5px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+.music__list ul  li.playing {
+    background-color: #ffffff20;
+}
+.music__list ul  li:last-child {
+    margin-bottom: -10px;
+}
+.music__list ul  li img {
+    width: 50px;
+    height: 100%;
+    border-radius: 4px;
+    padding-left: 1px;
+
+}
+.music__list ul  li.active {
+    background-color: rgba(208, 188, 219, 0.566);
+}
+.music__list ul  li > div strong,
+.music__list ul  li > div > span,
+.music__list ul  li > div > em {
+    display: inline-block;
+}
+
+.music__list ul  li > span {
+    padding-right: 10px;
+}

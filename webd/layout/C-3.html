@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 레이아웃 실기 C유형 3번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+            font-size: 16px;
+        }
+        #wrap {
+            width: 1000px;
+            height: 650px;
+            display: flex;
+        }
+        #aside {
+            width: 20%;
+        }
+        #aside h1 {
+            height: 200px;
+            background-color: #b3fcb3;
+        }
+        #aside nav {
+            height: 450px;
+            background-color: #81fa85;
+        }
+        #main {
+            width: 80%;
+        }
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #38ea47;
+        }
+        #contents {
+            width: 100%;
+            height: 200px;
+            display: flex; 
+        }
+        #content1 {
+            width: 33.3333%;
+            background-color: #47c270;
+        }
+        #content2 {
+            width: 33.3333%;
+            background-color: #0f8a19;
+        }
+        #content3 {
+            width: 33.3333%;
+            background-color: #27ae49;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #f1 {
+            width: 20%;
+            background-color: #3c9062;
+        }
+        #f2 {
+            width: 80%;
+        }
+        .f2-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #9ef7aa;
+        }
+        .f2-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #60db8b;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section id="slider"></section>
+            <article id="contents">
+                <article id="content1"></article>
+                <article id="content2"></article>
+                <article id="content3"></article>
+            </article>
+            <footer id="footer">
+                <footer id="f1"></footer>
+                <footer id="f2">
+                    <footer class="f2-1"></footer>
+                    <footer class="f2-2"></footer>
+                </footer>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
