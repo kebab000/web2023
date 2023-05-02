@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
     <div id="skip">
@@ -33,7 +35,6 @@
         <a href="#">푸터 영역 바로가기</a>
     </div>
     <!-- //skip -->
-
     <header id="header">
         <div class="header__inner">
             <h1 class="header__logo"> Plant Planner</h1>
@@ -57,7 +58,64 @@
         <section id="sliderType" class="nexon">
             <div class="slider__inner">
                 <h2 class="blind">메인 슬라이드 영역</h2>  
-                <div class="slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">식물과 함께하는 일상☘️</h3>
+                                    <p class="desc">식물을 키우는 것은 건강하고 지속 가능한 생활 습관을 형성하는데 도움이 되며, 자연과의 소통을 이루는 작은 시작이 될 수 있습니다.책상 위에 하나의 작은 식물, 당신의 일상에 작은 변화를 더해보세요 .</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 요청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">식물과 함께하는 일상☘️</h3>
+                                    <p class="desc">식물을 키우는 것은 건강하고 지속 가능한 생활 습관을 형성하는데 도움이 되며, 자연과의 소통을 이루는 작은 시작이 될 수 있습니다.책상 위에 하나의 작은 식물, 당신의 일상에 작은 변화를 더해보세요 .</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 요청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">식물과 함께하는 일상☘️</h3>
+                                    <p class="desc">식물을 키우는 것은 건강하고 지속 가능한 생활 습관을 형성하는데 도움이 되며, 자연과의 소통을 이루는 작은 시작이 될 수 있습니다.책상 위에 하나의 작은 식물, 당신의 일상에 작은 변화를 더해보세요 .</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 요청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                </div>
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">EVENT</span>
                         <h3 class="title">식물과 함께하는 일상☘️</h3>
@@ -78,7 +136,7 @@
                         <a href="#" class="play"><span class="blind">플레이</span></a>
                         <a href="#" class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="slider"></div>
                 <div class="slider"></div> -->
             </div>
@@ -314,5 +372,38 @@
             </div>
     </footer>
     <!-- //footerType -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+        const btnStop =  document.querySelector(".swiper-button-stop");
+        const btnplay =  document.querySelector(".swiper-button-play");
+
+        btnplay.style.display = "none"
+
+        document.querySelector(".swiper-button-play").addEventListener("click", () => {
+            btnplay.style.display = "none"
+            btnStop.style.display = "block"
+            swiper.autoplay.start()
+        })
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+            btnplay.style.display = "block"
+            btnStop.style.display = "none"
+            swiper.autoplay.stop()
+        })
+    </script>
 </body>
 </html>

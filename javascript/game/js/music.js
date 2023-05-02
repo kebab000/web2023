@@ -254,7 +254,6 @@ function playListMusic(){
 
     for(let i=0; i<musicListAll.length; i++){
         let audioTag = musicListAll[i].querySelector(".audio-duration");
-        
         musicListAll[i].setAttribute("onclick", "clicked(this)");
         
         if(musicListAll[i].classList.contains("playing")){
