@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 메인페이지</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'PPNeueWorld-Regular';
+            src: url('PPNeueWorld-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-ExtendedThin';
+            src: url('PPNeueWorld-ExtendedThin.woff2') format('woff2');
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-CondensedRegular';
+            src: url('PPNeueWorld-CondensedRegular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiCondensedUltrabold';
+            src: url('PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SuperCondensedLight';
+            src: url('PPNeueWorld-SuperCondensedLight.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-Thin';
+            src: url('PPNeueWorld-Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PPNeueWorld-SemiExtendedBlack';
+            src: url('PPNeueWorld-SemiExtendedBlack.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 9px;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100px;
+            background-color: #0b130d;
+            overflow: hidden;
+        }
+        #header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            font-family: 'Abel';
+            z-index: 1000;
+        }
+        #header h1 {
+            font-weight: normal;
+            color: #D2E3C0;
+            font-size: 28px;
+        }
+        #header nav li {
+            list-style: none;
+            display: inline-block;
+        }
+        #header nav li a {
+            color: #D2E3C0;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+        }
+       
+        #footer {
+            position: fixed;
+            left: 50%;
+            bottom: 1vw;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        #footer a {
+            color: #fff;
+            font-family: 'Abel';
+            text-decoration: none;
+        }
+        #footer a :hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        #main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;position: relative;
+        }
+        .text__inner {
+            text-align: center;
+            color: #D2E3C0;
+            position: relative;
+            z-index: 3000;
+        }
+        .text__inner > div {
+            font-size: 8vw;
+            line-height: 1;
+            
+        }
+        .text__inner > div.ti1 {
+            font-family: 'PP Neue World Semi Cond Ulbold';
+
+        }
+        .text__inner > div.ti1 em {
+            font-family: 'PPNeueWorld-ExtendedThin';
+
+        }
+        .text__inner > div.ti2 {
+            font-family: 'PPNeueWorld-SuperCondensedLight';
+        }
+        .text__inner > div.ti3 {
+            font-family: 'PP Neue World';
+        }
+        .text__inner > div.ti3 em {
+            font-family: 'PPNeueWorld-SemiCondensedUltrabold';
+
+        }
+        .img__inner > img {
+            position: absolute;
+            width: 10vw;
+            z-index: 2000;
+        }
+        .img__inner .ii1 {
+            left: 10%;
+            top: 50%;
+            transform: translateY(-150%);
+        }
+        .img__inner .ii2 {
+            left: 60%;
+            top: 50%;
+            transform: translateY(-270%) rotate(-20deg);
+        }
+        .img__inner .ii3 {
+            left: 75%;
+            top: 50%;
+            transform: translateY(140%);
+        }
+        em {
+            font-style: normal;
+        }
+        #webgl {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+        #webgl iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>kebab00's PORTFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="#">work</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="text__inner">
+            <div class="ti1">let's <em>introduce</em></div>
+            <div class="ti2 split">frontend developer's</div>
+            <div class="ti3"><em>all</em> works <em>of</em> portfolio</div>
+        </div>
+        <div class="img__inner">
+            <img class="ii1" src="img/figure01.png" alt="이미지1">
+            <img class="ii2" src="img/figure02.png" alt="이미지2">
+            <img class="ii3" src="img/figure03.png" alt="이미지3">
+        </div>
+        <div id="webgl">
+            <iframe src="three.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="#">im.kebab00@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // 글씨 분리하기 
+        document.querySelectorAll(".split").forEach(desc => {
+            let splitText = desc.innerText;
+            let splitWrap= splitText.split('').join("</span><span aria-hidden='true'>");
+            splitWrap = "<span aria-hidden='true'>" + splitWrap+ "</span>";
+            desc.innerHTML = splitWrap;
+            desc.setAttribute("aria-label", splitText);
+            
+            console.log(splitWrap);
+        })
+        // 메인 세팅
+        gsap.set(".text__inner .ti1",{opacity:0, y : "5vh"});
+        gsap.set(".text__inner .ti2 span",{opacity:0, x: 500, scale:10, rotation:60, display:"inline-block", mimwidth: "1.4vw"});
+        gsap.set(".text__inner .ti3",{opacity:0, y:"-5vh"});
+        gsap.set(".img__inner .ii1",{opacity:0,x: -500, scale:5});
+        gsap.set(".img__inner .ii2",{opacity:0, rotation:60});
+        gsap.set(".img__inner .ii3",{opacity:0});
+        gsap.set("#header",{opacity:0});
+        gsap.set("#footer",{opacity:0});
+        gsap.set("#webgl",{opacity:0});
+        // 메인 애니메이션
+        setTimeout(()=>{
+            let tl = gsap.timeline()
+            tl.to(".text__inner .ti2 span", {opacity: 1,x:0, scale:1,rotation:0, duration:1, stagger:0.1, ease:Power3.easeInOut});
+            tl.to(".text__inner .ti1", {opacity: 1, y:0, duration:1, ease: Circ.easeOut}, "two +=0.5");
+            tl.to(".text__inner .ti3", {opacity: 1, y:0, duration:1, ease: Circ.easeOut}, "two +=0.5");
+            tl.to(".img__inner .ii1", {duration: 0.5,opacity: 1, x:-100, y:-150, scale:1})
+            tl.to(".img__inner .ii2", {duration: 0.5,opacity: 1, x:200, y:-250,rotation:-30})
+            tl.to(".img__inner .ii3", {duration: 0.5,opacity: 1})
+            tl.to("#header",{opacity:1},"end");
+            tl.to("#footer",{opacity:1},"end");
+            tl.to("#webgl",{opacity:1});
+        },1000)
+        
+    </script>
+</body>
+</html>

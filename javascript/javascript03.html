@@ -73,7 +73,9 @@
                     <li><a href="#sample23">23. 함수 종류 : <strong>파라미터 함수</strong></a></li>
                     <li><a href="#sample24">24. 함수 종류 : <strong>아규먼트 함수</strong></a></li>
                     <li><a href="#sample25">25. 함수 종류 : <strong>재귀 함수</strong></a></li>
-                    <li><a href="#sample26">26. 함수 종류 : <strong>콜백 함수</strong></a></li>
+                    <li><a href="#sample26">26. 함수 종류 : <strong>콜백 함수(다른 함수에 인수로 넘겨지는 함수)</strong></a></li>
+                    <li><a href="#sample27">27. 함수 종류 : <strong>콜백 함수(반복문)</strong></a></li>
+                    <li><a href="#sample28">28. 함수 종류 : <strong>콜백 함수(동기/비동기)</strong></a></li>
                     <li><a href="#">01. 함수 종류 : promise 함수</a></li>
                     <li><a href="#">01. 함수 종류 : 내부 함수</a></li>
                     <li><a href="#">01. 함수 종류 : 내부 함수_스코프, 클로저</a></li>
@@ -1118,5 +1120,89 @@
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+        //27.콜백함수 반복문
+        // {
+        //     function func (index) {
+        //         console.log("함수가 실행되었습니다." + index);
+        //     }
+        //     function callback(num){
+        //         for(let i=1; i<=10; i++){
+        //             num(i);
+        //         }
+        //     }
+        //     callback(func);
+        // }
+
+        {
+            // 28. 함수 종류 : 콜백 함수(동기/비동기)
+            // 01
+            // function funcA(){
+            //     console.log("funcA가 실행되었습니다.");
+            // }
+            // function funcB(){
+            //     console.log("funcB가 실행되었습니다.");
+            // }
+            // funcB();
+            // funcA();
+            //02
+            // function funcA(){
+            //     setTimeout(()=>{
+            //         console.log("funcA가 실행되었습니다.");
+            //     })
+            // }
+            // function funcB(){
+            //     console.log("funcB가 실행되었습니다.");
+            // }
+            // funcA()
+            // funcB()
+            //03 
+            // function funcA(callback){
+            //     setTimeout(()=>{
+            //         console.log("funcA가 실행되었습니다.");
+            //         callback();
+                    
+            //     },1000)
+            // }
+            // function funcB(){
+            //         console.log("funcB가 실행되었습니다.");
+            // }
+            // funcA(function(){
+            //     funcB();
+            // })
+            //04
+            function funcA(callback){
+            setTimeout(() => {
+                console.log("funcA가 실행되었습니다.");
+                callback();
+            }, 1000);
+        }
+        function funcB(callback){
+            setTimeout(() => {
+                console.log("funcB가 실행되었습니다.");
+                callback();
+            }, 1000);
+        }
+        function funcC(callback){
+            setTimeout(() => {
+                console.log("funcC가 실행되었습니다.");
+                callback();
+            }, 1000);
+        }
+        function funcD(callback){
+            setTimeout(() => {
+                console.log("funcD가 실행되었습니다.");
+                callback();
+            }, 1000);
+        }
+        funcA(function () {
+            funcB(function () {
+                funcC(function () {
+                    funcD();
+                })
+            })
+        })
+    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>group</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .searchType__warap {
+            width: 100%;
+            height: 800px;
+            background-image: url(img/Frame\ 20.png);
+            text-align: center;
+            align-items: center;
+        }
+        .searchType__warap h2 {
+            font-size: 40px;
+            font-weight: bold;
+            padding-top: 300px;
+            margin-bottom: 65px;
+        }
+        .search__box {
+            position: relative;
+        }
+        .search__box input {
+            height: 70px;
+            width: 30%;
+            border-radius: 50px;
+            border: 0px;
+            margin-bottom: 10px;
+        }
+        .search__about {
+            margin: 0 auto;
+            width: 570px;
+        }
+        .search__box::after {
+            content: '';
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            top: 23px;
+            left: 37%;
+            background-image: url(img/search_icon01.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .search__about ul {
+            display: flex;
+            justify-content: center;
+        }
+        .search__about ul li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+        .search__about ul li:not(:first-child) {
+            border-left: 1px solid #000;
+        }
+        .search__about ul li a {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <div class="searchType__warap">
+        <h2>식물을 검색해 보세요</h2>
+        <div class="search__box">
+            <input type="text">
+        </div>
+        <div class="search__about">
+            <ul>
+                <li><a href="#">아레카 야자</a></li>
+                <li><a href="#">관음죽</a></li>
+                <li><a href="#">대나무 야자</a></li>
+                <li><a href="#">인도고무나무</a></li>
+                <li><a href="#">아이비</a></li>
+                <li><a href="#">피닉스 야자</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
