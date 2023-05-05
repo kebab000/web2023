@@ -60,21 +60,20 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	position: relative;
 	height: 60vh;
 }
-#header img {width: 190px; display: block; margin: 0 auto; padding-right: 50px;}
 .mariogl {
 	position: absolute;
-	left: 0;
+	left: 0px;
 	top: 0px;
 	width: 100%;
 	height: 60vh;
 	z-index: 1;
 }
 .mariogl iframe {
-	width: 70%;
+	width: 75%;
 	height: 60vh;
 }
 .titt {
-	background-color: #0c090e;
+	background-color: #000;
 }
 .titt p a {
 	color: #fff !important;
@@ -135,7 +134,7 @@ pre.pre-show{
 .header_tit h2 {margin-top:4px;}
 .header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; }
 .header_icon {margin: 50vh 0 0 0; }
-.header_icon ul {margin: 5px 0; list-style: none;position: fixed;top: 50px;right: 20px;}
+.header_icon ul {margin: 5px 0; list-style: none;position: fixed;top: 50px;right: 20px; z-index: 9999;}
 
 .header_icon {text-align: center;}
 .header_icon li {margin: 0 2px;}
@@ -177,10 +176,11 @@ padding: 8px 12px;
 /* Footer */
 
 #footer{
-	margin-top: 80px;
+
 	padding: 20px;
-	background: #f3f3f3;
-	text-align: center
+	background: #000;
+	text-align: center;
+	color: #FFF;
 }
 .twitter-share-button{
 	top: 4px;
@@ -313,7 +313,7 @@ padding: 8px 12px;
 
 /* Custom */
 #customizing {
-	background-color: #0c090e;
+	background-color: #000;
 }
 .selected {
 	color: #fff !important; 
