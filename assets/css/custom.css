@@ -312,6 +312,12 @@ padding: 8px 12px;
 }
 
 /* Custom */
+#customizing {
+	background-color: #0c090e;
+}
+.selected {
+	color: #fff !important; 
+}
 .demo-custom .demo-slide{
 	height: 40px;
 	width: 10%;
@@ -321,6 +327,7 @@ padding: 8px 12px;
 	height: 40px;
 	width: 100%;
 }
+
 
 /* json */
 

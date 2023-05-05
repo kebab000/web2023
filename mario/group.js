@@ -1,0 +1,1 @@
+// make slider use js
