@@ -165,29 +165,29 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
-            // $(".nav > ul > li").mouseover(function(){
-            //     $(".nav > ul > li").find(".submenu").stop().slideDown()
-            // });
-
-            // $(".nav > ul > li").mouseout(function(){
-            //     $(".nav > ul > li").find(".submenu").stop().slideUp()
-            // });
-
-            const subMenus = document.querySelectorAll(".nav > ul > li .submenu");
-            document.querySelectorAll(".nav > ul > li").forEach(li => {
-                li.addEventListener("mouseover",(e)=>{
-                    subMenus.forEach((el)=>{
-                        el.style.display = "block";
-                    });
-                });
-                li.addEventListener("mouseout",(e)=>{
-                    li.addEventListener("mouseout",(e)=>{
-                        subMenus.forEach((el)=>{
-                            el.style.display = "none";
-                        });
-                    });
-                });
+            $(".nav > ul > li").mouseover(function(){
+                $(".nav > ul > li").find(".submenu").stop().slideDown()
             });
+
+            $(".nav > ul > li").mouseout(function(){
+                $(".nav > ul > li").find(".submenu").stop().slideUp()
+            });
+
+            // const subMenus = document.querySelectorAll(".nav > ul > li .submenu");
+            // document.querySelectorAll(".nav > ul > li").forEach(li => {
+            //     li.addEventListener("mouseover",(e)=>{
+            //         subMenus.forEach((el)=>{
+            //             el.style.display = "block";
+            //         });
+            //     });
+            //     li.addEventListener("mouseout",(e)=>{
+            //         li.addEventListener("mouseout",(e)=>{
+            //             subMenus.forEach((el)=>{
+            //                 el.style.display = "none";
+            //             });
+            //         });
+            //     });
+            // });
         
 
 </script>
