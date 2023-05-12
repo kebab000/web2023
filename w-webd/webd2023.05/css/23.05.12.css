@@ -1,0 +1,246 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* font-family: '맑은고딕'; */
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.main_wrap {
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+}
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0026FF;
+}
+#header .logo {
+    width: 20%;
+    height: inherit;
+}
+#header .logo a {
+    display: inline-block;
+    padding: 30px 40px;
+    color: #fff;
+}
+#header nav {
+    width: 80%;
+    height: inherit;
+    text-align: right;
+}
+#header nav > ul {
+    margin-top: 25px;
+}
+#header nav > ul > li {
+    display: inline-block;
+    position: relative;
+}
+#header nav > ul > li > a {
+    color: #fff;
+    padding: 15px 45px;
+    background: #001CB8;
+    display: block;
+}
+#header nav > ul > li > a:hover {
+    background: #000E5A;
+}
+#header nav > ul > li > ul {
+    text-align: center;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    display: none;
+}
+#header nav > ul > li > ul > li {
+    padding: 10px 20px;
+    display: block;
+}
+#header nav > ul > li > ul > li > a {
+    padding: 10px 20px;
+    display: block;
+}
+#header nav > ul > li > ul > li > a:hover {
+    background: #B1BDFF;
+    display: block;
+}
+/* main */
+#main {
+    height: 500px;
+    background-color: #444;
+}
+/* slider */
+#slider {
+    width: 100%;
+    height: 300px;
+}
+#slider .sliderWrap {
+    position: relative;
+}
+#slider .sliderWrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .sliderWrap .slider img {
+    vertical-align: top;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+}
+#slider .sliderWrap .slider .text h2 {
+    color: #fff;
+}
+#slider .sliderWrap .slider .text p {
+    color: #fff;
+}
+/* content */
+#content {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+#content .info {
+    width: 400px;
+    height: 200px;
+    background-color: #DCDFFF;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#content .info h3 {
+    margin-bottom: 10px;
+}
+#content .info h3 a.active {
+    text-decoration: underline;
+}
+#content .info .notice li {
+    display: flex;
+}
+#content .info .notice li a {
+    width: 75%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+#content .info .notice li a:hover {
+    text-decoration: underline;
+}
+#content .info .notice li span {
+    width: 25%;
+    text-align: right;
+}
+#content .info .gallery {
+    display: flex;
+}
+#content .info .gallery li {
+    margin-right: 17px;
+    padding-top: 3px;
+}
+.banner{
+    width: 400px;
+    height: inherit;
+    background-image: url(../images/banner.jpg  );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner h3 {
+    color: #fff;
+}
+.banner a {
+    background-color: #ffffff96;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+.banner a:hover{}
+.link {
+    width: 400px;
+    height: inherit;
+    background-image: url(../images/link.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.link h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.link a {
+    background-color: #ffffff96;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+    color: #fff;
+}
+/* footer */
+#footer {
+    height: 100px;
+    background-color: #0C51A6;
+    display: flex;
+    flex-wrap: wrap;
+}
+.left {
+    width: 20%;
+    height: inherit;
+}
+.left h4 {
+    font-size: 30px;
+    color: #CDCDCD;
+    padding: 32px 30px;
+}
+.right {
+    width: 80%;
+    height: inherit;
+}
+.footer1 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.footer1 ul {
+    padding-top: 16px;
+}
+.footer1 li {
+    display: inline-block;
+    border-right: 1px solid #333;
+}
+.footer1 li:last-child {
+    border: 0;
+}
+.footer1 li a {
+    padding: 10px;
+}
+.footer1 li a:hover {
+    text-decoration: underline;
+}
+.footer2 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
