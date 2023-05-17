@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <style>
-        .split span {
+        /* .split span {
             display: inline-block;
             min-width: 1vw;
             opacity: 0;
@@ -17,8 +17,8 @@
         .split.show span {
             opacity: 1;
             transform: translateY(0px);
-        }
-        .split span:nth-child(1) {transition-delay: 100ms;}
+        } */
+        /* .split span:nth-child(1) {transition-delay: 100ms;}
         .split span:nth-child(2) {transition-delay: 150ms;}
         .split span:nth-child(3) {transition-delay: 200ms;}
         .split span:nth-child(4) {transition-delay: 250ms;}
@@ -52,7 +52,161 @@
         .split span:nth-child(32) {transition-delay: 1650ms;}
         .split span:nth-child(33) {transition-delay: 1700ms;}
         .split span:nth-child(34) {transition-delay: 1750ms;}
-        .split span:nth-child(35) {transition-delay: 1800ms;}
+        .split span:nth-child(35) {transition-delay: 1800ms;} */
+        /* 기본효과 */
+        /* .style1.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transition: all 0.3s ease-in-out;
+        }
+        .style1.split span.show {
+            opacity: 1;
+        } */
+        /* 밑에서 올라오기 */
+        /* .style2.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px);
+            transition: all 0.3s ease-in-out;
+        }
+        .style2.split span.show {
+            opacity: 1;
+            transform: translateY(0);
+
+        } */
+        /* 효과3 */
+        /* .style3.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) translateX(-100px) rotate(360deg);
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .style3.split span.show {
+            opacity: 1;
+            transform: translateY(0) translateX(0) rotate(0);
+        } */
+        /* 효과4 */
+        /* .style4.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style4.split span.show {
+            opacity: 1;
+            animation: rotateInDownRight 0.5s 1;
+        } */
+        /* 효과5 */
+        /* .style5.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style5.split span.show {
+            opacity: 1;
+            animation: rotateInUpRight 0.5s 1;
+        } */
+        /* 효과6 */
+        /* .style6.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style6.split span.show {
+            opacity: 1;
+            animation: jackInTheBox 0.7s 1;
+        } */
+        /* 효과7 */
+        /* .style7.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style7.split span.show {
+            opacity: 1;
+            animation: rollIn 0.7s 1;
+        } */
+        @keyframes rotateInDownRight {
+            0% {
+                transform-origin: right bottom;
+                transform-origin: right bottom;
+                transform: rotate(45deg);
+                transform: rotate(45deg);
+                opacity: 0
+            }
+
+            to {
+                transform-origin: right bottom;
+                transform-origin: right bottom;
+                transform: translateZ(0);
+                transform: translateZ(0);
+                opacity: 1
+            }
+        }
+        @keyframes rotateInUpRight {
+            0% {
+                transform-origin: right bottom;
+                transform-origin: right bottom;
+                transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                opacity: 0
+            }
+
+            to {
+                transform-origin: right bottom;
+                transform-origin: right bottom;
+                transform: translateZ(0);
+                transform: translateZ(0);
+                opacity: 1
+            }
+        }
+        @keyframes jackInTheBox {
+            0% {
+                opacity: 0;
+                transform: scale(.1) rotate(40deg);
+                transform: scale(.1) rotate(40deg);
+                transform-origin: center bottom;
+                transform-origin: center bottom
+            }
+
+            50% {
+                transform: rotate(-20deg);
+                transform: rotate(-20deg)
+            }
+
+            70% {
+                transform: rotate(6deg);
+                transform: rotate(6deg)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+                transform: scale(1)
+            }
+        }
+        @keyframes rollIn {
+            0% {
+                opacity: 0;
+                transform: translate3d(-100%, 0, 0) rotate(-120deg);
+                transform: translate3d(-100%, 0, 0) rotate(-120deg)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateZ(0);
+                transform: translateZ(0)
+            }
+        }
+        .split span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translate3d(-150px, -10px, 10px);
+            scale: 3;
+        }
     </style>
     <title>페럴럭스 이펙트</title>
 </head>
@@ -82,7 +236,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 과거를 잊은 민족에게 미래는 없다.</p>
+                <p class="parallax__item__desc split style1"> 과거를 잊은 민족에게 미래는 없다.</p>
             </section>
             <!-- //section1 -->
             <section id="section2" class="parallax__item">
@@ -91,7 +245,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 인생에서 가장 중요한 것은 무엇을 어떻게 생각하느냐이다.</p>
+                <p class="parallax__item__desc split style2">인생에서 가장 중요한 것은 무엇을 어떻게 생각하느냐이다</p>
             </section>
             <!-- //section2 -->
             <section id="section3" class="parallax__item">
@@ -100,7 +254,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 가장 큰 위험은 위험하지 않다는 것이다.</p>
+                <p class="parallax__item__desc split style3">가장 큰 위험은 위험하지 않다는 것이다.</p>
             </section>
             <!-- //section3 -->
             <section id="section4" class="parallax__item">
@@ -109,7 +263,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 마음만 먹으면 무엇이든 가능하다.</p>
+                <p class="parallax__item__desc split style4"> 마음만 먹으면 무엇이든 가능하다.</p>
             </section>
             <!-- //section4 -->
             <section id="section5" class="parallax__item">
@@ -118,7 +272,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 목적은 이뤄질 수 없는 꿈이 아니라 명확한 계획이 필요하다.</p>
+                <p class="parallax__item__desc split style5"> 목적은 이뤄질 수 없는 꿈이 아니라 명확한 계획이 필요하다.</p>
             </section>
             <!-- //section5 -->
             <section id="section6" class="parallax__item">
@@ -127,7 +281,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 실패는 성공의 어머니이다.</p>
+                <p class="parallax__item__desc split style6"> 실패는 성공의 어머니이다.</p>
             </section>
             <!-- //section6 -->
             <section id="section7" class="parallax__item">
@@ -136,7 +290,7 @@
                 <figure class="parallax_item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split"> 최악의 적은 실패가 아니라, 노력조차도 하지 않는 것이다.</p>
+                <p class="parallax__item__desc split style7"> 최악의 적은 실패가 아니라,노력조차도 하지 않는 것이다.</p>
             </section>
             <!-- //section7 -->
             <section id="section8" class="parallax__item">
@@ -177,19 +331,44 @@
             text.innerHTML = splitWrap = "<span aria-hidden='true'>"+ splitWrap +"</span>";
             text.setAttribute("aria-label", splitText)
         })
-       // 스크룰 이펙트
+       // 스크룰 이펙트 
         function scroll(){
             let scrollTop = window.pageXOffset || window.scrollY;
-            // css 클래스 추가
+            // 01. css 클래스 추가(노가다)
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop > item.offsetTop){
+            //         item.querySelector(".split").classList.add("show");
+            //     }
+            // });
+                // 02.span에 쇼 붙이기
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop >= item.offsetTop){
+            //         item.querySelectorAll(".split span").forEach((span, index) => {
+            //             setTimeout(() => {
+            //                 span.classList.add("show");
+            //             },index * 50)
+            //         })
+            //     }
+            // })
+            // gsap
             document.querySelectorAll(".parallax__item").forEach(item => {
-                if(scrollTop > item.offsetTop){
-                    item.querySelector(".split").classList.add("show");
+                const spans = item.querySelectorAll(".split span");
+                if(scrollTop >= item.offsetTop){
+                                                                                      
+                    gsap.to(spans, {
+                        duration:0.2,
+                        opacity:1,
+                        x:0,
+                        y:0,
+                        z:0,
+                        stagger:0.05,
+                        scale: 1
+                    })
                 }
-            });
-
+            })
             requestAnimationFrame(scroll);
         }
-        scroll();1
+        scroll();
         // document.querySelectorAll(".split span").forEach
     </script>
 </body>
