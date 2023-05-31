@@ -1,0 +1,129 @@
+// container
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+// section
+.section {
+    padding: 120px 0;
+}
+//bg
+.bg-blue {
+    background-color: var(--bg_section);
+}
+// 버튼
+
+.button-blue {
+    @include button(#4857EC, #ffffff)
+}
+
+.button-red {
+    @include button(#ff3344, #ffffff)
+}
+
+.button-green {
+    @include button(#00C183, #ffffff)
+}
+// icon
+.icon-bg1 {
+    @include icon(#D3F6EA,url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.625 21.5625H24.375V3.75H7.5C6.9725 3.76937 6.53312 3.955 6.18187 4.30687C5.83062 4.65875 5.645 5.09813 5.625 5.625V21.5625ZM7.5 1.875H25.3125C25.5862 1.875 25.8109 1.96281 25.9866 2.13844C26.1622 2.31406 26.25 2.53875 26.25 2.8125V22.5C26.25 22.7737 26.1622 22.9984 25.9866 23.1741C25.8109 23.3497 25.5862 23.4375 25.3125 23.4375H4.6875L3.75 25.1372V5.625C3.76937 4.57 4.13562 3.68625 4.84875 2.97375C5.56187 2.26125 6.44562 1.895 7.5 1.875ZM7.03125 23.4375C6.64063 23.4569 6.31344 23.5984 6.04969 23.8622C5.78594 24.1259 5.65406 24.4531 5.65406 24.8438C5.65406 25.2344 5.78594 25.5616 6.04969 25.8253C6.31344 26.0891 6.64063 26.2306 7.03125 26.25H24.375V23.4375H7.03125ZM7.03125 21.5625H26.25V26.25C26.2306 26.7775 26.045 27.2169 25.6931 27.5681C25.3413 27.9194 24.9019 28.105 24.375 28.125H7.03125C6.09375 28.1056 5.3175 27.7881 4.7025 27.1725C4.0875 26.5569 3.77 25.7806 3.75 24.8438C3.76937 23.9062 4.08687 23.13 4.7025 22.515C5.31812 21.9 6.09438 21.5825 7.03125 21.5625ZM11.25 3.75V11.1037L14.0625 8.84812L16.875 11.1037V3.75H11.25V3.75ZM9.375 1.875H18.75V13.0369C18.7306 13.4275 18.55 13.7059 18.2081 13.8722C17.8663 14.0384 17.5391 14.0044 17.2266 13.77L14.0625 11.25L10.8984 13.77C10.5859 14.0044 10.2588 14.0384 9.91688 13.8722C9.575 13.7059 9.39437 13.4275 9.375 13.0369V1.875Z' fill='%2308080A' fill-opacity='0.96'/%3E%3C/svg%3E%0A"));
+
+}
+.icon-bg2 {
+    @include icon(#E1f9d5,url(../../images/textType01_02.svg));
+
+}
+.icon-bg3 {
+    @include icon(#f6dce0,url(../../images/textType01_03.svg));
+
+}
+.icon-bg4 {
+    @include icon(#d3d8fa,url(../../images/textType01_04.svg));
+
+}
+.icon-bg5 {
+    @include icon(#dafbeb,url(../../images/textType01_05.svg));
+
+}
+.icon-bg6 {
+    @include icon(#ffd6fd,url(../../images/textType01_06.svg));
+
+}
+// blind
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background: #000;
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+$interval: (
+    0:0,
+    10:10,
+    20:20,
+    30:30,
+    40:40,
+    50:50,
+    60:60,
+    70:70,
+    80:80,
+    90:90,
+    100:100,
+);
+
+@each $value, $size in $interval {
+    .mb#{$value} {
+        margin-bottom: $size !important;
+    }
+
+}
+@each $value, $size in $interval {
+    .mt#{$value} {
+        margin-top: $size !important;
+    }
+
+}
+@each $value, $size in $interval {
+    .ml#{$value} {
+        margin-left: $size !important;
+    }
+
+}
+@each $value, $size in $interval {
+    .mr#{$value} {
+        margin-right: $size !important;
+    }
+
+}

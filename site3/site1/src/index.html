@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준 사이트 만들기</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/webs.svg" />
+    <meta name="author" content="kebab00">
+    <meta name="description" content="케밥과 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="케밥, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+</head>
+<body class="gmaket5">
+    <div id="skip">
+        <a href="#sliderSection">슬라이드 영역 바로가기</a>
+        <a href="#introSection">소개 영역 바로가기</a>
+        <a href="#memberSecion">멤버 영역 바로가기</a>
+        <a href="#portSecion">포트폴리오 영역 바로가기</a>
+        <a href="#youtubeSection">youtube 영역 바로가기</a>
+        <a href="#unsplashSection">unsplash 영역 바로가기</a>
+        <a href="#movieSection">movies 영역 바로가기</a>
+        <a href="#reviewSection">리뷰 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header" class="header__wrap bg-blue" role="heading">
+        <div class="header__inner container">
+            <h1 class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </h1>
+            <nav class="header__nav" role="navigation">
+                <ul>
+                    <li><a href="#introSection">소개</a></li>
+                    <li><a href="#memberSecion">멤버</a></li>
+                    <li><a href="#portSecion">포트폴리오</a></li>
+                    <li><a href="#youtubeSection">youtube</a></li>
+                    <li><a href="#unsplashSection">unsplash</a></li>
+                    <li><a href="#movieSection">movies</a></li>
+                    <li><a href="#reviewSection">소개</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+    <main id="main" role="main">
+        <section id="sliderSection" class="slider__wrap section">
+            <div class="slider__inner">
+                <h2 class="blind">배너 슬라이드</h2>
+                <div class="slider__img">
+                    <div class="slider s1 container">
+                       <div class="text">
+                            <h3>My <br>portfolio</h3>
+                            <p>재능은! 노력 끝에서 발견된다. <br> 어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                            <a href="#" class="more button-blue">더 알아보기</a>
+                       </div>
+                       <div class="img" aria-label="hidden">
+                            <img src="images/camera.png" alt="">
+                            <img src="images/clapperboard.png" alt="">
+                            <img src="images/coffee.png" alt="">
+                       </div>
+                       <div class="circle" aria-label="hidden">
+                            <span class="circle c1"></span>
+                            <span class="circle c2"></span>
+                            <span class="circle c3"></span>
+                            <span class="circle c4"></span>
+                            <span class="circle c5"></span>
+                       </div>
+                    </div>
+                    <!-- <div class="silider s2">
+                        <h3>My <br>portfolio</h3>
+                        <p>재능은! 노력 끝에서 발견된다. <br> 어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                    </div>
+                    <div class="silider s3">
+                        <h3>My <br>portfolio</h3>
+                        <p>재능은! 노력 끝에서 발견된다. <br> 어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.</p>
+                    </div> -->
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="left"><span class="ir">이전이미지</span></a>
+                    <a href="#" class="right"><span class="ir">다음이미지</span></a>
+                </div>
+                <div class="slider__dot">
+                    <a href="#" class="dot"><span class="ir">1번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">2번 이미지</span></a>
+                    <a href="#" class="dot"><span class="ir">3번 이미지</span></a>
+                </div>
+            </div>
+            
+
+        </section>    
+        <!-- //slider -->
+
+        <section id="introSection" class="intro__wrap section bg-blue">
+            <h3 class="blind">프론트앤드 커리큘럼 과정 소개</h3>
+            <div class="intro__inner container">
+                <div class="intro__title">
+                    <span>FRONTEND</span>
+                    <h3>프론트앤드<br>
+                        전문과정</h3>
+                    <p>프론트앤드 개발자로 취업하기 위한<br>
+                        전문 과정입니다.<br>
+                        여러분들도 도전해보세요!</p>
+                </div>
+                <div class="intro__desc">
+                    <div >
+                        <h4 class="icon-bg1">React.js</h4>
+                        <p>React.js는 사용자 인터페이스(UI)를 구축하기 위해 사용되는 JavaScript 라이브러리입니다. Facebook에서 개발한 React는 단일 페이지 애플리케이션(SPA) 및 대규모 애플리케이션의 UI 개발을 간편하게 만들기 위해 설계되었습니다.</p>
+                    </div>
+                    <div >
+                        <h4 class="icon-bg2">Node.js</h4>
+                        <p>Node.js는 이벤트 기반, 비동기식 프로그래밍 방식을 채택하여 빠른 네트워크 애플리케이션 개발과 확장성 있는 서버를 구축할 수 있도록 지원합니다.</p>
+                    </div>
+                    <div >
+                        <h4 class="icon-bg3">Vite.js</h4>
+                        <p>Vite.js는 Vue.js 프레임워크를 위한 개발 도구로서, 빠른 개발 서버와 최신 웹 개발 기술을 지원하는 빌드 도구를 제공합니다. Vite.js는 새로운 웹 개발 경험을 제공하기 위해 개발되었습니다..</p>
+                    </div>
+                    <div>
+                        <h4 class="icon-bg4">Next.js</h4>
+                        <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //introSection -->        
+        <section id="memberSection" class="members__wrap">
+            <div class="member__inner container">
+                <h3>멤버소개</h3>
+            </div>
+        </section>    
+        <!-- //memberSection -->
+
+        <section id="portSection" class="ports__wrap">
+            <div class="port__inner container">
+                <h3>포트폴리오 소개</h3>
+            </div>
+        </section>    
+        <!-- //portSection -->
+
+        <section id="youtubeSection" class="youtube__wrap">
+            <div class="youtube__inner container">
+                <h3>개발자 추천 유튜브</h3>
+            </div>
+        </section>    
+        <!-- //youtube -->
+
+        <section id="unsplashSection" class="unsplash__wrap">
+            <div class="unsplash__inner container">
+                <h3>유용한 사진들</h3>
+            </div>
+        </section>    
+        <!-- //unsplash -->
+
+        <section id="movieSection" class="movie__wrap">
+            <div class="movie__inner container">
+                <h3>개발자 추천 영화</h3>
+            </div>
+        </section>    
+        <!-- //movies -->
+
+        <section id="reviewSection" class="review__wrap"></section>    
+        <!-- //review -->
+
+    </main>
+    <!-- //main -->
+    <footer id="footer" class="footer__wrap" role="contentinfo"></footer>
+    <!-- //footer -->
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
