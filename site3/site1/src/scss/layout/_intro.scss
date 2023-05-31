@@ -17,11 +17,23 @@
         margin-bottom: 10px;
         display: inline-block;
     }
+    .myCharacter {
+        position: relative;
+        width: 230px;
+        height: 290px;
+        border: 1px solid #000;
+        img {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+        }
+    }
     h3 {
         font-size: 50px;
         font-weight: 700;
         line-height: 1.2;
-        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
     p {
         font-size: 18px;
