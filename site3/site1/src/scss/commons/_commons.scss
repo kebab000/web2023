@@ -7,8 +7,21 @@
     position: relative;
 }
 // section
+.section.center {
+    text-align: center;
+}
 .section {
     padding: 120px 0;
+
+
+    > h3 {
+        font-size: 50px;
+    }
+    > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
 }
 //bg
 .bg-blue {
@@ -50,7 +63,6 @@
 }
 .icon-bg6 {
     @include icon(#ffd6fd,url(../../images/textType01_06.svg));
-
 }
 // blind
 .blind {

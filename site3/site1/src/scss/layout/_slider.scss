@@ -4,8 +4,10 @@
 
 }
 .slider__inner {
+    position: relative;
     .slider__img {
         .slider {
+
             .text {
 
                 h3 {
@@ -124,7 +126,7 @@
     .slider__dot {
         position: absolute;
         left: 50%;
-        bottom: 0px;
+        bottom: -20%;
         transform: translateX(-50%);
         a {
             display: inline-block;
