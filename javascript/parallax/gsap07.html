@@ -138,6 +138,12 @@
                 font-weight: 800;
                 color: #fff;
             }
+            #section5 .parallaxs__item__title {
+                transform: translateX(-1000px);
+            }
+            #section7.parallaxs__item {
+                opacity: 0;
+            }
         </style>
         <title>GSAP 이펙트7</title>
     </head>
@@ -169,7 +175,6 @@
                 <!-- //section1 -->
                 <section id="section2" class="parallaxs__item">
                     <span class="parallaxs__item__num">02</span>
-                    <h2 class="parallaxs__item__title">SECTION2</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
@@ -194,35 +199,35 @@
                 <!-- //section4 -->
                 <section id="section5" class="parallaxs__item">
                     <span class="parallaxs__item__num">05</span>
-                    <h2 class="parallaxs__item__title">Section5</h2>
+                    <h2 class="parallaxs__item__title">Section05</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
                 <!-- //section5 -->
                 <section id="section6" class="parallaxs__item">
                     <span class="parallaxs__item__num">06</span>
-                    <h2 class="parallaxs__item__title">Section6</h2>
+                    <h2 class="parallaxs__item__title">Section</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
                 <!-- //section6 -->
                 <section id="section7" class="parallaxs__item">
                     <span class="parallaxs__item__num">07</span>
-                    <h2 class="parallaxs__item__title">Section7</h2>
+                    <h2 class="parallaxs__item__title">Section07</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
                 <!-- //section7 -->
                 <section id="section8" class="parallaxs__item">
                     <span class="parallaxs__item__num">08</span>
-                    <h2 class="parallaxs__item__title">Section8</h2>
+                    <h2 class="parallaxs__item__title">Section08</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
                 <!-- //section8 -->
                 <section id="section9" class="parallaxs__item">
                     <span class="parallaxs__item__num">09</span>
-                    <h2 class="parallaxs__item__title">Section9</h2>
+                    <h2 class="parallaxs__item__title">Section09</h2>
                     <div class="parallaxs__item__img"></div>
 
                 </section>
@@ -239,7 +244,6 @@
         <script>
             const box1 = document.querySelector("#section1 .parallaxs__item__img")
             const box2 = document.querySelector("#section2 .parallaxs__item__img")
-            const text2 = document.querySelector("#section2 .parallaxs__item__title")
             const box3 = document.querySelector("#section3 .parallaxs__item__img")
             const box4 = document.querySelector("#section4 .parallaxs__item__img")
             const box5 = document.querySelector("#section5 .parallaxs__item__img")
@@ -248,6 +252,234 @@
             const box8 = document.querySelector("#section8 .parallaxs__item__img")
             const box9 = document.querySelector("#section9 .parallaxs__item__img")
 
+            //01 갔다 왔다
+            gsap.to(box1, {
+                duration: 2,
+                x: 500,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box1,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //02 커졌다 작아졌다
+            gsap.to(box2, {
+                duration: 2,
+                // x: 500,
+                rotation : 360,
+                scale : 2,
+                scrollTrigger : {
+                    trigger : box2,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //03 여러방향으로 흩어지는
+            gsap.to("#section3 .parallaxs__item__img.i1", {
+                duration: 2,
+                x: -1000,
+                rotation : -360,
+                scrollTrigger : {
+                    trigger : box3,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section3 .parallaxs__item__img.i2", {
+                duration: 2,
+                y: -1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box3,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section3 .parallaxs__item__img.i3", {
+                duration: 2,
+                x: 1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box3,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            // 여러방향으로 흩어지는 22
+            gsap.to("#section4 .parallaxs__item__img.i1", {
+                duration: 2,
+                x: -1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i2", {
+                duration: 2,
+                x: -800,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i3", {
+                duration: 2,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            
+            gsap.to("#section4 .parallaxs__item__img.i4", {
+                duration: 2,
+                x: 800,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i5", {
+                duration: 2,
+                x: 1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //05 글자가 나옵니다
+            gsap.to("#section5 .parallaxs__item__title", {
+                duration: 1,
+                x: 0,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box5,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //05 글자 붙이기
+            gsap.to("#section6 .parallaxs__item__title", {
+                duration: 1,
+                x: -200,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section6 .parallaxs__item__num", {
+                duration: 1,
+                x: -680,
+                yPercent: -350,
+                scale: 2,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            // 없앴다 나오기 
+            gsap.to("#section7.parallaxs__item", {
+                duration: 1,
+                opacity:1,
+                scale: 1.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box7,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
+            // 한쪽 구석으로
+            gsap.to("#section8.parallaxs__item", {
+                duration: 2,
+                x: -500,
+                y: 200,
+                scale: 0.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box8,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
+            // 저쪽 구석으로
+            gsap.to("#section9.parallaxs__item", {
+                duration: 2,
+                x: 500,
+                y: 300,
+                scale: 0.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box9,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
         </script>
     </body>
 </html>

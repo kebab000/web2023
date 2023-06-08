@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from './components/layout/Header';
-import Footer from './components/layout/Footer.jsx';
-import Main from './components/layout/Main.jsx';
+import Footer from './components/layout/Footer';
+import Main from './components/layout/Main';
 
-import SliderSection from './components/section/SliderSection.jsx';
-import IntroSection from './components/section/IntroSection.jsx';
-import MemberSection from './components/section/MemberSection.jsx';
-import PortSection from './components/section/PortSection.jsx';
-import YoutubeSection from './components/section/YoutubeSection.jsx';
-import UnsplashSection from './components/section/UnsplashSection.jsx';
-import MovieSection from './components/section/MovieSection.jsx';
+import SliderSection from './components/section/SliderSection';
+import IntroSection from './components/section/IntroSection';
+import MemberSection from './components/section/MemberSection';
+import PortSection from './components/section/PortSection';
+import YoutubeSection from './components/section/YoutubeSection';
+import UnsplashSection from './components/section/UnsplashSection';
+import MovieSection from './components/section/MovieSection';
 function App() {
     return (
         <>
