@@ -65,7 +65,7 @@ img {
 }
 /* slider */
 #slider {
-    width: 1373px;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
