@@ -303,15 +303,194 @@
                 markers: true
                 
             });
-            // gsap.to("#section1 .parallaxs__item__img", {
-            //     duration: 2,
-            //     rotation : 720,
-            //     scale : 0.1,
-            //     scrollTrigger : {
-            //         trigger : "#section1",
-            //         scrub : true, // true, 1, 2,            
-            //     }
-            // })
+              // 여러방향으로 흩어지는 22
+              gsap.to("#section4 .parallaxs__item__img.i1", {
+                duration: 2,
+                x: -1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i2", {
+                duration: 2,
+                x: -800,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i3", {
+                duration: 2,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            
+            gsap.to("#section4 .parallaxs__item__img.i4", {
+                duration: 2,
+                x: 800,
+                y: -400,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section4 .parallaxs__item__img.i5", {
+                duration: 2,
+                x: 1000,
+                rotation : 360,
+                scrollTrigger : {
+                    trigger : box4,
+                    start: "top 30%",
+                    end : "bottom 20%",
+                    markers : false ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //05 글자가 나옵니다
+            gsap.to("#section5 .parallaxs__item__title", {
+                duration: 1,
+                x: 0,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box5,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            //05 글자 붙이기
+            gsap.to("#section6 .parallaxs__item__title", {
+                duration: 1,
+                x: -200,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section6 .parallaxs__item__num", {
+                duration: 1,
+                x: -680,
+                yPercent: -350,
+                scale: 2,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+             //05 글자 붙이기
+             gsap.to("#section6 .parallaxs__item__title", {
+                duration: 1,
+                x: -200,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            gsap.to("#section6 .parallaxs__item__num", {
+                duration: 1,
+                x: -680,
+                yPercent: -350,
+                scale: 2,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box6,
+                    start: "top 150%",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 2 // true, 1, 2, 
+
+                }
+            })
+            // 없앴다 나오기 
+            gsap.to("#section7.parallaxs__item", {
+                duration: 1,
+                opacity:1,
+                scale: 1.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box7,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
+            // 한쪽 구석으로
+            gsap.to("#section8.parallaxs__item", {
+                duration: 2,
+                x: -500,
+                y: 200,
+                scale: 0.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box8,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
+            // 저쪽 구석으로
+            gsap.to("#section9.parallaxs__item", {
+                duration: 2,
+                x: 500,
+                y: 300,
+                scale: 0.5,
+                // rotation : 360,
+                scrollTrigger : {
+                    trigger : box9,
+                    start: "top bottom",
+                    end : "bottom 20%",
+                    markers : true ,
+                    scrub : 1 // true, 1, 2, 
+
+                }
+            })
         </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer(props) {
     return (
@@ -11,29 +12,29 @@ function Footer(props) {
                     </p>
                     <ul className="sns">
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="../assets/images/footer/footer01.svg" alt="페이스북" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="../assets/images/footer/footer02.svg" alt="인스타그램" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="../assets/images/footer/footer03.svg" alt="유튜브" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="../assets/images/footer/footer04.svg" alt="깃헙" />
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <img src="../assets/images/footer/footer05.svg" alt="디스코드" />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -42,16 +43,16 @@ function Footer(props) {
                         <h4>사이트</h4>
                         <ul>
                             <li>
-                                <a href="/">웹표준 사이트</a>
+                                <Link to="/">웹표준 사이트</Link>
                             </li>
                             <li>
-                                <a href="/">반응형 사이트</a>
+                                <Link to="/">반응형 사이트</Link>
                             </li>
                             <li>
-                                <a href="/">패럴랙스 사이트</a>
+                                <Link to="/">패럴랙스 사이트</Link>
                             </li>
                             <li>
-                                <a href="/">포트폴리오 사이트</a>
+                                <Link to="/">포트폴리오 사이트</Link>
                             </li>
                         </ul>
                     </div>
@@ -59,22 +60,22 @@ function Footer(props) {
                         <h4>유형</h4>
                         <ul>
                             <li>
-                                <a href="/">이미지 유형</a>
+                                <Link to="/">이미지 유형</Link>
                             </li>
                             <li>
-                                <a href="/">카드 유형</a>
+                                <Link to="/">카드 유형</Link>
                             </li>
                             <li>
-                                <a href="/">이미지/텍스트 유형</a>
+                                <Link to="/">이미지/텍스트 유형</Link>
                             </li>
                             <li>
-                                <a href="/">배너 유형</a>
+                                <Link to="/">배너 유형</Link>
                             </li>
                             <li>
-                                <a href="/">텍스트 유형</a>
+                                <Link to="/">텍스트 유형</Link>
                             </li>
                             <li>
-                                <a href="/">푸터 유형 </a>
+                                <Link to="/">푸터 유형 </Link>
                             </li>
                         </ul>
                     </div>
@@ -82,22 +83,22 @@ function Footer(props) {
                         <h4>스크립트</h4>
                         <ul>
                             <li>
-                                <a href="/">검색 이펙트</a>
+                                <Link to="/">검색 이펙트</Link>
                             </li>
                             <li>
-                                <a href="/">퀴즈 이펙트</a>
+                                <Link to="/">퀴즈 이펙트</Link>
                             </li>
                             <li>
-                                <a href="/">마우스 이펙트</a>
+                                <Link to="/">마우스 이펙트</Link>
                             </li>
                             <li>
-                                <a href="/">슬라이드 이펙트</a>
+                                <Link to="/">슬라이드 이펙트</Link>
                             </li>
                             <li>
-                                <a href="/">패랠랙스 이펙트</a>
+                                <Link to="/">패랠랙스 이펙트</Link>
                             </li>
                             <li>
-                                <a href="/">게임 이팩트</a>
+                                <Link to="/">게임 이팩트</Link>
                             </li>
                         </ul>
                     </div>
@@ -105,19 +106,19 @@ function Footer(props) {
                         <h4>레퍼런스</h4>
                         <ul>
                             <li>
-                                <a href="/">CSS</a>
+                                <Link to="/">CSS</Link>
                             </li>
                             <li>
-                                <a href="/">FONTS</a>
+                                <Link to="/">FONTS</Link>
                             </li>
                             <li>
-                                <a href="/">BLOG</a>
+                                <Link to="/">BLOG</Link>
                             </li>
                             <li>
-                                <a href="/">REFERENCE</a>
+                                <Link to="/">REFERENCE</Link>
                             </li>
                             <li>
-                                <a href="/">TUTORIAL</a>
+                                <Link to="/">TUTORIAL</Link>
                             </li>
                         </ul>
                     </div>

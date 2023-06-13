@@ -1,0 +1,144 @@
+@charset "UTF - 8";
+/* font */
+@import url('https://webfontworld.github.io/naver/NanumGothic.css');
+ 
+/* reset */
+* {
+    margin: 0px;
+    padding:0px;
+    font-family: "NanumGothic";
+    color: #000;
+}
+a {
+    text-decoration: none;
+}
+ul,li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+.container {
+    margin: 0 150px;
+
+}
+/* header */
+#header {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    /* background-color: #e46a6a; */
+}
+#header .logo {
+    height: 100%;
+    width: 30%;
+    padding-top: 10px;
+}
+
+#header .logo img {
+    height: 80%;
+
+}
+#header ul {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+
+}
+#header ul li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+#header ul li a {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+#header .right {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: right;
+}
+/* slider */
+#slider {
+    width: 1373px;
+    position: relative;
+    overflow: hidden;
+}
+#slider .slider__wrap {
+    display: flex;
+    width: 300%;
+    flex-wrap: nowrap;
+}
+#slider .slider__wrap .slider {
+}
+#slider .slider__wrap .slider img {
+    width: 100%;
+}
+.slider__dot {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
+}
+.slider__dot span {
+    border: 2px solid #fff;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50px;
+    margin: 0 3px;
+}
+.slider__dot span.active {
+    width: 30px;
+    background-color: #fff;
+}
+/* contents */
+#cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+#cards > div {
+    width: 48%;
+}
+#cards .slider__min {
+    position: relative;
+    overflow: hidden;
+}
+#contents #cards .slider__min .slider__wrap {
+    width: 300%;
+    display: flex;
+}
+#contents #cards .slider__min .slider__wrap .slider {
+    width: 100%;
+}
+#contents #cards .slider__min .slider__wrap .slider img {
+    border-radius: 20px;
+    width: 100%;
+}
+#contents #cards .slider__dot {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* chains */
+#cards .chains {
+    position: relative;
+    overflow: hidden;
+}
+#contents #cards .chains .chains__wrap {
+    width: 300%;
+    display: flex;
+}
+#contents #cards .chains .chains__wrap .chains {
+    width: 100%;
+}
+#contents #cards .chains .chains__wrap .chains img {
+    border-radius: 20px;
+    width: 100%;
+}

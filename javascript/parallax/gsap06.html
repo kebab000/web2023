@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/parallax.css" />
         <style>
-            #header {
+             #header {
                 position: fixed;
                 z-index: 10000;
             }
@@ -138,13 +138,27 @@
                 font-weight: 800;
                 color: #fff;
             }
+            /* option */
+            #main {
+                /* overflow: auto; */
+            }
+            body {
+                overscroll-behavior: none;
+                height: 100vh;
+            }
+            .parallaxs__wrap {
+                width: 1000%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
         </style>
         <title>GSAP 이펙트6</title>
     </head>
     <body class="bg01 font01">
         <header id="header">
-            <h1>gsap parallax Effect06</h1>
-            <p>페럴럭스 이펙트 : Start/End</p>
+            <h1>GSAP parallax Effect06</h1>
+            <p>GSAP 이펙트 : 가로효과</p>
             <ul>
                 <li><a href="gsap01.html">1</a></li>
                 <li><a href="gsap02.html">2</a></li>
@@ -236,114 +250,17 @@
             const box8 = document.querySelector("#section8 .parallaxs__item__img")
             const box9 = document.querySelector("#section9 .parallaxs__item__img")
 
-            //01 : 지정을 안했을 때
-            gsap.to(box1, {
-                duration: 2,
-                x: 500,
-                rotation: 360,
-                scrollTrigger: {
-                    trigger: box1,
-                    markers : true
+            let sections = gsap.utils.toArray(".parallaxs__item");
 
-                }
-            })
-            // 탑 값만 지정을 했을 때
-            gsap.to(box2, {
-                duration: 2,
-                x: -500,
-                rotation: -360,
+            gsap.to(sections, {
+                xPercent: -100 * (sections.length -1),
+                ease: "none",
                 scrollTrigger: {
-                    trigger: box2,
-                    start: "top 25%",
-                    markers : true
-
-                }
-            })
-            // 둘다 지정을 했을 때
-            gsap.to(box3, {
-                duration: 2,
-                x: 1000,
-                rotation: 360,
-                scrollTrigger: {
-                    trigger: box3,
-                    start: "top 25%",
-                    end: "bottom 25%",
-                    markers : true
-
-                }
-            })
-            // 바텀만 지정을 했을 때 
-            gsap.to(box4, {
-                duration: 2,
-                x: -1000,
-                rotation: -360,
-                scrollTrigger: {
-                    trigger: box4,
-                    end: "bottom 25%",
-                    markers : true
-
-                }
-            })
-            // 위로 보내기
-            gsap.to(box5, {
-                duration: 2,
-                y: -300,
-                rotation: 360,
-                scrollTrigger: {
-                    trigger: box5,
-                    start: "top 25%",
-                    end: "bottom 25%",
-                    markers : true
-
-                }
-            })
-            // 아래로 보내기
-            gsap.to(box6, {
-                duration: 2,
-                y: 300,
-                rotation: -360,
-                scrollTrigger: {
-                    trigger: box6,
-                    start: "top 25%",
-                    end: "bottom 25%",
-                    markers : true
-                }
-            })
-            // 대각선로 보내기
-            gsap.to(box7, {
-                duration: 2,
-                y: 300,
-                x: 500,
-                rotation: 360,
-                scrollTrigger: {
-                    trigger: box7,
-                    start: "top 25%",
-                    end: "bottom 25%",
-                    markers : true
-                }
-            })
-            // 대각선로 보내기
-            gsap.to(box8, {
-                duration: 2,
-                y: 300,
-                x: -500,
-                rotation: -360,
-                scrollTrigger: {
-                    trigger: box8,
-                    start: "top 25%",
-                    end: "bottom 25%",
-                    markers : true
-                }
-            })
-            // 제자리 뱅뱅
-            gsap.to(box9, {
-                duration: 15,
-                rotation: 3600,
-                scrollTrigger: {
-                    trigger: box9,
-                    start: "top 40%",
-                    end: "bottom 25%",
-                    markers : true
+                    trigger:".parallaxs__wrap",
+                    pin: true,
+                    scrub:1,
+                    snap : 1/ (sections.length -1),
+                    end: document.querySelector(".parallaxs__wrap").offsetWidth,
                 }
             })
         </script>
