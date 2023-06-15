@@ -1,18 +1,19 @@
 @charset "UTF - 8";
 /* font */
-@import url('https://webfontworld.github.io/naver/NanumGothic.css');
- 
+@import url("https://webfontworld.github.io/naver/NanumGothic.css");
+
 /* reset */
 * {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
     font-family: "NanumGothic";
     color: #000;
 }
 a {
     text-decoration: none;
 }
-ul,li {
+ul,
+li {
     list-style: none;
 }
 img {
@@ -20,7 +21,13 @@ img {
 }
 .container {
     margin: 0 150px;
-
+}
+.blind {
+    width: 0px;
+    height: 0px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
 }
 /* header */
 #header {
@@ -37,31 +44,35 @@ img {
 
 #header .logo img {
     height: 80%;
-
 }
 #header ul {
     display: flex;
     justify-content: center;
     width: 50%;
     align-items: center;
-
+    position: relative;
 }
 #header ul li {
     display: inline-block;
     padding: 0 20px;
-
 }
 #header ul li a {
     display: inline-block;
     font-weight: 500;
     font-size: 20px;
-
 }
 #header .right {
     display: flex;
     width: 20%;
     align-items: center;
     justify-content: right;
+}
+#header .right .submenu {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
 }
 /* slider */
 #slider {
@@ -141,4 +152,131 @@ img {
 #contents #cards .chains .chains__wrap .chains img {
     border-radius: 20px;
     width: 100%;
+}
+.chains__btn__prev {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 30px;
+    height: 50px;
+    background-color: #000;
+}
+.chains__btn__next {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 30px;
+    height: 50px;
+    background-color: #000;
+}
+/* coupons */
+#coupons {
+    background-color: #eaeaea;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 40px;
+    position: relative;
+}
+#coupons h2 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    width: 100%;
+}
+#coupons .coupons__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#coupons .coupons__wrap .coupon {
+    border: 1px solid #fff;
+    min-width: 222px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #fff;
+}
+#coupons .coupons__wrap .coupon .coupon__title {
+    padding-top: 70px;
+    font-weight: 500;
+    font-size: 20px;
+}
+#coupons .coupons__wrap .coupon .per {
+    font-weight: 500;
+    font-size: 45px;
+    color: #e20c3e;
+}
+.coupon__btn__prev {
+    position: absolute;
+    left: 130px;
+    top: 53%;
+    width: 30px;
+    height: 50px;
+    background-color: #000;
+}
+.coupon__btn__next {
+    position: absolute;
+    right: 130px;
+    top: 53%;
+    width: 30px;
+    height: 50px;
+    background-color: #000;
+}
+/* decs */
+#decs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+#decs #notice {
+    width: 48%;
+}
+#decs #notice h3 {
+    padding-bottom: 30px;
+}
+#decs #notice h3 span {
+}
+#decs #notice .notice__wrap {
+    width: 560px;
+    margin-bottom: 100px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 200px;
+    overflow: hidden;
+}
+#decs #notice .notice__wrap ul {
+    display: flex;
+}
+#decs #notice .notice__wrap ul li {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+}
+#decs #notice .notice__wrap ul li a {
+    padding: 40px 20px 0 40px;
+    display: block;
+}
+#decs #notice .notice__wrap ul li a strong {
+    line-height: 1.5;
+    padding-bottom: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+#decs #notice .notice__wrap ul li a span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6e6d6d;
+    position: relative;
+}
+#decs #notice .notice__wrap ul li a span::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: #000;
+    border-radius: 50px;
 }
