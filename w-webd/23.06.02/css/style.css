@@ -19,6 +19,7 @@ li {
 #wrap {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 #nav {
     width: 200px;
@@ -29,54 +30,56 @@ li {
     margin-bottom: 1px;
 }
 #nav .menu {
+    z-index: 1000;
 }
-#nav .menu > ul {
-    padding: 20px;
-}
-#nav .menu > ul > li {
-    border: 1px solid #000;
-    margin-top: -1px;
-    padding: 10px;
+.menu > ul > li {
     position: relative;
-
 }
-#nav .menu > ul > li > a {
-    font-size: 20px;
-    font-weight: 500;
+.menu > ul > li > a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: #ccc;
+}
+.menu > ul > li > a:hover {
+    background-color: #aeaeae;
 }
 #nav .menu > ul > li > ul {
-    background-color: rgba(118, 118, 118, 0.9);
-    z-index: 999;
     position: absolute;
-    top: -1px;
-    left: 150px;
-    width: 0px;
-
+    right: -500px;
+    top: 0;
+    width: 500px;
+    z-index: 1000;
+    display: none;
 }
 #nav .menu > ul > li > ul > li {
-   display: inline-block;
+    display: inline;
 }
 #nav .menu > ul > li > ul > li > a {
-    padding: 13px 15px;
+    padding: 10px;
     display: inline-block;
-    color: #fff;
-    display: none;
+    width: 100px;
+}
+#nav .menu > ul > li > ul > li > a:hover {
+    background-color: #a2a2a2;
 
 }
-#nav .menu .spotmenu {
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-   
-}
-#nav .menu .spotmenu a {
-    text-decoration: underline;
-    text-underline-position: under;
-}
-
 /* main */
 #main {
     width: calc(100% - 200px);
+}
+#main::after {
+    content: '';
+    width: 0;
+    height: 160px;
+    background-color: #807f7f;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    transition: all 0.3s;
+}
+#main.on::after {
+    width: 100%;
 
 }
 /* slider&link */
@@ -85,7 +88,9 @@ li {
     width: 100%;
     overflow: hidden;
     position: relative;
-
+}
+#main #slider .sliderWrap {
+    transition: all 0.6s;
 }
 #main #slider .sliderWrap .slider {
     height: 400px;
@@ -98,11 +103,9 @@ li {
 }
 #main #slider .sliderWrap .slider.s2 {
     background-image: url(../images/slider02.png);
-
 }
 #main #slider .sliderWrap .slider.s3 {
     background-image: url(../images/slider03.png);
-
 }
 #main #link {
     width: 150px;
@@ -126,11 +129,9 @@ li {
     height: 200px;
     background-color: #889e7d;
     border: 1px solid #000;
-
 }
 #main #article .banner {
     padding: 20px;
-    
 }
 #main #article .banner a {
     padding: 20px;
@@ -171,6 +172,10 @@ li {
 #section > .info > a {
     left: 40px;
 }
+#section > .info .info__desc {
+    transition: all 0.3s;
+
+}
 #section > .info .info__desc p {
     display: flex;
     width: 100%;
@@ -186,6 +191,8 @@ li {
 }
 .gallery__wrap {
     display: none;
+    transition: all 0.3s;
+
 }
 #section > .gallery .gallery__img {
     display: flex;

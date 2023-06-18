@@ -1,14 +1,22 @@
-index = 0
+imgIndex = 0
+const sliderWrap = document.querySelector(".sliderWrap")
+const slider = document.querySelectorAll(".slider")
+const sliderClone = sliderWrap.firstElementChild.cloneNode(true)
+sliderWrap.appendChild(sliderClone)
 
 setInterval(() => {
-    index++
-    document.querySelector(".sliderWrap").style.transform = "translateY("+ -index * 400 +"px)";
-    document.querySelector(".sliderWrap").style.transition = "all 0.3s";
-    if(index == 2){
-        index = 0
+    imgIndex++
+    sliderWrap.style.transform = "translateY("+ -400 * imgIndex +"px)"
+    sliderWrap.style.transition = "all 0.6s"
+
+    if(imgIndex == 3){
+        setTimeout(()=>{
+            sliderWrap.style.transform = "translateY( 0px )"
+            sliderWrap.style.transition = "all 0s"
+            imgIndex = 0
+        },700)
     }
 }, 3000);
-
 // 공지사항& 갤러리
 
 const info = document.querySelector(".info")
@@ -17,7 +25,7 @@ const infoDesc = document.querySelector(".info__desc")
 const galleryImg = document.querySelector(".gallery__wrap")
 
 info.addEventListener("click",()=>{
-    
+    prevent()
     info.classList.add("active")
     gallery.classList.remove("active")
     infoDesc.style.display = "block"
@@ -35,17 +43,39 @@ gallery.addEventListener("click",()=>{
 
 // 탭메뉴
 
-const menu = document.querySelector("#nav .menu > ul")
-const subMenu = document.querySelectorAll("#nav .menu > ul .submenu")
-const subMenuDesc = document.querySelectorAll("#nav .menu > ul .submenu li")
+window.onload = function(){
+    const menu = document.querySelector(".menu > ul")
 
-menu.addEventListener("mouseenter",()=>{
-    subMenu.forEach((el)=>{
-        el.style.width = 10000+"px";
-        el.querySelectorAll("li").forEach((li)=>{
-            li.style.display = "block"
+    menu.addEventListener("mouseover",()=>{
+        document.querySelectorAll(".submenu").forEach((el)=>{
+            el.style.display = "block"
         })
-
+        document.querySelector("#main").classList.add("on")
     })
-})
+    menu.addEventListener("mouseout",()=>{
+        document.querySelectorAll(".submenu").forEach((el)=>{
+            el.style.display = "none"
+        })
+        document.querySelector("#main").classList.remove("on")
+    })
+    // 팝업 
+    const spotmenu1 = document.querySelector(".spotmenu1")
+    const spotmenu2 = document.querySelector(".spotmenu2")
+    const popup1 = document.querySelector(".popup1")
+    const popup2 = document.querySelector(".popup2")
+    const popup1Close = document.querySelector(".popup1 .popup1_close")
+    const popup2Close = document.querySelector(".popup2 .popup2_close")
 
+    spotmenu1.addEventListener("click",()=>{
+        popup1.style.display = "block"
+    })
+    spotmenu2.addEventListener("click",()=>{
+        popup2.style.display = "block"
+    })
+    popup1Close.addEventListener("click",()=>{
+        popup1.style.display = "none"
+    })
+    popup2Close.addEventListener("click",()=>{
+        popup2.style.display = "none"
+    })
+}

@@ -7,7 +7,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
- 
+ .popup1 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #7f7a7a;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    display: none;
+ }
+ .popup1 a {
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid #000;
+ }
+ .popup2 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    background-color: #7f7a7a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    display: none;
+
+ }
+ .popup2 a {
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid #000;
+ }
     </style>
 </head>
 <body>
@@ -54,6 +88,7 @@
                     <a href="#" class="spotmenu1">spotmenu1</a>
                     | <a href="#" class="spotmenu2">spotmenu2</a>
                 </div>
+                
             </div>
         </nav>
         <main id="main">
@@ -79,7 +114,7 @@
             </article>
             <div id="section">
                 <div class="info active">
-                    <a href="#section" class="info__title">공지사항</a>
+                    <a href="#" class="info__title">공지사항</a>
                     <div class="info__desc">
                         <p><a href="#">마을작물 여름 세일 공고</a><span>2023.05.30</span></p>
                         <p><a href="#">마을작물 여름 세일 공고</a><span>2023.05.30</span></p>
@@ -88,7 +123,7 @@
                     </div>
                 </div>
                 <div class="gallery">
-                    <a href="#section" class="gallery__title">갤러리</a>
+                    <a href="#" class="gallery__title">갤러리</a>
                     <div class="gallery__wrap">
                         <div class="gallery__img">
                             <img src="images/slider01.png" alt="갤러리사진1">
@@ -115,6 +150,13 @@
                 <div class="copy"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p></div>
             </div>
         </footer>
+        <div class="popup1">
+            <a href="#" class="popup1_close">닫기</a>
+        </div>
+        <div class="popup2">
+            <a href="#" class="popup2_close">닫기</a>
+
+        </div>
     </div>
     <script src="script/script.js"></script>
 </body>
