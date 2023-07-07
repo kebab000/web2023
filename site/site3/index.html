@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    #section6 {
+      width: 4000px;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+    }
+
+    .section {
+        width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #564242;
+    }
+
+    .text-wrap {
+      width: 33.33%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .s1 {
+        background-color: #905353;
+    }
+    .s2 {
+        background-color: #a0c9c3;
+    }
+    .s3 {
+        background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div id="section6">
+    <div class="section">
+      <div class="text-wrap s1">
+        <span class="t1">Section 1</span>
+      </div>
+      <div class="text-wrap s2">
+        <span class="t2">Section 2</span>
+      </div>
+      <div class="text-wrap s3">
+        <span class="t3">Section 3</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+  <script>
+    const sections = gsap.utils.toArray(".section");
+
+    let scrollTween = gsap.to("#section6", {
+      x: -(document.querySelector("#section6").offsetWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#section6",
+        pin: true,
+        anticipatePin: 1,
+        scrub: 1,
+        end: "+=4000",
+      }
+    });
+
+    // gsap.to(".text-wrap .t2", {
+    //   duration: 1,
+    //   x: -900,
+    //   scrollTrigger: {
+    //     trigger: ".text-wrap",
+    //     containerAnimation: scrollTween,
+    //     start: "left right",
+    //     end: "right left",
+    //     scrub: 0.5,
+    //     markers: false,
+    //   },
+    // });
+
+    // gsap.to(".text-wrap .t3", {
+    //   duration: 1,
+    //   x: -300,
+    //   scrollTrigger: {
+    //     trigger: ".text-wrap",
+    //     containerAnimation: scrollTween,
+    //     start: "left right",
+    //     end: "right left",
+    //     scrub: 1,
+    //     markers: false,
+    //   },
+    // });
+  </script>
+</body>
+</html>

@@ -11,7 +11,7 @@ setInterval(() => {
 
     if(imgIndex == 3){
         setTimeout(()=>{
-            sliderWrap.style.transform = "translateY( 0px )"
+            sliderWrap.style.transform = "translateY(0px)"
             sliderWrap.style.transition = "all 0s"
             imgIndex = 0
         },700)
@@ -25,18 +25,15 @@ const infoDesc = document.querySelector(".info__desc")
 const galleryImg = document.querySelector(".gallery__wrap")
 
 info.addEventListener("click",()=>{
-    prevent()
     info.classList.add("active")
     gallery.classList.remove("active")
     infoDesc.style.display = "block"
     galleryImg.style.display = "none"
-
 })
 
 gallery.addEventListener("click",()=>{
     gallery.classList.add("active")
     info.classList.remove("active")
-
     infoDesc.style.display = "none"
     galleryImg.style.display = "block"
 })
@@ -58,7 +55,7 @@ window.onload = function(){
         })
         document.querySelector("#main").classList.remove("on")
     })
-    // 팝업 
+// 팝업 
     const spotmenu1 = document.querySelector(".spotmenu1")
     const spotmenu2 = document.querySelector(".spotmenu2")
     const popup1 = document.querySelector(".popup1")

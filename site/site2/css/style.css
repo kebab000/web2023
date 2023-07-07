@@ -7,7 +7,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "NanumGothic";
-    color: #000;
+    color: #333;
 }
 a {
     text-decoration: none;
@@ -29,12 +29,35 @@ img {
     line-height: 0;
     text-indent: -9999px;
 }
+/* .bg_p {
+    position: relative;
+}
+.bg_p::before {
+   
+} */
 /* header */
 #header {
     display: flex;
     height: 100px;
     justify-content: space-between;
     /* background-color: #e46a6a; */
+    position: relative;
+}
+#header::before {
+    content: '';
+    width: calc(100% + 300px);
+    height: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: -150px;
+    z-index: 999;
+    transition: all 0.6s;
+    
+}
+#header.on::before {
+    border-top: 1px solid yellow;
+    height: 400px;
 }
 #header .logo {
     height: 100%;
@@ -45,21 +68,80 @@ img {
 #header .logo img {
     height: 80%;
 }
-#header ul {
+#header > ul {
     display: flex;
     justify-content: center;
     width: 50%;
     align-items: center;
     position: relative;
+    gap: 75px;
 }
-#header ul li {
+#header > ul > li {
     display: inline-block;
-    padding: 0 20px;
+    position: relative;
 }
-#header ul li a {
+#header > ul > li::after {
+    content: '';
+    width: 41px;
+    height: 41px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10px;
+    left: -41px;
+}
+#header > ul > li.i1::after {
+    background-image: url(../images/ico_gnb_01.png);
+}
+#header > ul > li.i2::after {
+    background-image: url(../images/ico_gnb_02.png);
+}
+#header > ul > li.i3::after {
+    background-image: url(../images/ico_gnb_03.png);
+}
+#header > ul > li.i4::after {
+    background-image: url(../images/ico_gnb_04.png);
+}
+#header > ul > li.i5::after {
+    background-image: url(../images/ico_gnb_05.png);
+}
+#header > ul > li:first-child {
+    position: relative;
+}
+#header > ul > li:first-child::before {
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    background-color: #f6bb68;
+    z-index: -1;
+}
+#header > ul > li > a {
     display: inline-block;
     font-weight: 500;
     font-size: 20px;
+}
+#header > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: -31px;
+    top: 100px;
+    z-index: 999;
+}
+#header > ul > li > ul.on {
+    display: block;
+}
+#header > ul > li > ul > li {
+    display: inline-block;
+    width: 100px;
+}
+#header > ul > li > ul > li > a {
+    font-size: 14px;
+    padding: 10px 0;
+    display: inline-block;
 }
 #header .right {
     display: flex;
@@ -67,12 +149,19 @@ img {
     align-items: center;
     justify-content: right;
 }
-#header .right .submenu {
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
+.menu_dot {
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/menuBtn02.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.menu_dot.close {
+    background-image: url(../images/menu_dot_close.png);
+    background-size: cover;
+    scale: 0.85;
+
 }
 /* slider */
 #slider {
@@ -82,7 +171,7 @@ img {
 }
 #slider .slider__wrap {
     display: flex;
-    width: 300%;
+    width: 400%;
     flex-wrap: nowrap;
 }
 #slider .slider__wrap .slider {
@@ -122,7 +211,7 @@ img {
     overflow: hidden;
 }
 #contents #cards .slider__min .slider__wrap {
-    width: 300%;
+    width: 400%;
     display: flex;
 }
 #contents #cards .slider__min .slider__wrap .slider {
@@ -159,7 +248,8 @@ img {
     top: 40%;
     width: 30px;
     height: 50px;
-    background-color: #000;
+    border: 0;
+    background-image: url(../images/slide_prev.png);
 }
 .chains__btn__next {
     position: absolute;
@@ -167,7 +257,8 @@ img {
     top: 40%;
     width: 30px;
     height: 50px;
-    background-color: #000;
+    border: 0;
+    background-image: url(../images/slide_next.png);
 }
 /* coupons */
 #coupons {
@@ -182,7 +273,19 @@ img {
     padding-top: 50px;
     padding-bottom: 40px;
     width: 100%;
+    position: relative;
+    display: inline-block;
 }
+/* #coupons h2::before {
+    content: '';
+    width: 58px;
+    height: 58px;
+    background: url(../images/bg_main_tit.png) 0 0 no-repeat;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);    
+} */
 #coupons .coupons__wrap {
     display: flex;
     justify-content: center;
@@ -212,7 +315,8 @@ img {
     top: 53%;
     width: 30px;
     height: 50px;
-    background-color: #000;
+    background-image: url(../images/slide_prev.png);
+    border: 0;
 }
 .coupon__btn__next {
     position: absolute;
@@ -220,7 +324,9 @@ img {
     top: 53%;
     width: 30px;
     height: 50px;
-    background-color: #000;
+    background-image: url(../images/slide_next.png);
+    border: 0;
+
 }
 /* decs */
 #decs {
@@ -269,6 +375,18 @@ img {
     color: #6e6d6d;
     position: relative;
 }
+#decs #notice .notice__wrap ul li a span::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-image: url(../images/ico_notice.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 #decs #notice .notice__wrap ul li a span::before {
     content: "";
     width: 50px;
@@ -276,7 +394,7 @@ img {
     position: absolute;
     bottom: -10px;
     right: 0;
-    background-color: #000;
+    background-color: #ffda30;
     border-radius: 50px;
 }
 .fra_wrap {
@@ -307,4 +425,124 @@ img {
     font-size: 50px;
     color: #ffda30;
     font-family: 'yg-jalnan';
+}
+#footer {
+    margin-bottom: 100px;
+}
+.f_menu {
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+
+}
+.f_menu .f_menu_desc a {
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 40px 10px 0;
+
+}
+.f_desc {
+    display: flex;
+    height: 100px;
+    position: relative;
+    justify-content: space-between;
+}
+.copy {
+    width: 72%;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.sns_list {
+    text-align: right;
+    width: 28%;
+    height: 100px;
+}
+.sns_list span {
+    margin-top: 5px;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-color: #000;
+    border-radius: 50px;
+}
+.sns_list span.s1 {
+    background-image: url(../images/sns_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sns_list span.s2 {
+    background-image: url(../images/sns_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sns_list span.s3 {
+    background-image: url(../images/sns_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sns_list span.s4 {
+    background-image: url(../images/sns_4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.f_other {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.aword {
+    display: flex;
+    gap: 30px;
+}
+.aword span {
+    font-size: 10px;
+    position: relative;
+    padding-left: 60px;
+    line-height: 1.5;
+}
+.tel {
+    color: #e20c3e;
+    font-size: 26px;
+    font-family: 'yg-jalnan';
+    font-weight: bold;
+
+}
+.tel span{
+    font-family: 'yg-jalnan';
+    color: #484848;
+    font-size: 18px;
+    font-weight: bold;
+}
+.aword span::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    /* object-fit: cover; */
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.aword span.a1::before {
+    background-image: url(../images/img_award_01.jpg);
+}
+.aword span.a2::before {
+    background-image: url(../images/img_award_02.jpg);
+}
+.aword span.a3::before {
+    background-image: url(../images/img_award_03.jpg);
+}
+.aword span.a4::before {
+    background-image: url(../images/img_award_04.jpg);
+}
+.aword span.a5::before {
+    background-image: url(../images/img_award_05.jpg);
 }

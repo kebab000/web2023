@@ -10,35 +10,35 @@
     <header id="header" class="container">
         <h1 class="logo"><img src="images/logo.png" alt="logo"></h1>
         <ul>
-            <li><a href="#">바로주문</a></li>
-            <li><a href="#">메뉴</a></li>
-            <li><a href="#">매장</a></li>
-            <li><a href="#">이벤트</a></li>
-            <li><a href="#">마이미피</a></li>
+            <li class="i1"><a href="#" style="color: red;">바로주문</a></li>
+            <li class="i2"><a href="#">메뉴</a>
+                <ul class="submenu">
+                    <li><a href="#">피자</a></li>
+                    <li><a href="#">1인용피자</a></li>
+                    <li><a href="#">특가세트</a></li>
+                    <li><a href="#">샐러드&사이드</a></li>
+                </ul>
+            </li>
+            <li class="i3"><a href="#">매장</a>
+                <ul class="submenu">
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">뷔페매장</a></li>
+                    <li><a href="#">매장전용매뉴</a></li>
+                </ul>
+            </li>
+            <li class="i4"><a href="#">이벤트</a>
+                <ul class="submenu">
+                    <li><a href="#">신제품 소개</a></li>
+                    <li><a href="#">진행중 이벤트</a></li>
+                    <li><a href="#">종료된 이벤트</a></li>
+                    <li><a href="#">할인안내</a></li>
+                </ul>
+            </li>
+            <li class="i5"><a href="#">마이미피</a></li>
         </ul>
         <div class="right">
             <a href="#"><img src="./images/menuBtn01.png" alt="#"></a>
-            <a href="#"><img src="./images/menuBtn02.png" alt="#">
-                <div class="submenu">
-                    <ul>
-                        <li><a href="#">피자</a></li>
-                        <li><a href="#">1인용피자</a></li>
-                        <li><a href="#">특가세트</a></li>
-                        <li><a href="#">샐러드&사이드</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">매장찾기</a></li>
-                        <li><a href="#">뷔페매장</a></li>
-                        <li><a href="#">매장전용매뉴</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">신제품 소개</a></li>
-                        <li><a href="#">진행중 이벤트</a></li>
-                        <li><a href="#">종료된 이벤트</a></li>
-                        <li><a href="#">할인안내</a></li>
-                    </ul>
-                </div>
-            </a>
+            <a href="#" class="menu_dot"></a>
         </div>
     </header>
     <div id="slider">
@@ -54,9 +54,9 @@
             </div>
         </div>
         <div class="slider__dot">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
+            <span class="s1 active"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
         </div>
     </div>
     <div id="contents" >
@@ -99,9 +99,9 @@
                 </button>
             </div>
         </div>
-        <div id="coupons">
-            <h2>특별한 할인혜택</h2>
-            <div class="coupons__wrap">
+        <div id="coupons" class="">
+            <h2 class="">특별한 할인혜택</h2>
+            <div class="coupons__wrap container">
                 <a href="#" class="coupon">
                     <p class="coupon__title">방문포장 최대</p>
                     <span class="per">30%</span>
@@ -165,7 +165,51 @@
         </div>
     </div>
     <footer id="footer">
-        
+        <div class="f_menu">
+            <div class="f_menu_desc container">
+                <a href="#" style="color: red;">개인정보처리방침</a >
+                <a href="#">이용약관</a >
+                <a href="#">가족점모집</a >
+                <a href="#">단체주문/상품권</a >
+            </div>
+        </div>
+
+        <div class="f_text container">
+            <div class="f_desc">
+                <div class="copy">경기도 성남시 분당구 판교로 255번길 35, 에이동 4층(삼평동) 대표이사:진형일 개인정보 관리책임자:한상근 통신판매업:2023-성남분당A-0191
+                    사업자등록번호 666-81-02675 <br>
+                    Copyright © Mr.Pizza All rights reserved.
+                </div>
+                <div class="sns_list">
+                    <span class="s1"></span>
+                    <span class="s2"></span>
+                    <span class="s3"></span>
+                    <span class="s4"></span>
+                </div>
+            </div>
+            <div class="f_other">
+               
+                <div class="aword">
+                    <span class="a1">대한민국 대표<br>
+                        고객만족도 조사<br>
+                        7회 수상<br>
+                        (2007·2009-2014)</span>
+                    <span class="a2">좋은기업 대상<br>
+                        9회 연속수상</span>
+                    <span class="a3">브랜드스타<br>
+                        12회 연속수상</span>
+                    <span class="a4">2021년<br>
+                        세계일류상품<br>
+                        차세대부분수상</span>
+                    <span class="a5">세계 피자대회<br>
+                        2019년 2관왕</span>
+                </div>
+                <p class="tel">
+                    <span>전화주문</span>
+                    1577-0077
+                </p>
+            </div>
+        </div>
     </footer>
     <script
         src="https://code.jquery.com/jquery-3.7.0.min.js"
