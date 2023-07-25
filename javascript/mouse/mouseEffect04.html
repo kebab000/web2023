@@ -47,8 +47,10 @@
         top: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.4;
+        color: #18144c;
+
       }
       .mouse__cursor {
         position: absolute;
@@ -98,34 +100,38 @@
     <!-- //footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-      document.querySelector(".mouse__img figure").addEventListener("mousemove", (e) => {
-        // 마우스 좌표 값
-        let mousePageX = e.pageX;
-        let mousePageY = e.pageY;
-        
-        // 전체 화면 가로 값
-        let centerPageX = window.innerWidth / 2 - mousePageX;
-        let centerPageY = window.innerHeight / 2 - mousePageY;
-        
-        // 요소 이동 및 회전하기
-        gsap.to(".mouse__cursor", {
+      document
+        .querySelector(".mouse__img figure")
+        .addEventListener("mousemove", (e) => {
+          gsap.to(".mouse__cursor", {
             duration: 0.2,
             left: e.pageX,
             top: e.pageY,
-            rotationZ: centerPageX / 10, // Z축을 기준으로 회전
-            ease: "power2.out", // 원하는 이징 함수 사용
-        });
+          });
 
-        // 이미지 이동 및 회전하기
-        const imgMove = document.querySelector(".mouse__img");
-        imgMove.style.transform =
-            "translate(" +
-            -centerPageX / 15 +
-            "px, " +
-            -centerPageY / 15 +
-            "px) rotateZ(" +
-            -centerPageX / 150 +
-            "deg)";
+          // 마우스 좌표 값
+          let mousePageX = e.pageX;
+          let mousePageY = e.pageY;
+
+          // 전체 화면에 가로 값
+          // window.innerWidth       // 1920 브라우저
+          // window.outerWidth       // 1920 브라우저 크기(스크롤바 포함)
+          // window.screen.width     // 1920 화면 크기
+
+          // 마우스 좌표값 기준점 가운데로 설정
+          let centerPageX = window.innerWidth / 2 - mousePageX;
+          let centerPageY = window.innerHeight / 2 - mousePageY;
+
+          // 이미지 움직이기
+          const imgMove = document.querySelector(".mouse__img figure img");
+
+          // imgMove.style.transform = "translate("+centerPageX/20+"px, "+centerPageY/20+"px)";
+
+          gsap.to(imgMove, {
+            duration: 0.2,
+            x: centerPageX / 20,
+            y: centerPageY / 20,
+          });
         });
     </script>
   </body>
