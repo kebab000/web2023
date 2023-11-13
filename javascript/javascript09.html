@@ -60,6 +60,7 @@
                     <li><a href="#">브라우저 속성 : <strong>window.scrollY</strong> : 세로 스크롤 값(브라우저 기준)</a></li>
                     <li><a href="#">문서 속성 : <strong>document.documentElement.scrollY</strong> : 세로 스크롤 값(브라우저 기준)</a></li>
                     <li><a href="#">문서 속성 : <strong>document.documentElement.scrollX</strong> : 가로 스크롤 값(브라우저 기준)</a></li>
+                    <li><a href="#">문서 메서드 : <strong>document.body.offsetHeight</strong>() : 문서의 전체 높이</a></li>
 
                     <li><a href="#">브라우저 메서드 : <strong>window.scroll()</strong> : 스크롤 값 설정</a></li>
                     <li><a href="#">브라우저 메서드 : <strong>window.scrollTo()</strong> : 스크롤 값 설정(절대 기준)</a></li>
@@ -68,6 +69,8 @@
                     <li><a href="#">요소 속성 : <strong>element.scrollLeft</strong> : 가로 스크롤 값</a></li>
                     <li><a href="#">요소 속성 : <strong>element.scrollTop</strong> : 가로 스크롤 값</a></li>
                     <li><a href="#">요소 메서드 : <strong>element.scrollIntoView</strong>() : 스크롤 이동 및 설정</a></li>
+
+                    <li><a href="#">Tip! : <strong>(window.innerHeight + window.scrollY) >= document.body.offsetHeight</strong>() : 현재 스크롤 위치(window.scrollY)와 브라우저 창의 높이(window.innerHeight)를 합친 값이 문서의 전체 높이(document.body.offsetHeight)와 같거나 큰 경우에만 아래 코드를 실행한다. 즉, 사용자가 페이지의 맨 아래에 도달했을 때를 의미.</a></li>
                 </ul>
             </div>
         </div>
