@@ -10,6 +10,19 @@
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+    <style>
+        .notice {
+            border-left: 5px solid #844aa3;
+            padding: 13px 10px 10px 15px;
+            background-color: #dbdbdbc0;
+        }
+        .notice p {
+            margin-bottom: 5px;
+        }
+        .notice p {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -69,9 +82,14 @@
                     <li><a href="#">요소 속성 : <strong>element.scrollLeft</strong> : 가로 스크롤 값</a></li>
                     <li><a href="#">요소 속성 : <strong>element.scrollTop</strong> : 가로 스크롤 값</a></li>
                     <li><a href="#">요소 메서드 : <strong>element.scrollIntoView</strong>() : 스크롤 이동 및 설정</a></li>
-
-                    <li><a href="#">Tip! : <strong>(window.innerHeight + window.scrollY) >= document.body.offsetHeight</strong>() : 현재 스크롤 위치(window.scrollY)와 브라우저 창의 높이(window.innerHeight)를 합친 값이 문서의 전체 높이(document.body.offsetHeight)와 같거나 큰 경우에만 아래 코드를 실행한다. 즉, 사용자가 페이지의 맨 아래에 도달했을 때를 의미.</a></li>
                 </ul>
+            </div>
+            <div id="main__tip">
+                <div class="notice">
+                    <h4>Tip! : <strong>(window.innerHeight + window.scrollY) >= document.body.offsetHeight</strong></h4>
+                    <p>현재 스크롤 위치(window.scrollY)와 브라우저 창의 높이(window.innerHeight)를 합친 값이 문서의 전체 높이(document.body.offsetHeight)와 같거나 큰 경우에만 아래 코드를 실행한다.<br/> 즉, 사용자가 페이지의 맨 아래에 도달했을 때를 의미.</p>
+
+                </div>
             </div>
         </div>
     </main>
